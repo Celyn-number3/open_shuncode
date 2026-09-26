@@ -32709,7 +32709,9 @@ ${custom}` : builtIn;
     return this.getStatus();
   }
   cloudflaredExecutableCandidates() {
-    const candidates = [this.cloudflaredExecutable, "cloudflared"];
+    // Prefer the cloudflared bundled with ShunCode (runtime/bin) so Bridge works without a separate install.
+    const bundled = import_node_path14.default.join(this.context.extensionPath, "runtime", "bin", process.platform === "win32" ? "cloudflared.exe" : "cloudflared");
+    const candidates = [bundled, this.cloudflaredExecutable, "cloudflared"];
     if (process.platform === "win32") {
       if (process.env.LOCALAPPDATA) {
         candidates.push(import_node_path14.default.join(process.env.LOCALAPPDATA, "Microsoft", "WinGet", "Links", "cloudflared.exe"));

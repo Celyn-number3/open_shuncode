@@ -11,6 +11,7 @@
 [下载 Windows 版](https://github.com/HP-Patience/open_shuncode/releases/latest) ·
 [功能](#-功能) ·
 [快速开始](#-快速开始) ·
+[首次使用](#-首次使用必看) ·
 [开源版改动](docs/OPEN_SOURCE_CHANGES.md) ·
 [English](#english)
 
@@ -37,7 +38,7 @@ ShunCode 在本地编辑器里启动一个 **MCP Bridge**，通过 Cloudflare Tu
 
 ### 🌉 远程 MCP Bridge
 - **Streamable HTTP MCP 端点**，兼容主流 MCP 客户端与网页 AI
-- **三种隧道**：Cloudflare Quick Tunnel（零配置）/ Cloudflare Named Tunnel（固定域名）/ ngrok
+- **三种隧道**：Cloudflare Quick Tunnel（零配置，已内置 cloudflared）/ Cloudflare Named Tunnel（固定域名）/ ngrok
 - **15 个 IDE 工具**：`list_directory` `find_files` `search_files` `read_files` `read_image` `apply_patch` `lsp` `get_diagnostics` `run_command` `get_command_output` `send_command_input` `cancel_command` `set_todos` `update_plan` `report_progress` 等
 - **真实 PTY 终端**（ConPTY + 内置 Git Bash），支持后台命令、交互输入、安全取消
 - **LSP 语义导航**：定义、引用、实现、符号、悬停类型
@@ -66,6 +67,17 @@ ShunCode 在本地编辑器里启动一个 **MCP Bridge**，通过 Cloudflare Tu
    ```
 
 5. 想用内置 Chat：命令面板运行 `ShunCode: Configure Model` 和 `ShunCode: Set API Key`
+
+## 🧩 首次使用（必看）
+
+第一次运行时 Windows 和编辑器会各弹一次提示，按下面操作即可：
+
+1. **Windows SmartScreen 拦截**：弹出“Windows 已保护你的电脑”时，点击 **更多信息 → 仍要运行**。
+   这是因为 ShunCode 暂未购买代码签名证书，并非病毒；你也可以在 [Releases](https://github.com/HP-Patience/open_shuncode/releases/latest) 核对文件后再运行。
+2. **信任文件夹**：用 ShunCode 打开项目文件夹时，会询问“是否信任此文件夹中的文件的作者?”，请点击 **是，我信任此作者**（英文界面为 *Yes, I trust the authors*）。
+   如果选了“否”，编辑器会进入**受限模式**，ShunCode 的 Chat 与 Bridge 都会被禁用；之后可点击左下角/标题栏的“受限模式”，或在命令面板运行 `Workspaces: Manage Workspace Trust` 改为信任。
+
+> Bridge 所需的 `cloudflared` 已随程序内置（`resources/app/extensions/shuncode/runtime/bin/cloudflared.exe`），**无需另外安装**。
 
 ## ⚙️ 常用设置
 
@@ -101,7 +113,7 @@ docs/
 └── OPEN_SOURCE_CHANGES.md   # 开源版相对商业版的全部改动
 ```
 
-完整可运行程序（Electron + Code-OSS 工作台 + 内置 Git/ripgrep，约 1 GB）通过 **Releases** 分发。
+完整可运行程序（Electron + Code-OSS 工作台 + 内置 Git / ripgrep / cloudflared，约 1.1 GB）通过 **Releases** 分发。
 
 ## 🧭 路线图 / 已知限制
 
@@ -122,7 +134,7 @@ docs/
 
 - ShunCode 自有代码：[MIT](LICENSE)
 - Code-OSS / VS Code：MIT（Microsoft），见发布包 `resources/app/LICENSE.txt` 与 `ThirdPartyNotices.txt`
-- 内置 [Git for Windows](https://gitforwindows.org/)：GPLv2（源码见其官方仓库）；PSReadLine：BSD-2-Clause；ripgrep：MIT / Unlicense
+- 内置 [Git for Windows](https://gitforwindows.org/)：GPLv2（源码见其官方仓库）；[cloudflared](https://github.com/cloudflare/cloudflared)：Apache-2.0（官方签名版本，许可证见 `runtime/bin/cloudflared-LICENSE.txt`）；PSReadLine：BSD-2-Clause；ripgrep：MIT / Unlicense
 
 ShunCode 与 Microsoft、OpenAI、Anthropic、Cloudflare 等公司无隶属关系，相关名称归其各自所有者。
 
@@ -134,6 +146,8 @@ ShunCode 与 Microsoft、OpenAI、Anthropic、Cloudflare 等公司无隶属关�
 
 It also ships a native Ask / Plan / Code agent that works with OpenAI-compatible, OpenAI Responses and Anthropic Messages APIs, plus multi-model branching & merge.
 
-This edition removes all account, license, activation and payment code — everything is free and works offline from any licensing server. Download the ready-to-run build from [Releases](https://github.com/HP-Patience/open_shuncode/releases/latest), run `shuncode_start.bat`, start the Bridge and paste the MCP URL into your AI.
+This edition removes all account, license, activation and payment code — everything is free and works offline from any licensing server. Download the ready-to-run build from [Releases](https://github.com/HP-Patience/open_shuncode/releases/latest), run `shuncode_start.bat`, start the Bridge and paste the MCP URL into your AI. `cloudflared` is bundled — no separate install needed.
+
+**First run:** if Windows SmartScreen appears, click **More info → Run anyway** (the app is not code-signed yet). When opening a folder, choose **Yes, I trust the authors** — in Restricted Mode the ShunCode Chat and Bridge are disabled.
 
 ⚠️ The MCP URL grants file-edit and shell access to your machine — keep it private.

@@ -35,3 +35,12 @@
 - 两个修改过的 JS 产物均通过 `node --check`。
 - 以独立用户目录启动开源版：ShunCode 扩展正常激活（Chat 参与者、模型提供方、Bridge、IDE 工具均已注册），无许可证相关报错。
 - 未实际启动公网隧道做端到端测试，建议发布前手动点一次“启动 Bridge”确认。
+
+## v0.7.7-oss
+
+- 内置官方 `cloudflared` 2026.9.3（Cloudflare, Inc. 数字签名有效，SHA-256 `f096265ec2fcbe9bb6e2d64268db167ced3fcbb83d894bdb9e2fcdb26f2ea7e2`，与官方 Release 资产一致），
+  位于 `resources/app/extensions/shuncode/runtime/bin/cloudflared.exe`，附 Apache-2.0 许可证 `cloudflared-LICENSE.txt`。
+- `src/bridge-server.ts` 与 `dist/extension.js`：`cloudflaredExecutableCandidates()` 优先使用扩展目录下 `runtime/bin` 中自带的 cloudflared，
+  找不到时再回退到 PATH / WinGet / Program Files 中已安装的版本。
+- README 与 Release 说明新增“首次使用”（SmartScreen、信任文件夹）。
+- 验证：干净用户目录 + PATH 中移除 cloudflared，Bridge 自动使用自带 cloudflared 建立 Quick Tunnel，外部 MCP 客户端 `initialize` / `tools/list`（15 个工具）/ `run_command` 均成功。
