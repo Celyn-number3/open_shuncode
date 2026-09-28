@@ -68,6 +68,8 @@ ShunCode 在本地编辑器里启动一个 **MCP Bridge**，通过 Cloudflare Tu
 
 5. 想用内置 Chat：命令面板运行 `ShunCode: Configure Model` 和 `ShunCode: Set API Key`
 
+> **推荐的仓库打开方式（可选）**：在本仓库中使用 ShunCode 时，优先启动 Releases 发行包内的 `ShunCode.exe`（或 `shuncode_start.bat`），再通过“文件 → 打开文件夹”打开克隆目录；这样使用发行包自带扩展，无需 `--extensionDevelopmentPath`。如需与其他 ShunCode 实例隔离，可从命令行追加 `--user-data-dir <独立配置目录>`。
+
 > 若已安装兼容的 ShunCode，也可在克隆后的仓库根目录用 PowerShell 执行 `shuncode --new-window --user-data-dir "$env:LOCALAPPDATA\ShunCode-OpenSource-Dev" --extensionDevelopmentPath "$PWD\extension" "$PWD"`，以独立配置的扩展开发模式加载本仓库的预打包扩展（需将 `shuncode` 加入 PATH，或改用安装目录下 `bin\shuncode.cmd` 的完整路径）。
 
 ## 🧩 首次使用（必看）
