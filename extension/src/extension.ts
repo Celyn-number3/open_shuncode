@@ -10,6 +10,7 @@ import { ShunCodeLanguageModelProvider } from "./model-provider.js";
 import { registerShunCodeNativeChat } from "./native-chat.js";
 import { RuntimeClient } from "./runtime-client.js";
 import { WorkspaceHubController } from "./workspace-hub.js";
+import { registerCodexSkillScanCommand } from "./codex-skill-scan-command.js";
 
 let activeBridge: BridgeManager | undefined;
 let activeWorkspaceHub: WorkspaceHubController | undefined;
@@ -68,6 +69,7 @@ export function activate(context: vscode.ExtensionContext): void {
   }, branchStore);
   const customAgents = registerShunCodeCustomAgents(context);
   const customAgentDiscoveryCts = new vscode.CancellationTokenSource();
+  const codexSkillScanCommand = registerCodexSkillScanCommand(vscode, bridge, bridgeReady);
 
   context.subscriptions.push(
     output,
@@ -82,6 +84,7 @@ export function activate(context: vscode.ExtensionContext): void {
     participant,
     customAgents,
     customAgentDiscoveryCts,
+    codexSkillScanCommand,
     vscode.lm.registerLanguageModelChatProvider("shuncode", apiModelProvider),
     vscode.lm.registerLanguageModelChatProvider("shuncode-codex", codexModelProvider),
     vscode.workspace.onDidChangeConfiguration((event) => {

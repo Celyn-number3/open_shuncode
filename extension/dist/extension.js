@@ -40711,6 +40711,7 @@ function activate(context) {
   }, branchStore);
   const customAgents = registerShunCodeCustomAgents(context);
   const customAgentDiscoveryCts = new vscode16.CancellationTokenSource();
+  const codexSkillScanCommand = require("../src/codex-skill-scan-command.js").registerCodexSkillScanCommand(vscode16, bridge, bridgeReady);
   context.subscriptions.push(
     output,
     ideToolBroker,
@@ -40724,6 +40725,7 @@ function activate(context) {
     participant,
     customAgents,
     customAgentDiscoveryCts,
+    codexSkillScanCommand,
     vscode16.lm.registerLanguageModelChatProvider("shuncode", apiModelProvider),
     vscode16.lm.registerLanguageModelChatProvider("shuncode-codex", codexModelProvider),
     vscode16.workspace.onDidChangeConfiguration((event) => {

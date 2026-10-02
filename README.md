@@ -45,6 +45,7 @@ ShunCode 在本地编辑器里启动一个 **MCP Bridge**，通过 Cloudflare Tu
 - **自适应并发**：默认 16 路并行，健康时自动扩到 64
 - **任务卡片**：远程 Agent 的 todo / 进度实时显示在编辑器里
 - **Agent Skills**：`.shuncode/skills` 与 `.shuncode/mcp-tools` 自定义工具自动暴露给远程 Agent
+- **导入本机 Codex Skills**：v0.7.8 发行包起，Bridge 设置页“自定义工具”区域提供“扫描 Codex Skills…”按钮；扫描常见用户/工作区目录或自选目录，选中并确认后导入 `.shuncode/mcp-tools`，供 Bridge 远程 Agent 使用。旧版解压包可先关闭 ShunCode，再在仓库根目录运行 `node tools/patch-shuncode-codex-skills-ui.js <app目录> --apply` 添加此按钮；也可从命令面板运行 `ShunCode: Import Codex Skills to Bridge`。
 - 一键轮换端点、健康检查、工具调用日志、快捷打开常用网页 AI
 
 ### 🤖 原生 Chat / Agent
