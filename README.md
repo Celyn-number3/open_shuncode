@@ -68,8 +68,9 @@ ShunCode 在本地编辑器里启动一个 **MCP Bridge**，通过 Cloudflare Tu
 
 5. 想用内置 Chat：命令面板运行 `ShunCode: Configure Model` 和 `ShunCode: Set API Key`
 
-> **推荐的仓库打开方式（可选）**：克隆仓库后可直接运行根目录的 `shuncode_start.bat`，它会启动 ShunCode 并打开当前仓库，使用发行包自带扩展；脚本优先查找 PATH 中的 `shuncode`，也可设置 `SHUNCODE_EXE` 指向发行包内的 `ShunCode.exe`。也可以直接启动发行包内的 `ShunCode.exe`（或发行包自带的 `shuncode_start.bat`），再通过“文件 → 打开文件夹”打开本仓库；以上方式均不需要 `--extensionDevelopmentPath`。
-
+> **推荐的仓库打开方式（可选）**：克隆后可直接运行仓库根目录的 `shuncode_start.bat`，它会启动 ShunCode 并打开当前仓库，使用发行包自带扩展；脚本可通过 PATH 中的 `shuncode` 命令或环境变量 `SHUNCODE_EXE` 找到编辑器。也可以直接启动发行包内的 `ShunCode.exe`（或发行包自带的 `shuncode_start.bat`），再通过“文件 → 打开文件夹”打开本仓库；以上方式均不需要 `--extensionDevelopmentPath`。
+>
+> **前置条件**：`git clone` 只获取仓库源码，不包含 ShunCode 编辑器；请先安装兼容版本，或下载并解压 Releases 中的完整发行包。运行仓库根目录的 BAT 时，还需确保它能找到编辑器：将发行包的 `bin` 目录加入 PATH、设置 `SHUNCODE_EXE` 指向 `ShunCode.exe`，或把 `ShunCode.exe` 与 BAT 放在同一目录。仅克隆仓库不能启动编辑器。
 > 若已安装兼容的 ShunCode，也可在克隆后的仓库根目录用 PowerShell 执行 `shuncode --new-window --user-data-dir "$env:LOCALAPPDATA\ShunCode-OpenSource-Dev" --extensionDevelopmentPath "$PWD\extension" "$PWD"`，以独立配置的扩展开发模式加载本仓库的预打包扩展（需将 `shuncode` 加入 PATH，或改用安装目录下 `bin\shuncode.cmd` 的完整路径）。
 
 ## 🧩 首次使用（必看）
