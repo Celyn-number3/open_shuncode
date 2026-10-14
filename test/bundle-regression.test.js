@@ -16,7 +16,7 @@ function setup() {
  transport.sessions.set("client",{lastActivity:Date.now(),activeRequests:0,activeStreams:0,transport:{close(){}},server:{close(){}}});
  const vscode={StatusBarAlignment:{Right:1},window:{createOutputChannel:()=>({appendLine(){},clear(){},show(){},dispose(){}}),createStatusBarItem:()=>({show(){},dispose(){}}),showInformationMessage:async()=>{}},commands:{registerCommand:()=>({dispose(){}})}};
  const bridge={dispatcher,mcpTransport:transport,ideToolBroker:{releaseCommandOwner(){}},workspaceRoots:()=>[root],output:{appendLine(){}},getStatus:()=>({activities:[]})};
- const hooks=registerBridgeSecurity(vscode,{subscriptions:[],extensionPath:root},bridge,{version:"0.7.9",sourceRevision:"fixture",sourceHash:"fixture"});
+ const hooks=registerBridgeSecurity(vscode,{subscriptions:[],extensionPath:root,globalState:{get:()=>({mode:"readOnly",terminal:false,customTools:false}),update:async()=>{}}},bridge,{version:"0.7.9",sourceRevision:"fixture",sourceHash:"fixture"});
  const handlers=new Map();transport.registerToolHandlers({setRequestHandler:(m,h)=>handlers.set(m,h)},()=>"client");
  const call=(name,args={})=>handlers.get("tools/call")({params:{name,arguments:args}},{signal:undefined});
  return {temp,root,bridge,hooks,invoked,handlers,call,close(){hooks.dispose();fs.rmSync(temp,{recursive:true,force:true});}};

@@ -48,7 +48,7 @@ function build({check=false,capture=false}={}) {
   if((bundle.match(new RegExp(define.source,"g"))||[]).length!==1)throw new Error("Build metadata anchor mismatch");
   bundle=bundle.replace(define,"define_SHUNCODE_BUILD_INFO_default = "+JSON.stringify({version:metadata.version,gitSha:metadata.sourceRevision,builtAt:metadata.builtAt,release:false})+";");
   bundle=replaceOnce(bundle,'"tools/list": { ttlMs: 6e4, cacheScope: "public" }','"tools/list": { ttlMs: 0, cacheScope: "private" }');
-  const permissionInstructions="MCP permissions are enforced per connection. New connections are read-only. File changes require local project permission; terminal/input/output and all custom tools require a separate, time-limited local device grant. Agents cannot grant themselves permission. Project mode is not a terminal sandbox. Use the local ShunCode permissions command for consent.";
+  const permissionInstructions="MCP permissions follow local persistent defaults. This personal build defaults to device mode with terminal and custom tools enabled, without time or idle expiry. Local users can change defaults or revoke all permissions. Per-session restrictions still apply; agents cannot self-authorize or bypass canonical tool and workspace-path checks. Terminal/custom tools are not sandboxed.";
   const scope=/function bridgeWorkspaceScopeInstructions\(scope\) \{[\s\S]*?\n\}/;
   if(!scope.test(bundle))throw new Error("Scope instruction anchor mismatch");
   bundle=bundle.replace(scope,"function bridgeWorkspaceScopeInstructions(scope) {\n  return "+JSON.stringify(permissionInstructions)+";\n}");

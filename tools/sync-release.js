@@ -10,7 +10,7 @@ function sync(app,{apply=false}={}) {
   const targetRoot=path.join(app,"resources/app/extensions/shuncode");
   const files=["package.json","dist/extension.js","dist/build-info.json","runtime/agent-host.js","runtime/mcp-server.js",...fs.readdirSync(path.join(root,"extension/src")).filter(n=>/\.(ts|mts|js|d\.ts)$/.test(n)).map(n=>"src/"+n)];
   const entries=files.map(file=>({file:"resources/app/extensions/shuncode/"+file,src:path.join(root,"extension",file),dst:path.join(targetRoot,file)}));
-  for(const file of ["README.md","docs/SECURITY.md","docs/RELEASING.md","docs/mcp-v0.7.9-maintenance.md"])if(fs.existsSync(path.join(root,file)))entries.push({file,src:path.join(root,file),dst:path.join(app,file)});
+  for(const file of ["README.md","docs/SECURITY.md","docs/RELEASING.md","docs/mcp-v0.7.9-maintenance.md","docs/mcp-v0.7.10-permanent-permissions.md"])if(fs.existsSync(path.join(root,file)))entries.push({file,src:path.join(root,file),dst:path.join(app,file)});
   const changes=entries.map(x=>({...x,data:fs.readFileSync(x.src),old:fs.existsSync(x.dst)?fs.readFileSync(x.dst):null})).filter(x=>!x.old || hash(x.data)!==hash(x.old));
   const version=JSON.parse(fs.readFileSync(path.join(root,"version.json"),"utf8")).version;
   const backup=path.join(path.dirname(app),"..","ShunCode-maintenance-backups",version+"-"+Date.now());

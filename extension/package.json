@@ -2,7 +2,7 @@
   "name": "shuncode",
   "displayName": "ShunCode",
   "description": "Open-source native Chat/Agent + remote MCP Bridge for the ShunCode Code-OSS editor.",
-  "version": "0.7.9",
+  "version": "0.7.10",
   "publisher": "shuncode",
   "license": "MIT",
   "repository": {
@@ -76,7 +76,8 @@
     "onCommand:shuncode.bridge.security.manage",
     "onCommand:shuncode.bridge.security.revokeAll",
     "onCommand:shuncode.bridge.security.disconnect",
-    "onCommand:shuncode.bridge.security.status"
+    "onCommand:shuncode.bridge.security.status",
+    "onCommand:shuncode.bridge.security.defaults"
   ],
   "contributes": {
     "commands": [
@@ -225,6 +226,10 @@
       {
         "command": "shuncode.bridge.security.status",
         "title": "ShunCode: 查看 MCP 权限与构建信息"
+      },
+      {
+        "command": "shuncode.bridge.security.defaults",
+        "title": "ShunCode: 设置 MCP 永久默认权限"
       }
     ],
     "menus": {

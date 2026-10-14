@@ -70,8 +70,8 @@ function validateToolPaths(tool, args, roots) {
   }
 }
 class BridgeSecurityPolicy {
-  constructor({ now = Date.now, onRevoke = () => {}, maxSessions = 64, idleMs = 15 * 60_000 } = {}) {
-    this.now = now; this.onRevoke = onRevoke; this.maxSessions = maxSessions; this.idleMs = idleMs;
+  constructor({ now = Date.now, onRevoke = () => {}, maxSessions = 64, defaultPermissions = {mode:"readOnly",terminal:false,customTools:false} } = {}) {
+    this.now = now; this.onRevoke = onRevoke; this.maxSessions = maxSessions; this.defaultPermissions = this.normalizePermissions(defaultPermissions);
     this.sessions = new Map(); this.audit = []; this.revision = 0;
   }
   touch(owner) {
@@ -80,19 +80,19 @@ class BridgeSecurityPolicy {
     let session = this.sessions.get(owner);
     if (!session) {
       if (this.sessions.size >= this.maxSessions) throw new Error("SECURITY_SESSION_LIMIT");
-      session = { owner, id: createHash("sha256").update(owner).digest("hex").slice(0,12), mode:"readOnly", terminal:false, customTools:false, lastActivity:this.now(), expiresAt:0 };
+      session = { owner, id: createHash("sha256").update(owner).digest("hex").slice(0,12), ...this.defaultPermissions, lastActivity:this.now(), expiresAt:0 };
       this.sessions.set(owner,session); this.revision++;
     }
     session.lastActivity = this.now();
     return session;
   }
-  grant(owner, { mode = "readOnly", terminal = false, customTools = false, minutes = 15 } = {}) {
-    if (!["readOnly","project","device"].includes(mode) || !Number.isFinite(minutes) || minutes <= 0 || minutes > 60) throw new Error("INVALID_GRANT");
+  grant(owner, { mode = "readOnly", terminal = false, customTools = false, minutes = 0 } = {}) {
+    if (!["readOnly","project","device"].includes(mode) || !Number.isFinite(minutes) || minutes !== 0) throw new Error("INVALID_GRANT");
     if (mode !== "device" && (terminal || customTools)) throw new Error("DEVICE_CONSENT_REQUIRED");
     const s = this.touch(owner);
     // Downgrading also cancels commands created with the old capability.
     if (s.terminal || s.customTools) this.revoke(owner,"regrant");
-    Object.assign(s,{ mode, terminal:!!terminal, customTools:!!customTools, expiresAt: mode === "readOnly" ? 0 : this.now()+minutes*60_000 });
+    Object.assign(s,{ mode, terminal:!!terminal, customTools:!!customTools, expiresAt:0 });
     this.record(owner,"grant",mode); this.revision++;
     return this.snapshot();
   }
@@ -104,19 +104,28 @@ class BridgeSecurityPolicy {
   }
   forget(owner,reason="disconnect") { this.revoke(owner,reason); if(this.sessions.delete(owner))this.revision++; }
   revokeAll(reason="local-user") { for(const owner of this.sessions.keys())this.revoke(owner,reason); }
-  expire() {
-    const now=this.now();
-    for(const [owner,s] of [...this.sessions]) {
-      if(s.expiresAt && now>=s.expiresAt)this.revoke(owner,"grant-expired");
-      if(now-s.lastActivity>=this.idleMs)this.forget(owner,"idle-expired");
-    }
+  // Permanent grants: neither elapsed time nor idle time revokes permissions.
+  expire() {}
+  normalizePermissions({mode="readOnly",terminal=false,customTools=false}={}) {
+    if (!["readOnly","project","device"].includes(mode))throw new Error("INVALID_GRANT");
+    if(mode!=="device" && (terminal || customTools))throw new Error("DEVICE_CONSENT_REQUIRED");
+    return {mode,terminal:!!terminal,customTools:!!customTools};
   }
-  allows(owner,tool) {
-    const s=this.touch(owner);
+  setDefaults(value) {
+    this.defaultPermissions=this.normalizePermissions(value);
+    for(const owner of this.sessions.keys())this.grant(owner,this.defaultPermissions);
+    this.revision++;
+  }
+  defaultAllows(tool) {return this.permissionsAllow(this.defaultPermissions,tool);}
+  permissionsAllow(s,tool) {
     if(READ_TOOLS.has(tool))return true;
     if(tool === "apply_patch")return s.mode === "project" || s.mode === "device";
     if(TERMINAL_TOOLS.has(tool))return s.mode === "device" && s.terminal;
     return s.mode === "device" && s.customTools && !BUILTIN_TOOLS.has(tool);
+  }
+  allows(owner,tool) {
+    const s=this.touch(owner);
+    return this.permissionsAllow(s,tool);
   }
   record(owner,action,detail) {
     const id=this.sessions.get(owner)?.id ?? "unknown";
@@ -125,7 +134,7 @@ class BridgeSecurityPolicy {
   }
   snapshot() {
     this.expire();
-    return { defaultMode:"readOnly", sandboxed:false, revision:this.revision, sessions:[...this.sessions.values()].map(({owner,...s})=>({...s})), audit:this.audit.map(x=>({...x})) };
+    return { defaultMode:this.defaultPermissions.mode, defaultPermissions:{...this.defaultPermissions}, grantsExpire:false, sandboxed:false, revision:this.revision, sessions:[...this.sessions.values()].map(({owner,...s})=>({...s})), audit:this.audit.map(x=>({...x})) };
   }
 }
 module.exports={ BridgeSecurityPolicy, READ_TOOLS, TERMINAL_TOOLS, BUILTIN_TOOLS, redact, redactObject, checkWorkspacePath, validateToolPaths };
