@@ -32358,7 +32358,7 @@ async function dispatchFileTool(name, args, context) {
 }
 
 // src/version.ts
-var SHUNCODE_BEHAVIOR_VERSION = "0.7.6";
+var SHUNCODE_BEHAVIOR_VERSION = "0.7.9";
 
 // src/concurrency.ts
 var Semaphore = class {

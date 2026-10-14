@@ -46,7 +46,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var define_SHUNCODE_BUILD_INFO_default;
 var init_define_SHUNCODE_BUILD_INFO = __esm({
   "<define:__SHUNCODE_BUILD_INFO__>"() {
-    define_SHUNCODE_BUILD_INFO_default = { version: "0.7.6", gitSha: "nogit", builtAt: "2026-09-21T03:29:43.7821761Z", release: true };
+    define_SHUNCODE_BUILD_INFO_default = {"version":"0.7.9","gitSha":"28a79ae45a454fbfc52be42b809ee883ef842763","builtAt":"2026-10-14T00:00:00.000Z","release":false};
   }
 });
 
@@ -29319,7 +29319,7 @@ init_define_SHUNCODE_BUILD_INFO();
 
 // src/version.ts
 init_define_SHUNCODE_BUILD_INFO();
-var SHUNCODE_BEHAVIOR_VERSION = "0.7.6";
+var SHUNCODE_BEHAVIOR_VERSION = "0.7.9";
 
 // src/build-info.ts
 function injectedBuildInfo() {
@@ -30575,7 +30575,7 @@ var BridgeMcpTransport = class {
       // itself changes, so let shared caches hold it briefly; discovery is
       // even more stable. 2025-era responses are unaffected by these hints.
       cacheHints: {
-        "tools/list": { ttlMs: 6e4, cacheScope: "public" },
+        "tools/list": { ttlMs: 0, cacheScope: "private" },
         "server/discover": { ttlMs: 3e5, cacheScope: "public" }
       },
       // Keep this connection-specific rule beside the MCP metadata it must reach;
@@ -32098,10 +32098,7 @@ function cloudflaredEdgeFailureHint(output) {
   return blocked ? " This usually means cloudflared cannot reach the Cloudflare edge from this network. ShunCode passes a resolvable VS Code/system HTTP proxy to tunnel processes; if that still fails, verify the proxy supports tunnel traffic or use a system/global (TUN) proxy." : "";
 }
 function bridgeWorkspaceScopeInstructions(scope) {
-  if (scope === "workspace") {
-    return "Default operating scope: project files in the folder(s) currently open in ShunCode on this local Windows host. That is the default target, not a hard ban: inspect another local path on this same PC only when the user explicitly identifies it, usually with run_command for read-only discovery first. Do not scan the whole device by default. Workspace file tools remain workspace-scoped.";
-  }
-  return "Default operating scope: this entire local Windows device. Prioritize the folder(s) currently open in ShunCode whenever they are relevant, but you may inspect other local paths on this same PC without requiring the user to restate the workspace first. Locate the exact path before acting outside the workspace and prefer read-only discovery first when the target is uncertain. Workspace file tools remain workspace-scoped; use run_command for outside-workspace paths.";
+  return "MCP permissions are enforced per connection. New connections are read-only. File changes require local project permission; terminal/input/output and all custom tools require a separate, time-limited local device grant. Agents cannot grant themselves permission. Project mode is not a terminal sandbox. Use the local ShunCode permissions command for consent.";
 }
 function normalizeHttpsHostname(value, label) {
   const trimmed = value.trim();
@@ -40696,6 +40693,7 @@ function activate(context) {
   const ideToolBroker = new IdeToolBroker();
   const bridge = new BridgeManager(context, output, ideToolBroker, async () => {
   });
+  require("../src/bridge-security.js").registerBridgeSecurity(vscode16, context, bridge, require("./build-info.json"));
   const bridgeAccess = new BridgeAccessController(bridge);
   activeBridge = bridge;
   const bridgeReady = bridge.initialize();

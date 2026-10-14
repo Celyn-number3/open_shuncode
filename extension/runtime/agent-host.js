@@ -22353,7 +22353,7 @@ function agentToolResultContent(result) {
 
 // src/version.ts
 init_define_SHUNCODE_BUILD_INFO();
-var SHUNCODE_BEHAVIOR_VERSION = "0.7.6";
+var SHUNCODE_BEHAVIOR_VERSION = "0.7.9";
 
 // src/openai-agent.ts
 var ANTHROPIC_API_VERSION = "2023-06-01";

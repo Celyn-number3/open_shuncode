@@ -1,0 +1,10 @@
+{
+  "version": "0.7.9",
+  "sourceRevision": "28a79ae45a454fbfc52be42b809ee883ef842763",
+  "sourceHash": "a2c02f9a20705180ad5f206c5a027c57a71ff4633cbe055be39e2a3ddd94ab7c",
+  "builtAt": "2026-10-14T00:00:00.000Z",
+  "release": false,
+  "sourceDirty": false,
+  "buildKind": "audited-legacy-augmentation",
+  "fullSourceBuild": false
+}
