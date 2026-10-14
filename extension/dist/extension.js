@@ -46,7 +46,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var define_SHUNCODE_BUILD_INFO_default;
 var init_define_SHUNCODE_BUILD_INFO = __esm({
   "<define:__SHUNCODE_BUILD_INFO__>"() {
-    define_SHUNCODE_BUILD_INFO_default = {"version":"0.7.9","gitSha":"3bde80c5f830bc4767bfdd9f713bd7f658a4930c","builtAt":"2026-10-14T00:00:00.000Z","release":false};
+    define_SHUNCODE_BUILD_INFO_default = {"version":"0.7.10","gitSha":"83ea85b46577ae0684cac9bfaf51e9c538c6a59c","builtAt":"2026-10-14T00:00:00.000Z","release":false};
   }
 });
 
@@ -29319,7 +29319,7 @@ init_define_SHUNCODE_BUILD_INFO();
 
 // src/version.ts
 init_define_SHUNCODE_BUILD_INFO();
-var SHUNCODE_BEHAVIOR_VERSION = "0.7.9";
+var SHUNCODE_BEHAVIOR_VERSION = "0.7.10";
 
 // src/build-info.ts
 function injectedBuildInfo() {
@@ -32098,7 +32098,7 @@ function cloudflaredEdgeFailureHint(output) {
   return blocked ? " This usually means cloudflared cannot reach the Cloudflare edge from this network. ShunCode passes a resolvable VS Code/system HTTP proxy to tunnel processes; if that still fails, verify the proxy supports tunnel traffic or use a system/global (TUN) proxy." : "";
 }
 function bridgeWorkspaceScopeInstructions(scope) {
-  return "MCP permissions are enforced per connection. New connections are read-only. File changes require local project permission; terminal/input/output and all custom tools require a separate, time-limited local device grant. Agents cannot grant themselves permission. Project mode is not a terminal sandbox. Use the local ShunCode permissions command for consent.";
+  return "MCP permissions follow local persistent defaults. This personal build defaults to device mode with terminal and custom tools enabled, without time or idle expiry. Local users can change defaults or revoke all permissions. Per-session restrictions still apply; agents cannot self-authorize or bypass canonical tool and workspace-path checks. Terminal/custom tools are not sandboxed.";
 }
 function normalizeHttpsHostname(value, label) {
   const trimmed = value.trim();

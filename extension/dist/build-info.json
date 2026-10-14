@@ -1,7 +1,7 @@
 {
-  "version": "0.7.9",
-  "sourceRevision": "3bde80c5f830bc4767bfdd9f713bd7f658a4930c",
-  "sourceHash": "a7088cbea786c3397942770da9ae31b47dc5a6fac47b9ae8679bfad907732b6f",
+  "version": "0.7.10",
+  "sourceRevision": "83ea85b46577ae0684cac9bfaf51e9c538c6a59c",
+  "sourceHash": "f6e2c561e18e71eb7f73d0772905ac715456fbd6d5c9a4e96ad433fd43202013",
   "builtAt": "2026-10-14T00:00:00.000Z",
   "release": false,
   "sourceDirty": false,
