@@ -19,6 +19,7 @@ function registerBridgeSecurity(vscode,context,bridge,buildInfo) {
     try {
       // Fail closed on compatibility aliases: an alias must never turn a custom-tool grant into terminal permission.
       if(typeof name !== "string" || (!BUILTIN_TOOLS.has(name) && dispatcher.findCustomToolSafe?.(name)?.name !== name))return denied("BRIDGE_PERMISSION_DENIED: unknown or noncanonical tool name");
+      if(!READ_TOOLS.has(name) && !transport.sessions?.has(owner?.slice("bridge:".length)))return denied("BRIDGE_SESSION_BINDING_REQUIRED: 提升权限仅支持服务器签发的会话式连接；无状态客户端保持只读。");
       if(!policy.allows(owner,name)) { policy.record(owner,"deny",name); return denied("BRIDGE_PERMISSION_DENIED: 此会话默认只读；请在本机权限管理中授权。项目模式不允许终端或自定义工具。"); }
       if(BUILTIN_TOOLS.has(name))validateToolPaths(name,args ?? {},bridge.workspaceRoots());
       if(!READ_TOOLS.has(name))policy.record(owner,"tool",name);
@@ -49,7 +50,7 @@ function registerBridgeSecurity(vscode,context,bridge,buildInfo) {
           const result=await originalHandler(...args);
           const sid=resolveSessionId();
           const owner=typeof sid === "string" && sid.trim() ? "bridge:"+sid.trim() : undefined;
-          result.tools=result.tools.filter(tool=>owner ? policy.allows(owner,tool.name) : READ_TOOLS.has(tool.name));
+          result.tools=result.tools.filter(tool=>READ_TOOLS.has(tool.name) || (owner && transport.sessions?.has(sid) && policy.allows(owner,tool.name)));
           return result;
         };
       }
@@ -85,6 +86,9 @@ function registerBridgeSecurity(vscode,context,bridge,buildInfo) {
       {label:"自定义工具（高风险，无终端工具）",mode:"device",customTools:true},
       {label:"整机终端与自定义工具（高风险）",mode:"device",terminal:true,customTools:true},
     ],{title:"选择本次会话权限"});if(!choice)return;
+    if(choice.mode!=="readOnly" && !transport.sessions?.has(item.owner.slice("bridge:".length))) {
+      await vscode.window.showInformationMessage("此连接没有服务器签发的会话，不能安全绑定提升权限。无状态客户端保持只读；请使用支持 Mcp-Session-Id 的会话式连接。");return;
+    }
     if(choice.mode!=="readOnly") {
       const answer=await vscode.window.showWarningMessage(choice.mode==="device" ? "允许此 AI 执行本机命令，可能读取、修改项目外文件或向网络发送数据。这不是沙箱。授权仅限此会话，15 分钟后失效。" : "允许此 AI 修改打开的项目文件。终端和自定义工具仍被禁止。授权仅限此会话，15 分钟后失效。",{modal:true},"授权 15 分钟");
       if(answer!=="授权 15 分钟")return;

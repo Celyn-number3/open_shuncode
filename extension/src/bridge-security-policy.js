@@ -9,14 +9,15 @@ function redact(value) {
   if (typeof value !== "string") return value;
   return value
     .replace(/\/(mcp|healthz)\/[^\s/?#"'<>]+/gi, "/$1/[REDACTED]")
+    .replace(/(session(?: created| destroyed)?\s*[:=]\s*)([A-Za-z0-9:_-]+)/gi, "$1[REDACTED]")
     .replace(/\bBearer\s+[A-Za-z0-9._~+/=-]+/gi, "Bearer [REDACTED]")
     .replace(/\b(?:gh[pousr]_[A-Za-z0-9_]{20,}|github_pat_[A-Za-z0-9_]{20,}|sk-(?:proj-|ant-)?[A-Za-z0-9_-]{20,})\b/g, "[REDACTED]")
-    .replace(/((?:api[_-]?key|password|access[_-]?token|refresh[_-]?token|authorization|secret|token)\s*["']?\s*[:=]\s*["']?)([^\s,"'}]+)/gi, "$1[REDACTED]");
+    .replace(/((?:api[_-]?key|password|access[_-]?token|refresh[_-]?token|authorization|secret|token|mcp-session-id|sessionid|commandownerid)\s*["']?\s*[:=]\s*["']?)([^\s,"'}]+)/gi, "$1[REDACTED]");
 }
 function redactObject(value) {
   if (typeof value === "string") return redact(value);
   if (Array.isArray(value)) return value.map(redactObject);
-  if (value && typeof value === "object") return Object.fromEntries(Object.entries(value).map(([k,v]) => [k, /^(apiKey|password|accessToken|refreshToken|authorization|secret|token)$/i.test(k) ? "[REDACTED]" : redactObject(v)]));
+  if (value && typeof value === "object") return Object.fromEntries(Object.entries(value).map(([k,v]) => [k, /^(apiKey|password|accessToken|refreshToken|authorization|secret|token|mcp-session-id|sessionid|commandownerid)$/i.test(k) ? "[REDACTED]" : redactObject(v)]));
   return value;
 }
 function inside(root, target) {
