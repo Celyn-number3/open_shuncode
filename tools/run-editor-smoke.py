@@ -16,7 +16,9 @@ env=os.environ.copy()
 for key in ['ELECTRON_RUN_AS_NODE','VSCODE_CLI','NODE_OPTIONS']:env.pop(key,None)
 env['SHUNCODE_SMOKE_RESULT']=str(result)
 command=[str(exe),'--new-window','--user-data-dir',str(user),'--extensions-dir',str(user/'extensions'),'--extensionTestsPath',str(root/'test/vscode-smoke'),'--enable-proposed-api','shuncode.shuncode','--disable-gpu',str(root)]
-if args.source:command.extend(['--extensionDevelopmentPath',str(root/'extension')])
+# Editor test execution needs development mode. The dummy host keeps the actual
+# packaged ShunCode extension in place instead of silently testing repository code.
+command.extend(['--extensionDevelopmentPath',str(root/'extension' if args.source else root/'test/host-fixture')])
 print('Isolated editor smoke profile:',str(user),flush=True)
 with (user/'launch-output.log').open('wb') as log:
     process=subprocess.Popen(command,env=env,stdout=log,stderr=log)

@@ -1,0 +1,9 @@
+{
+  "name": "shuncode-smoke-host",
+  "publisher": "maintenance",
+  "version": "0.0.1",
+  "private": true,
+  "engines": { "vscode": "^1.132.0" },
+  "main": "index.js",
+  "activationEvents": ["*"]
+}
