@@ -1,159 +1,96 @@
-<div align="center">
+# ShunCode 开源维护版
 
-<img src="extension/media/shuncode.svg" width="96" alt="ShunCode logo" />
+基于 Code-OSS 的 Windows AI 编程编辑器，包含原生 Ask / Plan / Code 智能体、多模型协作，以及将本地工作区连接到网页 AI 的远程 MCP Bridge。
 
-# ShunCode · 开源版
+维护仓库：[Celyn-number3/open_shuncode](https://github.com/Celyn-number3/open_shuncode)。上游：[HP-Patience/open_shuncode](https://github.com/HP-Patience/open_shuncode)。保留上游许可证和提交历史。
 
-**让任何网页端 AI 直接操作你的本地项目。**
+## 当前版本与下载
 
-基于 Code-OSS（VS Code）的 AI 编程编辑器，内置远程 MCP Bridge、原生 Agent、多模型协作 —— 全部免费、无需登录、无需激活。
+- [发行版本与下载](https://github.com/Celyn-number3/open_shuncode/releases)
+- [问题反馈](https://github.com/Celyn-number3/open_shuncode/issues)
+- 仓库当前开发版本：**0.7.9**。未完成编辑器 GUI 验收前，不作为新的稳定版发布。
+- 仓库与 Release 的可见性遵循 GitHub 仓库设置；私有仓库需要获得访问权限。
 
-[下载 Windows 版](https://github.com/HP-Patience/open_shuncode/releases/latest) ·
-[功能](#-功能) ·
-[快速开始](#-快速开始) ·
-[首次使用](#-首次使用必看) ·
-[开源版改动](docs/OPEN_SOURCE_CHANGES.md) ·
-[English](#english)
+## 0.7.9 的 MCP 权限模型
 
-![platform](https://img.shields.io/badge/platform-Windows%20x64-blue)
-![license](https://img.shields.io/badge/license-MIT-green)
-![base](https://img.shields.io/badge/base-Code--OSS%201.132-007ACC)
-![MCP](https://img.shields.io/badge/MCP-Streamable%20HTTP-purple)
+新连接默认只读，权限由本机用户在命令面板或状态栏授权，AI 无法通过 MCP 参数自行提升权限。
 
-</div>
+| 权限 | 项目读取 | 项目补丁 | 终端执行、输入和输出 | 自定义工具 |
+| --- | --- | --- | --- | --- |
+| 默认只读 | 允许 | 禁止 | 禁止 | 禁止 |
+| 项目文件修改 | 允许 | 允许 | 禁止 | 禁止 |
+| 整机授权 | 允许 | 允许 | 单独授权 | 单独授权 |
 
----
+- 提升权限仅限当前会话，默认 **15 分钟**；不写入持久配置。
+- 会话断开、闲置过期、权限到期或本机撤销后，提升权限失效，并请求取消关联命令及活动工具。
+- 自定义工具可能运行任意命令，即使其声明为只读，也不能绕过本机授权。
+- 兼容工具别名默认拒绝，避免别名混淆绕过权限；客户端应使用 `tools/list` 返回的标准名称。
+- 文件路径检查包括已有父目录的真实路径，拒绝显式目录穿越、工作区外路径、符号链接和 Windows junction 越界。
+- **整机终端不是沙箱。** 授权后可访问 Windows 账号有权访问的其他文件，并可能访问网络。项目模式通过关闭任意终端和自定义命令控制风险，不宣称实现操作系统级隔离。
+- 默认只读也不是秘密扫描器：工作区内文件可能包含敏感内容，请不要开放含私钥或生产凭证的工作区。
 
-## 💡 它解决什么问题？
+本机命令：
 
-ChatGPT、Claude、Gemini、Arena、Manus、Devin 这些网页端 AI 很聪明，但**碰不到你电脑上的代码**。
-ShunCode 在本地编辑器里启动一个 **MCP Bridge**，通过 Cloudflare Tunnel 生成一个公网 MCP 地址 ——
-把地址丢给任意支持 MCP 的网页 AI，它就能像本地 Agent 一样：
+- `ShunCode: 管理 MCP 会话权限`
+- `ShunCode: 撤销全部 MCP 会话权限`
+- `ShunCode: 断开 MCP 会话`
+- `ShunCode: 查看 MCP 权限与构建信息`
 
-> 浏览目录 → 语义搜索代码 → 读文件 → 打补丁 → 看诊断 → 跑构建和测试 → 汇报进度
+状态栏显示默认只读或已授权会话数量。权限状态含版本、源码提交、输入哈希和实际加载路径。传统 Bridge 设置页的工作范围仅为兼容提示，不再代表提升权限。
 
-你**不用在本地配置 API Key**，用你已有的网页 AI 会员/免费额度就能干活；所有操作在编辑器里实时可见。
+## 使用发行包
 
-## ✨ 功能
+1. 下载 Windows x64 ZIP，解压后运行 `shuncode_start.bat` 或 `ShunCode.exe`。
+2. 仅对来源可信的项目启用工作区信任。
+3. 在 Bridge 设置页启动 Bridge，把 MCP 地址交给支持 MCP 的 AI。
+4. 先让 AI 建立只读连接；确需修改或运行命令时，在本机命令面板为相应会话限时授权。
+5. 不使用时停止 Bridge；地址泄露时轮换端点。
 
-### 🌉 远程 MCP Bridge
-- **Streamable HTTP MCP 端点**，兼容主流 MCP 客户端与网页 AI
-- **三种隧道**：Cloudflare Quick Tunnel（零配置，已内置 cloudflared）/ Cloudflare Named Tunnel（固定域名）/ ngrok
-- **15 个 IDE 工具**：`list_directory` `find_files` `search_files` `read_files` `read_image` `apply_patch` `lsp` `get_diagnostics` `run_command` `get_command_output` `send_command_input` `cancel_command` `set_todos` `update_plan` `report_progress` 等
-- **真实 PTY 终端**（ConPTY + 内置 Git Bash），支持后台命令、交互输入、安全取消
-- **LSP 语义导航**：定义、引用、实现、符号、悬停类型
-- **自适应并发**：默认 16 路并行，健康时自动扩到 64
-- **任务卡片**：远程 Agent 的 todo / 进度实时显示在编辑器里
-- **Agent Skills**：`.shuncode/skills` 与 `.shuncode/mcp-tools` 自定义工具自动暴露给远程 Agent
-- **导入本机 Codex Skills**：v0.7.8 发行包起，Bridge 设置页“自定义工具”区域提供“扫描 Codex Skills…”按钮；扫描常见用户/工作区目录或自选目录，选中并确认后导入 `.shuncode/mcp-tools`，供 Bridge 远程 Agent 使用。旧版解压包可先关闭 ShunCode，再在仓库根目录运行 `node tools/patch-shuncode-codex-skills-ui.js <app目录> --apply` 添加此按钮；也可从命令面板运行 `ShunCode: Import Codex Skills to Bridge`。
-- 一键轮换端点、健康检查、工具调用日志、快捷打开常用网页 AI
+MCP URL 包含访问凭证，不要公开分享。日志会对常见 token、Bearer 认证和密钥字段脱敏，但不应把任意终端输出视为绝对安全的日志。内置模型需要相应 API Key 或账号，模型服务可能收费。Windows 安全提示并不证明程序安全或恶意，应核对来源和校验值。
 
-### 🤖 原生 Chat / Agent
-- **Ask / Plan / Code** 三种模式
-- 支持 **OpenAI Chat Completions / OpenAI Responses / Anthropic Messages** 协议，自动拉取 `/models`
-- 默认适配 DeepSeek，支持思考强度设置；也可用 Codex 账号登录
-- **多模型分支 + 合并**：同一问题让多个模型并行回答，合并模型对比共识与分歧、必要时只读核验文件后给出最终方案
-- Agent 检查点、全实例共享聊天记录、一键新开独立实例
+## 可重复的增量构建
 
-## 🚀 快速开始
+需要 Node.js 20+；打包另需 Python 3.10+。新增维护工具不依赖第三方 npm 包。
 
-1. 到 [Releases](https://github.com/HP-Patience/open_shuncode/releases/latest) 下载 `ShunCode-oss-*-win-x64.zip` 并解压
-2. 双击 `shuncode_start.bat`（或 `ShunCode.exe`）
-3. 打开 Bridge 设置页，点击 **启动 Bridge**
-4. 点击 **复制提示词**，粘贴给任意支持 MCP 的网页 AI，例如：
-
-   ```text
-   https://xxxx.trycloudflare.com/mcp/<token>
-   快速连接这个 MCP，明确使用规则，熟悉可用工具，做好处理接下来一系列工作的准备。
-   ```
-
-5. 想用内置 Chat：命令面板运行 `ShunCode: Configure Model` 和 `ShunCode: Set API Key`
-
-> **推荐的仓库打开方式（可选）**：克隆后可直接运行仓库根目录的 `shuncode_start.bat`，它会启动 ShunCode 并打开当前仓库，使用发行包自带扩展；脚本可通过 PATH 中的 `shuncode` 命令或环境变量 `SHUNCODE_EXE` 找到编辑器。也可以直接启动发行包内的 `ShunCode.exe`（或发行包自带的 `shuncode_start.bat`），再通过“文件 → 打开文件夹”打开本仓库；以上方式均不需要 `--extensionDevelopmentPath`。
->
-> **前置条件**：`git clone` 只获取仓库源码，不包含 ShunCode 编辑器；请先安装兼容版本，或下载并解压 Releases 中的完整发行包。运行仓库根目录的 BAT 时，还需确保它能找到编辑器：将发行包的 `bin` 目录加入 PATH、设置 `SHUNCODE_EXE` 指向 `ShunCode.exe`，或把 `ShunCode.exe` 与 BAT 放在同一目录。仅克隆仓库不能启动编辑器。
-> 若已安装兼容的 ShunCode，也可在克隆后的仓库根目录用 PowerShell 执行 `shuncode --new-window --user-data-dir "$env:LOCALAPPDATA\ShunCode-OpenSource-Dev" --extensionDevelopmentPath "$PWD\extension" "$PWD"`，以独立配置的扩展开发模式加载本仓库的预打包扩展（需将 `shuncode` 加入 PATH，或改用安装目录下 `bin\shuncode.cmd` 的完整路径）。
-
-## 🧩 首次使用（必看）
-
-第一次运行时 Windows 和编辑器会各弹一次提示，按下面操作即可：
-
-1. **Windows SmartScreen 拦截**：弹出“Windows 已保护你的电脑”时，点击 **更多信息 → 仍要运行**。
-   这是因为 ShunCode 暂未购买代码签名证书，并非病毒；你也可以在 [Releases](https://github.com/HP-Patience/open_shuncode/releases/latest) 核对文件后再运行。
-2. **信任文件夹**：用 ShunCode 打开项目文件夹时，会询问“是否信任此文件夹中的文件的作者?”，请点击 **是，我信任此作者**（英文界面为 *Yes, I trust the authors*）。
-   如果选了“否”，编辑器会进入**受限模式**，ShunCode 的 Chat 与 Bridge 都会被禁用；之后可点击左下角/标题栏的“受限模式”，或在命令面板运行 `Workspaces: Manage Workspace Trust` 改为信任。
-
-> Bridge 所需的 `cloudflared` 已随程序内置（`resources/app/extensions/shuncode/runtime/bin/cloudflared.exe`），**无需另外安装**。
-
-## ⚙️ 常用设置
-
-| 设置项 | 说明 | 默认 |
-|---|---|---|
-| `shuncode.bridge.tunnelProvider` | 隧道类型：`cloudflare` / `cloudflare-named` / `ngrok` | `cloudflare` |
-| `shuncode.bridge.workspaceScope` | 远程 Agent 作用范围：`workspace`（仅项目）/ `device`（整台电脑） | `device` |
-| `shuncode.bridge.persistentMode` | 随 ShunCode 启动自动开启 Bridge | `false` |
-| `shuncode.bridge.toolConcurrency` | 初始工具并发数（1–64） | `16` |
-| `shuncode.bridge.skillsEnabled` | 从 `.shuncode/skills` 加载自定义工具 | `true` |
-| `shuncode.multiModel.enabled` | 多模型分支与合并 | `true` |
-| `shuncode.multiModel.maxBranches` | 每轮最多分支数（2–6） | `3` |
-
-## 🔒 安全须知
-
-Bridge 能**编辑文件和执行终端命令**。MCP 地址（含随机 token）等同于你电脑的操作权限：
-
-- 不要把地址公开或发到群里；怀疑泄露时使用 **Rotate Bridge Endpoint** 立即换新地址
-- 只处理项目时，建议把 `shuncode.bridge.workspaceScope` 设为 `workspace`
-- 不用时停止 Bridge
-
-## 📁 仓库结构
-
-```text
-extension/
-├── src/                 # ShunCode 扩展 TypeScript 源码（Bridge、IDE 工具、模型接入、Chat…）
-├── dist/extension.js    # 扩展实际运行的打包产物
-├── runtime/             # Agent Host 与 MCP Server 运行时（打包产物）
-├── agents/              # Ask / Plan / Code 模式提示词
-├── media/               # 图标与 Workspace Hub 页面
-└── package.json         # 扩展清单（命令、设置项、模型提供方）
-docs/
-└── OPEN_SOURCE_CHANGES.md   # 开源版相对商业版的全部改动
+```bash
+npm ci
+npm run build
+npm run verify
+node tools/sync-release.js --app "D:/path/to/app"
+node tools/sync-release.js --app "D:/path/to/app" --apply
+python tools/package_release.py --app "D:/path/to/app" --output "D:/releases/ShunCode-oss-0.7.9-win-x64.zip"
 ```
 
-完整可运行程序（Electron + Code-OSS 工作台 + 内置 Git / ripgrep / cloudflared，约 1.1 GB）通过 **Releases** 分发。
+- `version.json` 是版本来源；清单一致性在构建时检查。
+- `extension/legacy/` 保存经过固定 SHA-256 校验、统一 LF 的上游预编译基线。
+- 构建脚本从基线重建增量产物，不叠加补丁；锚点或基线不匹配时失败。
+- `build:check` 核对生成产物和安全模块输入哈希；`verify` 执行语法、回归和产物一致性检查。
+- 同步默认只预览；`--apply` 先备份，在逐文件原子替换后核对哈希，失败时回滚已安装文件。它不是文件系统级全局原子事务。
+- 运行中的扩展不会热加载。同步之后需要重载编辑器才能使用新版本，不应在远程维护中自动重启当前 Bridge。
+- 打包剔除本地配置目录、快捷方式、备份及部分凭证文件名，生成 ZIP 和 SHA-256 文件。此筛查不构成任意秘密检测。
 
-## 🧭 路线图 / 已知限制
+## 构建限制（重要）
 
-- [ ] 补齐扩展依赖的共享模块（`../../../src/*`）与 `runtime/*.js` 源码，实现从源码完整构建
-- [ ] 开源工作台 UI 定制部分的源码
-- [ ] macOS / Linux 构建
-- [ ] 英文界面与文档完善
+**本仓库目前不是完整的 Code-OSS 源码发行树。** 27 个共享模块、工作台定制源码以及 Agent/MCP 运行时的完整源码仍缺失。
 
-目前 `src/` 暂不能独立编译；修改运行逻辑请以 `dist/extension.js` 为准，`src/` 同步作为可读参考。欢迎 Issue 和 PR！
+当前流程是可重复的 **已审计基线增量构建**，不是从全部源码独立编译：新增权限模块是可维护的 JavaScript 源码，激活入口的 TypeScript 参考同步更新；遗留预编译产物仍明确保留。不能凭此宣称完整源码构建已完成，也不能用命令字符串过滤代替终端沙箱。
 
-## 🤝 参与贡献
+详情见 [安全说明](docs/SECURITY.md)、[发布流程](docs/RELEASING.md)、[本轮交付记录](docs/mcp-v0.7.9-maintenance.md)。
 
-- 🐛 Bug / 建议：[Issues](https://github.com/HP-Patience/open_shuncode/issues)
-- 🔧 PR：请描述改动动机，并同时更新 `src/` 与 `dist/extension.js` 中对应逻辑
-- ⭐ 如果 ShunCode 对你有帮助，点个 Star 就是最大的支持
+## 目录结构
 
-## 📄 许可证
+```text
+extension/src/        扩展参考源码及可执行安全模块
+extension/dist/       实际扩展入口及构建信息
+extension/runtime/    Agent/MCP 预编译运行时
+extension/legacy/     校验固定的上游运行基线
+extension/agents/     Ask / Plan / Code 提示词
+extension/media/      图标与 Workspace Hub
+ test/                权限、路径、协议和补丁回归测试
+ tools/               构建、检查、同步和打包工具
+ docs/                安全说明、发布流程、交付记录
+```
 
-- ShunCode 自有代码：[MIT](LICENSE)
-- Code-OSS / VS Code：MIT（Microsoft），见发布包 `resources/app/LICENSE.txt` 与 `ThirdPartyNotices.txt`
-- 内置 [Git for Windows](https://gitforwindows.org/)：GPLv2（源码见其官方仓库）；[cloudflared](https://github.com/cloudflare/cloudflared)：Apache-2.0（官方签名版本，许可证见 `runtime/bin/cloudflared-LICENSE.txt`）；PSReadLine：BSD-2-Clause；ripgrep：MIT / Unlicense
+## 许可证
 
-ShunCode 与 Microsoft、OpenAI、Anthropic、Cloudflare 等公司无隶属关系，相关名称归其各自所有者。
-
----
-
-## English
-
-**ShunCode (open-source edition)** is a Code-OSS based AI coding editor for Windows. Its **MCP Bridge** exposes your local workspace as a Streamable HTTP MCP endpoint through a Cloudflare Tunnel (or ngrok), so any web AI agent — ChatGPT, Claude, Gemini, Arena, Manus, Devin… — can browse, search, read, patch, diagnose, build and test your local project, with live task/progress cards in the editor.
-
-It also ships a native Ask / Plan / Code agent that works with OpenAI-compatible, OpenAI Responses and Anthropic Messages APIs, plus multi-model branching & merge.
-
-This edition removes all account, license, activation and payment code — everything is free and works offline from any licensing server. Download the ready-to-run build from [Releases](https://github.com/HP-Patience/open_shuncode/releases/latest), run `shuncode_start.bat`, start the Bridge and paste the MCP URL into your AI. `cloudflared` is bundled — no separate install needed.
-
-**First run:** if Windows SmartScreen appears, click **More info → Run anyway** (the app is not code-signed yet). When opening a folder, choose **Yes, I trust the authors** — in Restricted Mode the ShunCode Chat and Bridge are disabled.
-
-⚠️ The MCP URL grants file-edit and shell access to your machine — keep it private.
+ShunCode 自有代码遵循 [MIT](LICENSE)。发行包包含 Code-OSS/Electron 等组件及 Git for Windows、cloudflared 等工具，需保留各自许可证和第三方声明。本项目不隶属于 Microsoft、OpenAI、Anthropic 或 Cloudflare。

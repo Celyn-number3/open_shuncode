@@ -100,11 +100,8 @@ function cloudflaredEdgeFailureHint(output: string): string {
 
 type BridgeWorkspaceScope = "workspace" | "device";
 
-function bridgeWorkspaceScopeInstructions(scope: BridgeWorkspaceScope): string {
-  if (scope === "workspace") {
-    return "Default operating scope: project files in the folder(s) currently open in ShunCode on this local Windows host. That is the default target, not a hard ban: inspect another local path on this same PC only when the user explicitly identifies it, usually with run_command for read-only discovery first. Do not scan the whole device by default. Workspace file tools remain workspace-scoped.";
-  }
-  return "Default operating scope: this entire local Windows device. Prioritize the folder(s) currently open in ShunCode whenever they are relevant, but you may inspect other local paths on this same PC without requiring the user to restate the workspace first. Locate the exact path before acting outside the workspace and prefer read-only discovery first when the target is uncertain. Workspace file tools remain workspace-scoped; use run_command for outside-workspace paths.";
+function bridgeWorkspaceScopeInstructions(_scope: BridgeWorkspaceScope): string {
+  return "MCP permissions are enforced per connection. New connections are read-only. File changes require local project permission; terminal/input/output and all custom tools require a separate, time-limited local device grant. Agents cannot grant themselves permission. Project mode is not a terminal sandbox. Use the local ShunCode permissions command for consent.";
 }
 
 function normalizeHttpsHostname(value: string, label: string): string {
@@ -416,7 +413,7 @@ export class BridgeManager implements vscode.Disposable {
   }
 
   private readWorkspaceScope(): BridgeWorkspaceScope {
-    return vscode.workspace.getConfiguration("shuncode").get<string>(BRIDGE_WORKSPACE_SCOPE_SETTING, "device") === "workspace" ? "workspace" : "device";
+    return vscode.workspace.getConfiguration("shuncode").get<string>(BRIDGE_WORKSPACE_SCOPE_SETTING, "workspace") === "workspace" ? "workspace" : "device";
   }
 
   /**

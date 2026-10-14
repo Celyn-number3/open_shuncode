@@ -1,0 +1,8 @@
+* text=auto eol=lf
+*.exe binary
+*.dll binary
+*.pak binary
+*.asar binary
+*.png binary
+*.svg text eol=lf
+extension/legacy/*.js text eol=lf

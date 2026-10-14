@@ -1,0 +1,11 @@
+node_modules/
+.shuncode/
+.codegraph/
+__pycache__/
+*.shuncode-stage
+*.partial
+*.zip
+*.7z
+.env
+.env.*
+!.env.example

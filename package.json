@@ -1,0 +1,16 @@
+{
+  "name": "shuncode-maintenance",
+  "version": "0.7.9",
+  "private": true,
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build:bootstrap": "node tools/build-extension.js --capture-baseline",
+    "build": "node tools/build-extension.js",
+    "build:check": "node tools/build-extension.js --check",
+    "check": "node tools/check-project.js",
+    "test": "node --test test/*.test.js",
+    "verify": "npm run check && npm test && npm run build:check",
+    "sync:app": "node tools/sync-release.js",
+    "package:release": "python tools/package_release.py"
+  }
+}

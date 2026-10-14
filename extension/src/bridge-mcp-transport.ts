@@ -597,7 +597,7 @@ export class BridgeMcpTransport {
       // itself changes, so let shared caches hold it briefly; discovery is
       // even more stable. 2025-era responses are unaffected by these hints.
       cacheHints: {
-        "tools/list": { ttlMs: 60_000, cacheScope: "public" },
+        "tools/list": { ttlMs: 0, cacheScope: "private" },
         "server/discover": { ttlMs: 300_000, cacheScope: "public" },
       },
       // Keep this connection-specific rule beside the MCP metadata it must reach;
