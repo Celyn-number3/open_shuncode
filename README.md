@@ -67,6 +67,25 @@ python tools/build-source-product.py --runtime "D:/ShunCode" --output "E:/an-abs
 
 完整结果、来源、证据和边界见 [下一阶段完成报告](docs/mcp-next-stage-completed.md)。这不代表所有第三方 C/C++ 从源码重编译、原始 TS/注释精确还原、954 条静态候选义务全部关闭或所有付费厂商 API 已验收。模型功能使用本地可控兼容服务验证；稳定版发布另行决定。
 
+### 完成边界一览
+
+状态字段有两层含义，不能互相替代：`firstPartySourceBuild` 表示第一方 JS/TS 确实由仓库源码编译；`fullSourceBuild` 表示**全部依赖**都从源码重编译，当前仍为 `false`，因为 Electron/Chromium 与第三方原生模块复用匹配运行时。
+
+| 维度 | 状态 | 依据 |
+| --- | --- | --- |
+| 扩展 / Agent / MCP 源码重编译 | 完成 | 341 / 50 / 105 个输入，编译输入不含旧 dist/runtime/legacy |
+| 编辑器第一方源码构建 | 完成 | 24 个 desktop bundle、3 个 standalone 文件 |
+| 独立产品组装 | 完成 | `artifacts/source-product-0.7.10-verified`，10,948 个文件校验 |
+| 功能验收（限定范围） | 完成 | 28 项源码回归、35 项维护回归、17 个 GUI 场景；2026-10-26 复核 28/28 与 35/35 |
+| 原始 TS 类型 / 注释 / 提交历史 | 不可恢复 | 产物中不存在，未声称还原 |
+| Electron/Chromium、第三方 native | 复用运行时 | 未从源码重编译 |
+| 954 条 REA 静态候选义务 | 未关闭 | 见 [义务归类](docs/mcp-obligation-triage.md) |
+| 付费厂商模型 API、公共隧道服务 | 未验收 | 仅本地 loopback 兼容服务 |
+| 稳定版发布 | 未进行 | `version.json` 中 `status: development` |
+
+编辑器重建清单 `editor/SHUNCODE_RECONSTRUCTION.json` 的 `validation_status` 只在模块输出哈希与验收时完全一致时保留 `passed`；重新分拆产生任何新输出会自动退回 `pending`，需重新验收后再标记。
+
+
 ## 历史维护基线的可重复增量构建
 
 需要 Node.js 20+；打包另需 Python 3.10+。新增维护工具不依赖第三方 npm 包。

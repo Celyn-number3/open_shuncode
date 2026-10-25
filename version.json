@@ -2,5 +2,9 @@
   "version": "0.7.10",
   "buildEpoch": "2026-10-14T00:00:00.000Z",
   "status": "development",
-  "fullSourceBuild": false
+  "fullSourceBuild": false,
+  "firstPartySourceBuild": true,
+  "productAssembled": true,
+  "releaseCandidate": "0.7.10",
+  "fullSourceBuildNote": "false because Electron/Chromium and third-party native dependencies are reused from the matching runtime; first-party JS/TS is built from repository source. See docs/mcp-next-stage-completed.md."
 }

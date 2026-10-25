@@ -4598,8 +4598,41 @@
     }
   ],
   "unresolved_imports": [],
+  "module_counts": {
+    "recovered-syntax-helpers": 3,
+    "reconstructed-custom-module": 32,
+    "reconstructed-customized-upstream-module": 17,
+    "reconstructed-contribution-wiring": 2
+  },
+  "first_party_editor_source_build": true,
   "full_editor_source_build": false,
-  "validation_status": "pending",
+  "full_editor_source_build_note": "false means Electron/Chromium and third-party native dependencies are reused from the matching runtime, not rebuilt from source. All first-party desktop bundles in this tree were built from source.",
+  "validation_status": "passed",
+  "validation": {
+    "scope": "First-party JS/TS source build plus the owned local-model GUI/MCP scenarios listed in docs/mcp-next-stage-completed.md; third-party Electron/Chromium/native runtime reused.",
+    "validated_at": "2026-10-14",
+    "revalidated_at": "2026-10-26",
+    "desktop_bundles_built": 24,
+    "standalone_files_built": 3,
+    "builtin_extensions_compile_errors": 0,
+    "source_regressions_passed": 28,
+    "maintenance_regressions_passed": 35,
+    "gui_scenarios_passed": 17,
+    "product_files_verified": 10948,
+    "evidence": [
+      "artifacts/source-build/validation/final-stage/final-stage-acceptance.json",
+      "artifacts/source-build/validation/final-stage/final-product-audit.json",
+      "artifacts/source-build/validation/final-stage/gui-integration-verified/gui-integration.json",
+      "artifacts/source-build/validation/final-stage/gui-production-verified/launch-probe.json",
+      "artifacts/source-build/validation/final-stage/source-verify-final.log"
+    ],
+    "not_claimed": [
+      "Original TypeScript types, comments and commit history are not recovered.",
+      "Electron/Chromium and all third-party native dependencies are not rebuilt from source.",
+      "The 954 static candidate obligations from the REA ledger are not closed; see docs/mcp-obligation-triage.md.",
+      "Paid vendor model APIs and public tunnel services are not covered by this validation."
+    ]
+  },
   "limitations": [
     "Source implementations are executable JS reconstructed from preserved esbuild module boundaries; original TS types are not restored.",
     "Official upstream TS is retained for unchanged modules.",
