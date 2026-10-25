@@ -20,7 +20,7 @@
 | 源码回归 | 通过 | 2026-10-26 复核 28/28 |
 | 维护回归 | 通过 | 2026-10-26 复核 35/35 |
 | 来源哈希一致性 | 通过 | `check-provenance-hashes.cjs` 报告 drift 0（6 处已知变更已记录） |
-| 成果已固化 | 完成 | 4 个提交 + `backups/open_shuncode-reconstruction-20261026.bundle`（54 MB，完整历史） |
+| 成果已固化 | 完成 | 5 个提交（`d3bc75b0`…`b0e17511`）+ `backups/open_shuncode-reconstruction-20261026.bundle`（54 MB，完整历史） |
 | 义务范围 | 已归类 | 954 条拆为 918 族级回归 / 22 厂商服务 / 14 无所有者静态候选 |
 
 ## 发布阻塞项
