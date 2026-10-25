@@ -1,7 +1,7 @@
 {
   "schema": 1,
-  "generated_at": "2026-10-25T16:40:49.485Z",
   "ledger_id": "rol_6fb0d4f840ebc77fa321776f4eedeb94223020eb5a96df8dae434d6877083597",
+  "ledger_closure_digest": "a3f4b1f7aca0589504ad4b24db6551a1c57b24ae0fb24396fecd5449f77b315c",
   "ledger_status": "unknown",
   "ledger_verified": 0,
   "total": 954,

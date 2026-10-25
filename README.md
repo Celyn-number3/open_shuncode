@@ -85,6 +85,8 @@ python tools/build-source-product.py --runtime "D:/ShunCode" --output "E:/an-abs
 
 编辑器重建清单 `editor/SHUNCODE_RECONSTRUCTION.json` 的 `validation_status` 只在模块输出哈希与验收时完全一致时保留 `passed`；重新分拆产生任何新输出会自动退回 `pending`，需重新验收后再标记。
 
+发布判断、阻塞项与检查清单见 [0.7.10 发布决策](docs/mcp-v0.7.10-release-decision.md)：当前建议暂缓稳定版，先在最终提交上重跑 GUI 验收。
+
 
 ## 历史维护基线的可重复增量构建
 

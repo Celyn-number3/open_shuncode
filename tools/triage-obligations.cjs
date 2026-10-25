@@ -167,8 +167,8 @@ function main() {
 
 	const summary = {
 		schema: 1,
-		generated_at: new Date().toISOString(),
 		ledger_id: normalized.ledger_id,
+		ledger_closure_digest: normalized.closure_digest,
 		ledger_status: normalized.status,
 		ledger_verified: normalized.summary?.verified ?? 0,
 		total: rows.length,
