@@ -4652,21 +4652,33 @@
     ],
     "final_commit_revalidation": {
       "date": "2026-10-26",
-      "commit": "8341e318",
-      "product": "artifacts/source-product-0.7.10-20261026",
-      "receipt_sha256": "58a9b41a9c3eac295a41d3598092f43d4929ff74ea3dd18a26bf14cbaf6722ad",
-      "files_verified": 10947,
+      "commit": "b8db5585",
+      "product": "artifacts/source-product-0.7.10-20261026d",
+      "receipt_sha256": "6c35d77c51e9b981c5beed952d19a793a91017a176566d99294dbb82d918725b",
+      "files_verified": 10948,
       "files_missing": 0,
       "files_mismatched": 0,
       "integrity_checks": "10/10",
       "gui_scenarios": "17/17",
       "page_errors": 0,
       "exit_code": 0,
+      "release_archive": {
+        "name": "ShunCode-0.7.10-win-x64.zip",
+        "bytes": 598842988,
+        "sha256": "5fc97663ff1d5a5513df098d9873a724164ef7a105ac47bd7a7087b9dfdbc83d",
+        "files": 10949,
+        "packaged_at": "2026-10-26"
+      },
+      "superseded_builds": [
+        "artifacts/source-product-0.7.10-20261026 (10,947 files, verified before the product carried SOURCE_BUILD_INFO.json)",
+        "artifacts/source-product-0.7.10-20261026b (provenance file written to resources/app by mistake)",
+        "artifacts/source-product-0.7.10-20261026c (sourceDirty=true because tooling was uncommitted)"
+      ],
       "evidence": [
-        "artifacts/source-build/validation/final-stage/gui-integration-20261026/gui-integration.json",
-        "artifacts/source-build/validation/final-stage/gui-integration-20261026/editor-source.png",
-        "artifacts/source-product-0.7.10-20261026/SOURCE_PRODUCT_AUDIT.json",
-        "docs/mcp-v0.7.10-final-verification-20261026.md"
+        "artifacts/source-build/validation/final-stage/gui-integration-20261026-final/gui-integration.json",
+        "artifacts/source-product-0.7.10-20261026d/SOURCE_PRODUCT_AUDIT.json",
+        "artifacts/source-product-0.7.10-20261026d/SOURCE_BUILD_INFO.json",
+        "docs/mcp-v0.7.10-release-notes.md"
       ]
     }
   },
