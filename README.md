@@ -8,7 +8,7 @@
 
 - [发行版本与下载](https://github.com/Celyn-number3/open_shuncode/releases)
 - [问题反馈](https://github.com/Celyn-number3/open_shuncode/issues)
-- 仓库当前开发版本：**0.7.10**。未完成编辑器 GUI 验收前，不作为新的稳定版发布。
+- 仓库当前版本：**0.7.11**，2026-10-26 发布，见 [发布说明](docs/mcp-v0.7.11-release-notes.md)。第一方源码构建与产品级 GUI 复验已完成；0.7.10 为旧的增量构建版，仍可下载。
 - 仓库与 Release 的可见性遵循 GitHub 仓库设置；私有仓库需要获得访问权限。
 
 ## 0.7.10 的个人高强度使用权限模型
@@ -65,7 +65,7 @@ python tools/build-source-product.py --runtime "D:/ShunCode" --output "E:/an-abs
 
 需要对应 Windows x64 和 Node.js 24.15.0；输出目录必须不存在。runtime 只用于匹配的第三方 Electron/native/dependency/resource 输入，新第一方代码来自仓库源码。建议用交付目录的 `start-source.cmd`，不要在远程维护中替换或重启当前 Bridge。
 
-完整结果、来源、证据和边界见 [下一阶段完成报告](docs/mcp-next-stage-completed.md)。这不代表所有第三方 C/C++ 从源码重编译、原始 TS/注释精确还原、954 条静态候选义务全部关闭或所有付费厂商 API 已验收。模型功能使用本地可控兼容服务验证；稳定版发布另行决定。
+完整结果、来源、证据和边界见 [下一阶段完成报告](docs/mcp-next-stage-completed.md)。这不代表所有第三方 C/C++ 从源码重编译、原始 TS/注释精确还原、954 条静态候选义务全部关闭或所有付费厂商 API 已验收。模型功能使用本地可控兼容服务验证；0.7.11 已按上述边界发布。
 
 ### 完成边界一览
 
@@ -75,17 +75,17 @@ python tools/build-source-product.py --runtime "D:/ShunCode" --output "E:/an-abs
 | --- | --- | --- |
 | 扩展 / Agent / MCP 源码重编译 | 完成 | 341 / 50 / 105 个输入，编译输入不含旧 dist/runtime/legacy |
 | 编辑器第一方源码构建 | 完成 | 24 个 desktop bundle、3 个 standalone 文件 |
-| 独立产品组装 | 完成 | `artifacts/source-product-0.7.10-verified`，10,948 个文件校验 |
-| 功能验收（限定范围） | 完成 | 28 项源码回归、35 项维护回归；2026-10-26 在提交 `b8db5585` 重跑 17/17 GUI 场景、10,948 个文件复核、完整性 10/10 |
+| 独立产品组装 | 完成 | `artifacts/source-product-0.7.11-20261026`，10,948 个文件逐个复核 |
+| 功能验收（限定范围） | 完成 | 28 项源码回归、35 项维护回归；在提交 `b9ddfd8a` 上 17/17 GUI 场景、10,948 个文件复核、完整性 10/10 |
 | 原始 TS 类型 / 注释 / 提交历史 | 不可恢复 | 产物中不存在，未声称还原 |
 | Electron/Chromium、第三方 native | 复用运行时 | 未从源码重编译 |
 | 954 条 REA 静态候选义务 | 未关闭 | 见 [义务归类](docs/mcp-obligation-triage.md) |
 | 付费厂商模型 API、公共隧道服务 | 未验收 | 仅本地 loopback 兼容服务 |
-| 稳定版发布 | 未进行 | `version.json` 中 `status: development` |
+| 稳定版发布 | 已发布 | 2026-10-26 发布 `v0.7.11`；`version.json` 中 `status: released` |
 
 编辑器重建清单 `editor/SHUNCODE_RECONSTRUCTION.json` 的 `validation_status` 只在模块输出哈希与验收时完全一致时保留 `passed`；重新分拆产生任何新输出会自动退回 `pending`，需重新验收后再标记。
 
-发布判断、阻塞项与检查清单见 [0.7.10 发布决策](docs/mcp-v0.7.10-release-decision.md)：最终提交上的 GUI 复验已完成（17/17），发布包已生成并校验，详见 [发布说明](docs/mcp-v0.7.10-release-notes.md) 与 [最终提交复验](docs/mcp-v0.7.10-final-verification-20261026.md)。
+发布判断、阻塞项与检查清单见 [0.7.11 发布决策](docs/mcp-v0.7.11-release-decision.md)，产物与校验值见 [发布说明](docs/mcp-v0.7.11-release-notes.md)，复验过程见 [最终提交复验](docs/mcp-v0.7.11-final-verification-20261026.md)。
 
 
 ## 历史维护基线的可重复增量构建

@@ -4652,9 +4652,10 @@
     ],
     "final_commit_revalidation": {
       "date": "2026-10-26",
-      "commit": "b8db5585",
-      "product": "artifacts/source-product-0.7.10-20261026d",
-      "receipt_sha256": "6c35d77c51e9b981c5beed952d19a793a91017a176566d99294dbb82d918725b",
+      "version": "0.7.11",
+      "commit": "b9ddfd8a",
+      "product": "artifacts/source-product-0.7.11-20261026",
+      "receipt_sha256": "cd21f5238b0078f31a8b42adba6b00210371e59df1f7fc5c4d2ab8099e96a6fd",
       "files_verified": 10948,
       "files_missing": 0,
       "files_mismatched": 0,
@@ -4663,22 +4664,23 @@
       "page_errors": 0,
       "exit_code": 0,
       "release_archive": {
-        "name": "ShunCode-0.7.10-win-x64.zip",
-        "bytes": 598842988,
-        "sha256": "5fc97663ff1d5a5513df098d9873a724164ef7a105ac47bd7a7087b9dfdbc83d",
+        "name": "ShunCode-0.7.11-win-x64.zip",
+        "bytes": 598842980,
+        "sha256": "e52998b486caaebd46ca90fb7bfb76b261908aa2358af8753b9c33b37e1e7630",
         "files": 10949,
         "packaged_at": "2026-10-26"
       },
       "superseded_builds": [
-        "artifacts/source-product-0.7.10-20261026 (10,947 files, verified before the product carried SOURCE_BUILD_INFO.json)",
-        "artifacts/source-product-0.7.10-20261026b (provenance file written to resources/app by mistake)",
-        "artifacts/source-product-0.7.10-20261026c (sourceDirty=true because tooling was uncommitted)"
+        "artifacts/source-product-0.7.10-20261026 (10,947 files, before the product carried SOURCE_BUILD_INFO.json)",
+        "artifacts/source-product-0.7.10-20261026b (provenance written to resources/app by mistake)",
+        "artifacts/source-product-0.7.10-20261026c (sourceDirty=true)",
+        "artifacts/source-product-0.7.10-20261026d (verified as 0.7.10; superseded by the 0.7.11 version bump)"
       ],
       "evidence": [
-        "artifacts/source-build/validation/final-stage/gui-integration-20261026-final/gui-integration.json",
-        "artifacts/source-product-0.7.10-20261026d/SOURCE_PRODUCT_AUDIT.json",
-        "artifacts/source-product-0.7.10-20261026d/SOURCE_BUILD_INFO.json",
-        "docs/mcp-v0.7.10-release-notes.md"
+        "artifacts/source-build/validation/final-stage/gui-integration-0.7.11/gui-integration.json",
+        "artifacts/source-product-0.7.11-20261026/SOURCE_PRODUCT_AUDIT.json",
+        "artifacts/source-product-0.7.11-20261026/SOURCE_BUILD_INFO.json",
+        "docs/mcp-v0.7.11-release-notes.md"
       ]
     }
   },
