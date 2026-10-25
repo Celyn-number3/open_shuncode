@@ -76,7 +76,7 @@ python tools/build-source-product.py --runtime "D:/ShunCode" --output "E:/an-abs
 | 扩展 / Agent / MCP 源码重编译 | 完成 | 341 / 50 / 105 个输入，编译输入不含旧 dist/runtime/legacy |
 | 编辑器第一方源码构建 | 完成 | 24 个 desktop bundle、3 个 standalone 文件 |
 | 独立产品组装 | 完成 | `artifacts/source-product-0.7.10-verified`，10,948 个文件校验 |
-| 功能验收（限定范围） | 完成 | 28 项源码回归、35 项维护回归、17 个 GUI 场景；2026-10-26 复核 28/28 与 35/35 |
+| 功能验收（限定范围） | 完成 | 28 项源码回归、35 项维护回归；2026-10-26 在最终提交 `8341e318` 重跑 17/17 GUI 场景、10,947 个文件复核、完整性 10/10 |
 | 原始 TS 类型 / 注释 / 提交历史 | 不可恢复 | 产物中不存在，未声称还原 |
 | Electron/Chromium、第三方 native | 复用运行时 | 未从源码重编译 |
 | 954 条 REA 静态候选义务 | 未关闭 | 见 [义务归类](docs/mcp-obligation-triage.md) |
@@ -85,7 +85,7 @@ python tools/build-source-product.py --runtime "D:/ShunCode" --output "E:/an-abs
 
 编辑器重建清单 `editor/SHUNCODE_RECONSTRUCTION.json` 的 `validation_status` 只在模块输出哈希与验收时完全一致时保留 `passed`；重新分拆产生任何新输出会自动退回 `pending`，需重新验收后再标记。
 
-发布判断、阻塞项与检查清单见 [0.7.10 发布决策](docs/mcp-v0.7.10-release-decision.md)：当前建议暂缓稳定版，先在最终提交上重跑 GUI 验收。
+发布判断、阻塞项与检查清单见 [0.7.10 发布决策](docs/mcp-v0.7.10-release-decision.md)：最终提交上的 GUI 复验已完成（17/17），发布只待维护者确认默认权限与披露文字，详见 [最终提交复验](docs/mcp-v0.7.10-final-verification-20261026.md)。
 
 
 ## 历史维护基线的可重复增量构建

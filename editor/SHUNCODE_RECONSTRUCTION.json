@@ -4649,7 +4649,26 @@
       "Electron/Chromium and all third-party native dependencies are not rebuilt from source.",
       "The 954 static candidate obligations from the REA ledger are not closed; see docs/mcp-obligation-triage.md.",
       "Paid vendor model APIs and public tunnel services are not covered by this validation."
-    ]
+    ],
+    "final_commit_revalidation": {
+      "date": "2026-10-26",
+      "commit": "8341e318",
+      "product": "artifacts/source-product-0.7.10-20261026",
+      "receipt_sha256": "58a9b41a9c3eac295a41d3598092f43d4929ff74ea3dd18a26bf14cbaf6722ad",
+      "files_verified": 10947,
+      "files_missing": 0,
+      "files_mismatched": 0,
+      "integrity_checks": "10/10",
+      "gui_scenarios": "17/17",
+      "page_errors": 0,
+      "exit_code": 0,
+      "evidence": [
+        "artifacts/source-build/validation/final-stage/gui-integration-20261026/gui-integration.json",
+        "artifacts/source-build/validation/final-stage/gui-integration-20261026/editor-source.png",
+        "artifacts/source-product-0.7.10-20261026/SOURCE_PRODUCT_AUDIT.json",
+        "docs/mcp-v0.7.10-final-verification-20261026.md"
+      ]
+    }
   },
   "limitations": [
     "Source implementations are executable JS reconstructed from preserved esbuild module boundaries; original TS types are not restored.",
