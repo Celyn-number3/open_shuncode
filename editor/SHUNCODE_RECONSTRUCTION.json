@@ -1913,7 +1913,7 @@
       "classification": "reconstructed-customized-upstream-module",
       "indexed_nls_messages_restored": 15,
       "original_upstream_sha256": "41b151898ed5388ab35d3e3617b15d4faedfd3cc894fb3d6c69814ce6451eb6c",
-      "output_sha256": "add60284c6f36268e561e9aaee22fe2b3b8c4cd11e45a4a2e021db8ffcc1a757",
+      "output_sha256": "f1b0cbc585ef270e40008cef670aa169ad9c9796db4957cae89affabad71a6f4",
       "source_ranges": [
         {
           "start": 20876046,
@@ -1995,6 +1995,9 @@
         "layoutChatWidgetForInputHeight",
         "MIN_LIST_HEIGHT",
         "$"
+      ],
+      "reconstruction_deltas": [
+        "ChatPetWidget is constructed with input-content, focus and content-change observables so the pet reflects input state; the pre-change copy is kept as chatWidget-before-pet-api.ts."
       ]
     },
     {
@@ -2169,7 +2172,7 @@
       "classification": "reconstructed-customized-upstream-module",
       "indexed_nls_messages_restored": 321,
       "original_upstream_sha256": "f081f01fae4cbc8b89fa7671e3f502c71beab2f139188cbab6081a0cf3a7d7d2",
-      "output_sha256": "cc662d33378be326c8f1a21a91d3559cf443cc880a38cc91e6dd19a357137c00",
+      "output_sha256": "847745b0d5c2de3b01991ba57856d54ca541af41cc3bd1073ef85ead700e0b5a",
       "source_ranges": [
         {
           "start": 25895575,
@@ -3278,6 +3281,9 @@
         "ChatSpeechToTextInitContribution",
         "jsonContributionRegistry",
         "configurationRegistry"
+      ],
+      "reconstruction_deltas": [
+        "Re-added the pinned upstream AI customization workspace service, harness service, management contribution and items model registrations, resolving UNKNOWN service and command-not-found during GUI acceptance (docs/mcp-next-stage-completed.md)."
       ]
     },
     {
@@ -3620,7 +3626,7 @@
       "classification": "reconstructed-customized-upstream-module",
       "indexed_nls_messages_restored": 0,
       "original_upstream_sha256": "3716765b303957e509c4a72152a98dd457c2924ec38d86449d8dc1ab2097dc47",
-      "output_sha256": "f708d43f76a709d824ae82da8b3afb3a0cc68917f3114432deeeb02eaab5570c",
+      "output_sha256": "212115e760528af371535dde962d260e6fbc8e1ebea900b037539875a362dcfe",
       "source_ranges": [
         {
           "start": 18142890,
@@ -3646,6 +3652,9 @@
         "isGlowingVoiceState",
         "readVoiceGlowIntensity",
         "computeVoiceGlowStyle"
+      ],
+      "reconstruction_deltas": [
+        "Retained upstream glow exports are re-exported through voiceGlowTheme.ts so the shipped legacy glow behaviour keeps executing (docs/mcp-source-recovery-resume.md)."
       ]
     },
     {
@@ -4263,7 +4272,7 @@
       "classification": "reconstructed-customized-upstream-module",
       "indexed_nls_messages_restored": 0,
       "original_upstream_sha256": "6dd7c5b74246e362edc569c088e391f074edfb7379ecfdf832343798e5069f22",
-      "output_sha256": "fbe2fe3b9dc92f5eba60a508f004455afb2877b589dc6ca6d92a67f1f749a716",
+      "output_sha256": "fca888632a59d53da591c1dcb5f08caf8ef14951b11f0e8fe530c45bbff31629",
       "source_ranges": [
         {
           "start": 31190791,
@@ -4282,6 +4291,9 @@
       "exports": [
         "ARCHIVE_SESSION_COMMAND_ID",
         "UNARCHIVE_SESSION_COMMAND_ID"
+      ],
+      "reconstruction_deltas": [
+        "Restored upstream RENAME_SESSION_COMMAND_ID alongside the recovered archive/unarchive command ids (docs/mcp-source-recovery-resume.md)."
       ]
     },
     {
@@ -4589,12 +4601,18 @@
     {
       "module": "src/vs/workbench/workbench.desktop.main.ts",
       "classification": "reconstructed-contribution-wiring",
-      "output_sha256": "0db75665efc8f1b2b4715d8db6f997cb1afda1f86a1c89c779e930a8c40e47b3"
+      "output_sha256": "f56fdb024507a02369b8b41b4ff14acd71aba21a706cfed30b14202db21ef2b5",
+      "reconstruction_deltas": [
+        "Entry point prepends imports for reconstructed contribution modules during the port step (reconstructed-contribution-wiring)."
+      ]
     },
     {
       "module": "src/vs/sessions/sessions.desktop.main.ts",
       "classification": "reconstructed-contribution-wiring",
-      "output_sha256": "bc24738eb2b0badc9edfd199a40acad50bde3fa436e94223cb5d7b3b6a40006b"
+      "output_sha256": "74fb6a991dd7f3cc3088feda0b53b4ee2405285f9537c1a5da150b56f74e7b6e",
+      "reconstruction_deltas": [
+        "Entry point prepends imports for reconstructed contribution modules during the port step (reconstructed-contribution-wiring)."
+      ]
     }
   ],
   "unresolved_imports": [],
