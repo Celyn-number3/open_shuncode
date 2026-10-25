@@ -2,7 +2,7 @@
   "name": "shuncode",
   "displayName": "ShunCode",
   "description": "Open-source native Chat/Agent + remote MCP Bridge for the ShunCode Code-OSS editor.",
-  "version": "0.7.10",
+  "version": "0.7.11",
   "publisher": "shuncode",
   "license": "MIT",
   "repository": {
