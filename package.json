@@ -2,7 +2,9 @@
   "name": "shuncode-maintenance",
   "version": "0.7.10",
   "private": true,
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "build:bootstrap": "node tools/build-extension.js --capture-baseline",
     "build": "node tools/build-extension.js",
@@ -11,6 +13,26 @@
     "test": "node --test test/*.test.js",
     "verify": "npm run check && npm test && npm run build:check",
     "sync:app": "node tools/sync-release.js",
-    "package:release": "python tools/package_release.py"
+    "package:release": "python tools/package_release.py",
+    "build:source:extension": "node tools/build-source-extension.cjs",
+    "build:source:runtimes": "node tools/build-source-extension.cjs --runtimes-only",
+    "build:editor:upstream": "npm --prefix editor run compile-client",
+    "typecheck:source:extension": "tsc -p extension/tsconfig.source.json",
+    "test:source": "node --test test/source-recovery.test.cjs test/source-extension-integration.test.cjs test/source-editor-compat.test.cjs test/source-contracts.test.cjs",
+    "verify:source:extension": "npm run typecheck:source:extension && npm run build:source:extension && npm run test:source",
+    "build:source:product": "python tools/build-source-product.py"
+  },
+  "devDependencies": {
+    "esbuild": "0.27.0",
+    "typescript": "5.9.3",
+    "@types/node": "24.10.1"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.24.3",
+    "zod": "3.25.76",
+    "ws": "8.18.3",
+    "@modelcontextprotocol/server": "2.3.1",
+    "@modelcontextprotocol/node": "2.1.1",
+    "https-proxy-agent": "7.0.6"
   }
 }

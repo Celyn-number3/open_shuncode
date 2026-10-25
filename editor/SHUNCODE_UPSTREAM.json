@@ -1,0 +1,7 @@
+{
+  "repository": "https://github.com/microsoft/vscode.git",
+  "tag": "1.132.0",
+  "commit": "df53daabb18cd157bdb08c7f01c34df936cf12f4",
+  "source_archive_sha256": "839e64034892e272d765d769e4db25c6616ecfa662b55fbe0e28f86139ab2ee0",
+  "customization_status": "not-integrated-yet"
+}

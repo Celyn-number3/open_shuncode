@@ -1,4 +1,4 @@
-import { bridgeOwnerFromIdentity, MODERN_COMMAND_OWNER_PREFIX, MODERN_TASK_OWNER_PREFIX, type BridgeClientIdentity } from "../../../src/bridge-task-owner.js";
+import { bridgeOwnerFromIdentity, MODERN_COMMAND_OWNER_PREFIX, MODERN_TASK_OWNER_PREFIX, type BridgeClientIdentity } from "../../src/bridge-task-owner.js";
 import type { IncomingMessage, ServerResponse } from "node:http";
 import { createMcpHandler, isLegacyRequest } from "@modelcontextprotocol/server";
 import { toNodeHandler } from "@modelcontextprotocol/node";

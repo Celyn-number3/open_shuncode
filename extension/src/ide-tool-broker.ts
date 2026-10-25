@@ -4,7 +4,7 @@ import os from "node:os";
 import path from "node:path";
 import { StringDecoder } from "node:string_decoder";
 import * as vscode from "vscode";
-import { IDE_TOOL_DEFINITIONS, getIdeToolDefinition } from "../../../src/ide-tool-definitions.js";
+import { IDE_TOOL_DEFINITIONS, getIdeToolDefinition } from "../../src/ide-tool-definitions.js";
 import {
   ManagedCommandCanceller,
   NATIVE_MANAGED_COMMAND_OWNER_ID,
@@ -12,10 +12,10 @@ import {
   managedCommandNotAccessibleError,
   type ManagedCommandCancellationPreview,
   type ManagedCommandCancellationTarget,
-} from "../../../src/managed-command-cancellation.js";
-import { createManagedCommandId, normalizeManagedCommandId } from "../../../src/managed-command-id.js";
-import { managedCommandStateIdsToPrune } from "../../../src/managed-command-retention.js";
-import { isManagedTerminalIdleExpired, managedTerminalIdleDelay } from "../../../src/managed-terminal-lifecycle.js";
+} from "../../src/managed-command-cancellation.js";
+import { createManagedCommandId, normalizeManagedCommandId } from "../../src/managed-command-id.js";
+import { managedCommandStateIdsToPrune } from "../../src/managed-command-retention.js";
+import { isManagedTerminalIdleExpired, managedTerminalIdleDelay } from "../../src/managed-terminal-lifecycle.js";
 import { invokeLspTool } from "./lsp-tool.js";
 
 const COMMON_EXCLUDES = new Set([".git", "node_modules", "dist", "build", "coverage", ".next", "target", "vendor"]);
@@ -532,7 +532,13 @@ class ManagedCommandPseudoterminal implements vscode.Pseudoterminal, vscode.Disp
   }
 
   private async startPersistentShell(): Promise<void> {
-    await this.openPromise;
+    // Background MCP callers must not wait indefinitely for the renderer to
+    // open a pseudoterminal tab. Default dimensions are valid for node-pty;
+    // the later VS Code open/dimensions callback still updates the display.
+    await new Promise<void>((resolve) => {
+      const timer = setTimeout(resolve, 1_500);
+      void this.openPromise.then(() => { clearTimeout(timer); resolve(); });
+    });
     if (this.disposed) throw new Error("The ShunCode managed terminal is closed.");
     const shell = managedShellSpec(this.protocolToken);
     this.shellKind = shell.kind;

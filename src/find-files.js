@@ -1,0 +1,3 @@
+// Evidence-based JavaScript source facade. Original TS types are not claimed recovered.
+// See src/recovered/extension/provenance.json for statement-level source provenance.
+export { DEFAULT_FIND_FILES_CONFIG, FindFilesError, MACOS_PROTECTED_VOLUME_GLOBS, buildRipgrepArgs, canonicalRoots2, displayPath, enrichFiles, findFiles, findWithNode, findWithPreferredEngine, formatFindFilesForModel, gitignoreMatches, isHiddenPath, isInsideRoot2, loadRootGitignore, mapWithConcurrency, matchesAny, matchesGlob, matchesScopedAny, normalizeError2, normalizeInput, planInvalidGlobRetry, resolveSafeScope, rgPath, ripgrepCandidates, toRipgrepFailure, tryFindWithRipgrep, validateGlob } from "./recovered/extension/modules/src/find-files.mjs";

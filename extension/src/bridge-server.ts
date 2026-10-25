@@ -10,10 +10,10 @@ import { execFile, spawn, type ChildProcessWithoutNullStreams } from "node:child
 import path from "node:path";
 import { promisify } from "node:util";
 import * as vscode from "vscode";
-import { deleteCustomTool, toggleCustomTool } from "../../../src/custom-tool-admin.js";
-import { migrateLegacySkillDirs } from "../../../src/custom-tool-migration.js";
-import { generateSkillRunner, importSkill, type SkillImportResult, type SkillRunnerResult } from "../../../src/custom-tool-skill-import.js";
-import { diagnoseSkillTools, type SkillLoadDiagnosis } from "../../../src/custom-tool-skill.js";
+import { deleteCustomTool, toggleCustomTool } from "../../src/custom-tool-admin.js";
+import { migrateLegacySkillDirs } from "../../src/custom-tool-migration.js";
+import { generateSkillRunner, importSkill, type SkillImportResult, type SkillRunnerResult } from "../../src/custom-tool-skill-import.js";
+import { diagnoseSkillTools, type SkillLoadDiagnosis } from "../../src/custom-tool-skill.js";
 import {
   CUSTOM_TOOLS_DIR_NAME,
   customToolsFingerprint,
@@ -22,7 +22,7 @@ import {
   toStatusEntries,
   type CustomToolStatusEntry,
   type CustomToolManifest,
-} from "../../../src/custom-tools.js";
+} from "../../src/custom-tools.js";
 import type { IdeToolBroker } from "./ide-tool-broker.js";
 import { fetchWithExtensionHostFallbacks, resolveExtensionHostProxy } from "./extension-host-proxy.mjs";
 import { acquireBridgeTunnelLease, bridgeTunnelLeaseResources, clearTunnelOwnership, isBridgeTunnelLeaseConflict, reclaimStaleTunnelOwner, recordTunnelOwnership } from "./bridge-tunnel-lease.js";

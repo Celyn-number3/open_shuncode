@@ -1,3 +1,4 @@
+import { sourceBuildInfo } from "./source-build-info.js";
 import * as vscode from "vscode";
 import { registerBridgeSecurity } from "./bridge-security.js";
 import { BridgeAccessController } from "./bridge-access-controller.js";
@@ -55,7 +56,7 @@ export function activate(context: vscode.ExtensionContext): void {
   const ideToolBroker = new IdeToolBroker();
   // Open-source edition: Bridge is always available (no license, activation or payment checks).
   const bridge = new BridgeManager(context, output, ideToolBroker, async () => {});
-  registerBridgeSecurity(vscode, context, bridge, require("../dist/build-info.json"));
+  registerBridgeSecurity(vscode, context, bridge, sourceBuildInfo);
   const bridgeAccess = new BridgeAccessController(bridge);
   activeBridge = bridge;
   const bridgeReady = bridge.initialize();

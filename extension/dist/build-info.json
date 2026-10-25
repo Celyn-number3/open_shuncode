@@ -1,10 +1,10 @@
 {
   "version": "0.7.10",
-  "sourceRevision": "83ea85b46577ae0684cac9bfaf51e9c538c6a59c",
-  "sourceHash": "f6e2c561e18e71eb7f73d0772905ac715456fbd6d5c9a4e96ad433fd43202013",
+  "sourceRevision": "19bf489275681c4ffc800ae61b392f18425acec8",
+  "sourceHash": "e5dcdee13b7b9ef4671dd964ab7a1f1e27ca41a04e429e533f21b1462f8f0023",
   "builtAt": "2026-10-14T00:00:00.000Z",
   "release": false,
-  "sourceDirty": false,
+  "sourceDirty": true,
   "buildKind": "audited-legacy-augmentation",
   "fullSourceBuild": false
 }

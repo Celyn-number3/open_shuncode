@@ -1,0 +1,3 @@
+// Evidence-based JavaScript source facade. Original TS types are not claimed recovered.
+// See src/recovered/extension/provenance.json for statement-level source provenance.
+export { APPLY_PATCH_TOOL, FILE_TOOL_DEFINITIONS, FILE_TOOL_ERROR_TAGS, FILE_TOOL_NAMES, FIND_FILES_TOOL, READ_FILES_TOOL, READ_IMAGE_TOOL, SEARCH_FILES_TOOL, asObjectRow, assertOptionalBooleans, assertOptionalIntegers, assertOptionalNonEmptyString, assertOptionalStringArrays, buildFileToolErrorResult, dispatchFileTool, invokeFileTool, isFileToolName, parseApplyPatchInput, parseFindFilesInput, parseReadFilesInput, parseReadImageInput, parseSearchFilesInput, resolveFileToolErrorCode } from "./recovered/extension/modules/src/file-tool-registry.mjs";

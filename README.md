@@ -51,7 +51,23 @@
 
 MCP URL 包含访问凭证，不要公开分享。日志会对常见 token、Bearer 认证和密钥字段脱敏，但不应把任意终端输出视为绝对安全的日志。内置模型需要相应 API Key 或账号，模型服务可能收费。Windows 安全提示并不证明程序安全或恶意，应核对来源和校验值。
 
-## 可重复的增量构建
+## 第一方源码构建与功能验收
+
+重建分支已打通第一方 JavaScript/TypeScript 的独立源码构建、Windows 产品组装和指定本地 GUI/MCP 验收。严格扩展类型检查、28 项源码回归、35 项维护回归与 17 项真实 GUI 场景通过，REA/Wakaru 恢复输出的链接修复也有独立运行证据。
+
+```bash
+npm ci
+npm --prefix editor ci --include=optional
+npm --prefix editor/build ci
+npm run verify:source:extension
+python tools/build-source-product.py --runtime "D:/ShunCode" --output "E:/an-absent-owned-output"
+```
+
+需要对应 Windows x64 和 Node.js 24.15.0；输出目录必须不存在。runtime 只用于匹配的第三方 Electron/native/dependency/resource 输入，新第一方代码来自仓库源码。建议用交付目录的 `start-source.cmd`，不要在远程维护中替换或重启当前 Bridge。
+
+完整结果、来源、证据和边界见 [下一阶段完成报告](docs/mcp-next-stage-completed.md)。这不代表所有第三方 C/C++ 从源码重编译、原始 TS/注释精确还原、954 条静态候选义务全部关闭或所有付费厂商 API 已验收。模型功能使用本地可控兼容服务验证；稳定版发布另行决定。
+
+## 历史维护基线的可重复增量构建
 
 需要 Node.js 20+；打包另需 Python 3.10+。新增维护工具不依赖第三方 npm 包。
 
@@ -74,9 +90,9 @@ python tools/package_release.py --app "D:/path/to/app" --output "D:/releases/Shu
 
 ## 构建限制（重要）
 
-**本仓库目前不是完整的 Code-OSS 源码发行树。** 27 个共享模块、工作台定制源码以及 Agent/MCP 运行时的完整源码仍缺失。
+当前仓库包含锁定上游的编辑器源码、标注来源的重建 JavaScript 和推导类型契约。第一方源码编译与报告列出的独立产品/GUI 验收已完成；推导类型并非原始 TypeScript，反编译结果不自动证明完整行为等价。
 
-当前流程是可重复的 **已审计基线增量构建**，不是从全部源码独立编译：新增权限模块是可维护的 JavaScript 源码，激活入口的 TypeScript 参考同步更新；遗留预编译产物仍明确保留。不能凭此宣称完整源码构建已完成，也不能用命令字符串过滤代替终端沙箱。
+Electron/Chromium、第三方原生模块与运行依赖仍复用匹配的运行时或锁定包，不宣称全部第三方原始源码重建。历史 `npm run build` / `verify` 仍为 **已审计基线增量流程**，与新的 `build:source:product` 分开，不把遗留产物当作新源码编译输入。终端权限仍不是操作系统沙箱。
 
 详情见 [安全说明](docs/SECURITY.md)、[发布流程](docs/RELEASING.md)、[永久权限说明](docs/mcp-v0.7.10-permanent-permissions.md)（0.7.9 报告保留为历史记录）。
 

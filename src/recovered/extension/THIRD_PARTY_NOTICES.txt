@@ -1,0 +1,16 @@
+/**
+   * Signs in with Gitee using the OAuth authorization-code flow. A browser
+   * window opens gitee.com/oauth/authorize and the code is delivered to a
+   * local loopback callback, then exchanged by the license server (the
+   * Gitee client secret never leaves the server).
+   */
+
+/*! Bundled license information:
+
+@modelcontextprotocol/server/dist/src-CX2iR2pK.mjs:
+  (*!
+  * content-type
+  * Copyright(c) 2015 Douglas Christopher Wilson
+  * MIT Licensed
+  *)
+*/

@@ -1,21 +1,21 @@
-import { BridgeTaskStore } from "../../../src/bridge-task-store.js";
-import { ideToolStructuredContent } from "../../../src/ide-tool-output.js";
-import { BridgeActivityTracker, type BridgeActivitySnapshot } from "../../../src/bridge-activity-tracker.js";
-import { parseBridgePlan, parseBridgeProgress, parseBridgeTodos } from "../../../src/bridge-coordination-validation.js";
-import { executeCustomTool, findCustomTool, type CustomToolManifest } from "../../../src/custom-tools.js";
-import { resolveBridgeToolName } from "../../../src/bridge-tool-name.js";
-import { BridgeUsageCounter } from "../../../src/bridge-usage-counter.js";
+import { BridgeTaskStore } from "../../src/bridge-task-store.js";
+import { ideToolStructuredContent } from "../../src/ide-tool-output.js";
+import { BridgeActivityTracker, type BridgeActivitySnapshot } from "../../src/bridge-activity-tracker.js";
+import { parseBridgePlan, parseBridgeProgress, parseBridgeTodos } from "../../src/bridge-coordination-validation.js";
+import { executeCustomTool, findCustomTool, type CustomToolManifest } from "../../src/custom-tools.js";
+import { resolveBridgeToolName } from "../../src/bridge-tool-name.js";
+import { BridgeUsageCounter } from "../../src/bridge-usage-counter.js";
 import {
   isFileToolCompatibilityAlias,
   normalizeFileToolInput,
   normalizeFileToolName,
-} from "../../../src/file-tool-input-compat.js";
-import { invokeFileTool, isFileToolName, type ToolContentBlock } from "../../../src/file-tool-registry.js";
-import { BRIDGE_EXCLUDED_TOOL_NAMES, getIdeToolDefinition } from "../../../src/ide-tool-definitions.js";
-import { NATIVE_MANAGED_COMMAND_OWNER_ID } from "../../../src/managed-command-cancellation.js";
-import { validateToolInput } from "../../../src/tool-input-validation.js";
-import { Semaphore } from "../../../src/concurrency.js";
-import { AdaptiveConcurrencyController } from "../../../src/adaptive-concurrency.js";
+} from "../../src/file-tool-input-compat.js";
+import { invokeFileTool, isFileToolName, type ToolContentBlock } from "../../src/file-tool-registry.js";
+import { BRIDGE_EXCLUDED_TOOL_NAMES, getIdeToolDefinition } from "../../src/ide-tool-definitions.js";
+import { NATIVE_MANAGED_COMMAND_OWNER_ID } from "../../src/managed-command-cancellation.js";
+import { validateToolInput } from "../../src/tool-input-validation.js";
+import { Semaphore } from "../../src/concurrency.js";
+import { AdaptiveConcurrencyController } from "../../src/adaptive-concurrency.js";
 import {
   BRIDGE_TOOL_DEFINITIONS,
   DEFAULT_BRIDGE_TOOL_CONCURRENCY,

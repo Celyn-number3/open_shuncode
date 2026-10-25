@@ -1,9 +1,9 @@
-import type { BridgeTaskSnapshot } from "../../../src/bridge-task-store.js";
-import type { CustomToolStatusEntry } from "../../../src/custom-tools.js";
+import type { BridgeTaskSnapshot } from "../../src/bridge-task-store.js";
+import type { CustomToolStatusEntry } from "../../src/custom-tools.js";
 
-import { FILE_TOOL_DEFINITIONS } from "../../../src/file-tool-registry.js";
+import { FILE_TOOL_DEFINITIONS } from "../../src/file-tool-registry.js";
 
-import { BRIDGE_EXCLUDED_TOOL_NAMES, IDE_TOOL_DEFINITIONS } from "../../../src/ide-tool-definitions.js";
+import { BRIDGE_EXCLUDED_TOOL_NAMES, IDE_TOOL_DEFINITIONS } from "../../src/ide-tool-definitions.js";
 
 export const MAX_REQUEST_BYTES = 8 * 1024 * 1024;
 export const MAX_ACTIVITY = 60;

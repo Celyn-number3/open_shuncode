@@ -46,7 +46,7 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 var define_SHUNCODE_BUILD_INFO_default;
 var init_define_SHUNCODE_BUILD_INFO = __esm({
   "<define:__SHUNCODE_BUILD_INFO__>"() {
-    define_SHUNCODE_BUILD_INFO_default = {"version":"0.7.10","gitSha":"83ea85b46577ae0684cac9bfaf51e9c538c6a59c","builtAt":"2026-10-14T00:00:00.000Z","release":false};
+    define_SHUNCODE_BUILD_INFO_default = {"version":"0.7.10","gitSha":"19bf489275681c4ffc800ae61b392f18425acec8","builtAt":"2026-10-14T00:00:00.000Z","release":false};
   }
 });
 

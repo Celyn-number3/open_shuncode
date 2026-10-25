@@ -1,0 +1,4608 @@
+{
+  "schema": 1,
+  "upstream_tag": "1.132.0",
+  "modules": [
+    {
+      "module": "src/vs/base/common/shunCodeRecoveredHelpersWorkbench.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "recovered-syntax-helpers",
+      "output_sha256": "2b7260a5bfcc8f6f91e8b1636ef9e0232d5fa1ba7ae2a74734e8915fda7486f9",
+      "reconstruction_deltas": [
+        "Deduplicated named exports of recovered tslib helper declarations."
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/chatBranchService.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "e173978b478ab7e73871466289d4afd3f3f9a4e1271a41031fa6e7c664635226",
+      "source_ranges": [
+        {
+          "start": 17707481,
+          "end": 17707543,
+          "start_line": 450509,
+          "end_line": 450509
+        },
+        {
+          "start": 17707544,
+          "end": 17717843,
+          "start_line": 450510,
+          "end_line": 450775
+        },
+        {
+          "start": 17717844,
+          "end": 17717942,
+          "start_line": 450776,
+          "end_line": 450778
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "IChatBranchService",
+        "ChatBranchService"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/shunCodeChatToolProgressPart.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 11,
+      "original_upstream_sha256": null,
+      "output_sha256": "4082707ff51e93b3b4737af8c3a28909e9eb2b02c01f8f7bd19e62a620f14da0",
+      "source_ranges": [
+        {
+          "start": 20326948,
+          "end": 20327052,
+          "start_line": 514650,
+          "end_line": 514652
+        },
+        {
+          "start": 20327053,
+          "end": 20327253,
+          "start_line": 514653,
+          "end_line": 514657
+        },
+        {
+          "start": 20327254,
+          "end": 20327647,
+          "start_line": 514658,
+          "end_line": 514675
+        },
+        {
+          "start": 20327648,
+          "end": 20336484,
+          "start_line": 514676,
+          "end_line": 514821
+        },
+        {
+          "start": 20336485,
+          "end": 20336643,
+          "start_line": 514822,
+          "end_line": 514825
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "messageText",
+        "formatDuration",
+        "presentationIcon",
+        "ShunCodeChatToolProgressPart"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/common/chatService/shunCodeSharedChat.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "8d1f8950ff843d3b22c74d0a1d3ed0b226f51e723258dd270115a7825f03ff73",
+      "source_ranges": [
+        {
+          "start": 22056096,
+          "end": 22056161,
+          "start_line": 556892,
+          "end_line": 556892
+        },
+        {
+          "start": 22056162,
+          "end": 22061928,
+          "start_line": 556893,
+          "end_line": 557027
+        },
+        {
+          "start": 22061929,
+          "end": 22062109,
+          "start_line": 557028,
+          "end_line": 557032
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "SHUNCODE_SHARED_CHAT_SETTING",
+        "ShunCodeSharedChat"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/actions/chatBranchActions.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 5,
+      "original_upstream_sha256": null,
+      "output_sha256": "98273c92fc9f61cd37da67c95a4d67f7dce474cdd421100ba204e99d642ea87f",
+      "source_ranges": [
+        {
+          "start": 22842610,
+          "end": 22843026,
+          "start_line": 576433,
+          "end_line": 576445
+        },
+        {
+          "start": 22843027,
+          "end": 22844648,
+          "start_line": 576446,
+          "end_line": 576495
+        },
+        {
+          "start": 22844649,
+          "end": 22846113,
+          "start_line": 576496,
+          "end_line": 576541
+        },
+        {
+          "start": 22846114,
+          "end": 22847300,
+          "start_line": 576542,
+          "end_line": 576577
+        },
+        {
+          "start": 22847301,
+          "end": 22848632,
+          "start_line": 576578,
+          "end_line": 576617
+        },
+        {
+          "start": 22848633,
+          "end": 22849070,
+          "start_line": 576618,
+          "end_line": 576632
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "getBranchRowContext",
+        "ChatBranchNavigateAction",
+        "ChatBranchMergeAction",
+        "ChatBranchAdoptAction",
+        "ChatBranchDeleteAction",
+        "registerChatBranchActions"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/actions/shunCodeSharedChatActions.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "ff0530a14f19bab13c206c4e31390f266e4c799c2fffd6833ba3bce29cf8d8c8",
+      "source_ranges": [
+        {
+          "start": 23539621,
+          "end": 23541450,
+          "start_line": 594218,
+          "end_line": 594244
+        },
+        {
+          "start": 23541451,
+          "end": 23541617,
+          "start_line": 594245,
+          "end_line": 594247
+        },
+        {
+          "start": 23541618,
+          "end": 23541749,
+          "start_line": 594248,
+          "end_line": 594251
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": []
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/customizationNavigationToggle.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "3233884cf28f7afc1dfa0442dfa011ba5da09b70d996fc3ff75cf783042aae11",
+      "source_ranges": [
+        {
+          "start": 24006390,
+          "end": 24006435,
+          "start_line": 606030,
+          "end_line": 606030
+        },
+        {
+          "start": 24006436,
+          "end": 24006457,
+          "start_line": 606031,
+          "end_line": 606031
+        },
+        {
+          "start": 24006458,
+          "end": 24008037,
+          "start_line": 606032,
+          "end_line": 606074
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "CUSTOMIZATION_NAVIGATION_BAR_HEIGHT",
+        "navigationId",
+        "CustomizationNavigationToggle"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/shunCodeBridgeLocalization.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "456927ba3960995eace546fc91fd477c5168d67055fdf3919768d9ad35f0b139",
+      "source_ranges": [
+        {
+          "start": 24008126,
+          "end": 24062986,
+          "start_line": 606077,
+          "end_line": 606561
+        },
+        {
+          "start": 24062987,
+          "end": 24063179,
+          "start_line": 606562,
+          "end_line": 606565
+        },
+        {
+          "start": 24063180,
+          "end": 24063526,
+          "start_line": 606566,
+          "end_line": 606572
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "simplifiedChineseMessages",
+        "isSimplifiedChinese",
+        "localizeBridge"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/automationsListWidget.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 60,
+      "original_upstream_sha256": null,
+      "output_sha256": "f69a67bff249783d28fb7ba15783cb1243e9ea7d50f95b1fa9ee3cb2d3351d1f",
+      "source_ranges": [
+        {
+          "start": 24352804,
+          "end": 24352816,
+          "start_line": 614078,
+          "end_line": 614078
+        },
+        {
+          "start": 24352817,
+          "end": 24352848,
+          "start_line": 614079,
+          "end_line": 614079
+        },
+        {
+          "start": 24352849,
+          "end": 24352877,
+          "start_line": 614080,
+          "end_line": 614080
+        },
+        {
+          "start": 24352878,
+          "end": 24352909,
+          "start_line": 614081,
+          "end_line": 614081
+        },
+        {
+          "start": 24352910,
+          "end": 24352940,
+          "start_line": 614082,
+          "end_line": 614082
+        },
+        {
+          "start": 24352941,
+          "end": 24352970,
+          "start_line": 614083,
+          "end_line": 614083
+        },
+        {
+          "start": 24352971,
+          "end": 24352997,
+          "start_line": 614084,
+          "end_line": 614084
+        },
+        {
+          "start": 24352998,
+          "end": 24353897,
+          "start_line": 614085,
+          "end_line": 614110
+        },
+        {
+          "start": 24353898,
+          "end": 24364908,
+          "start_line": 614111,
+          "end_line": 614321
+        },
+        {
+          "start": 24364909,
+          "end": 24378153,
+          "start_line": 614322,
+          "end_line": 614677
+        },
+        {
+          "start": 24378154,
+          "end": 24378728,
+          "start_line": 614678,
+          "end_line": 614691
+        },
+        {
+          "start": 24378729,
+          "end": 24379217,
+          "start_line": 614692,
+          "end_line": 614705
+        },
+        {
+          "start": 24379218,
+          "end": 24379489,
+          "start_line": 614706,
+          "end_line": 614710
+        },
+        {
+          "start": 24379490,
+          "end": 24379578,
+          "start_line": 614711,
+          "end_line": 614714
+        },
+        {
+          "start": 24379579,
+          "end": 24379786,
+          "start_line": 614715,
+          "end_line": 614720
+        },
+        {
+          "start": 24379787,
+          "end": 24380043,
+          "start_line": 614721,
+          "end_line": 614730
+        },
+        {
+          "start": 24380044,
+          "end": 24380234,
+          "start_line": 614731,
+          "end_line": 614737
+        },
+        {
+          "start": 24380235,
+          "end": 24380571,
+          "start_line": 614738,
+          "end_line": 614749
+        },
+        {
+          "start": 24380572,
+          "end": 24380854,
+          "start_line": 614750,
+          "end_line": 614761
+        },
+        {
+          "start": 24380855,
+          "end": 24381083,
+          "start_line": 614762,
+          "end_line": 614771
+        },
+        {
+          "start": 24381084,
+          "end": 24381426,
+          "start_line": 614772,
+          "end_line": 614783
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "$91",
+        "AUTOMATION_ROW_HEIGHT",
+        "HISTORY_ROW_HEIGHT",
+        "HISTORY_HEADER_HEIGHT",
+        "HISTORY_EMPTY_HEIGHT",
+        "HISTORY_MORE_HEIGHT",
+        "MAX_VISIBLE_RUNS",
+        "AutomationItemDelegate",
+        "AutomationItemRenderer",
+        "AutomationsListWidget",
+        "formatSchedule",
+        "formatHourMinute",
+        "dayName",
+        "formatNextRun",
+        "formatRelativeTimeOrIso",
+        "truncate4",
+        "runStatusIcon",
+        "runStatusLabel",
+        "runTriggerLabel",
+        "formatRunDuration",
+        "$",
+        "truncate"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/shunCodeBridgePaymentPresentation.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "c0e256405ac1a174a7a003d4857eb3b6fd97056bb31e182236a12bd3fbfc6e75",
+      "source_ranges": [
+        {
+          "start": 24541609,
+          "end": 24541996,
+          "start_line": 618455,
+          "end_line": 618461
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "isBridgePaymentApplied"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/shunCodeBridgeOpenFolder.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "758c799d8613163ed760d0b4b825b7e9b206e4dbb50568c5b3c27356f316f552",
+      "source_ranges": [
+        {
+          "start": 24542083,
+          "end": 24542148,
+          "start_line": 618464,
+          "end_line": 618464
+        },
+        {
+          "start": 24542149,
+          "end": 24542235,
+          "start_line": 618465,
+          "end_line": 618467
+        },
+        {
+          "start": 24542236,
+          "end": 24542372,
+          "start_line": 618468,
+          "end_line": 618471
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "OPEN_FOLDER_COMMAND_ID",
+        "openFolderShortcutHint",
+        "openFolderTooltip"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/shunCodeBridgeQuickLinks.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "7b5654fb8d659a303ba94c889ea86d4cb37ec6be64f63186984cae6a7d5a393f",
+      "source_ranges": [
+        {
+          "start": 24542459,
+          "end": 24542521,
+          "start_line": 618474,
+          "end_line": 618474
+        },
+        {
+          "start": 24542522,
+          "end": 24542558,
+          "start_line": 618475,
+          "end_line": 618475
+        },
+        {
+          "start": 24542559,
+          "end": 24542595,
+          "start_line": 618476,
+          "end_line": 618476
+        },
+        {
+          "start": 24542596,
+          "end": 24542637,
+          "start_line": 618477,
+          "end_line": 618477
+        },
+        {
+          "start": 24542638,
+          "end": 24542678,
+          "start_line": 618478,
+          "end_line": 618478
+        },
+        {
+          "start": 24542679,
+          "end": 24543229,
+          "start_line": 618479,
+          "end_line": 618490
+        },
+        {
+          "start": 24543230,
+          "end": 24543323,
+          "start_line": 618491,
+          "end_line": 618493
+        },
+        {
+          "start": 24543324,
+          "end": 24543407,
+          "start_line": 618494,
+          "end_line": 618496
+        },
+        {
+          "start": 24543408,
+          "end": 24544003,
+          "start_line": 618497,
+          "end_line": 618510
+        },
+        {
+          "start": 24544004,
+          "end": 24544138,
+          "start_line": 618511,
+          "end_line": 618513
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "BRIDGE_QUICK_LINKS_SETTING",
+        "QUICK_LINK_MAX_NAME_LENGTH",
+        "QUICK_LINK_MAX_URL_LENGTH",
+        "ARENA_URL",
+        "DEVIN_URL",
+        "DEFAULT_QUICK_LINKS",
+        "defaultQuickLinks",
+        "isValidQuickLinkUrl",
+        "parseQuickLinks",
+        "readQuickLinks"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/shunCodeBridgePurchasePresentation.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "eba1ce40ba9f7c421ccac49d69f12ed3140d7bc354287bf3614ee7d67f97bfef",
+      "source_ranges": [
+        {
+          "start": 24544235,
+          "end": 24544643,
+          "start_line": 618516,
+          "end_line": 618524
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "getShunCodeBridgePurchasePresentation"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/shunCodeBridgePublicUrlField.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "cac8c14764075aac141d42ec3c3132280cf6700a1e3be18cf5cea7ad2198215c",
+      "source_ranges": [
+        {
+          "start": 24544734,
+          "end": 24544792,
+          "start_line": 618527,
+          "end_line": 618527
+        },
+        {
+          "start": 24544793,
+          "end": 24548015,
+          "start_line": 618528,
+          "end_line": 618591
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "SHUNCODE_BRIDGE_HIDDEN_URL_MASK",
+        "ShunCodeBridgePublicUrlField"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/shunCodeBridgeSelectOptions.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "26cf779b1fbaaba51fdd64995bde9af84f07a63d5e5a46f14f8631e2c8546387",
+      "source_ranges": [
+        {
+          "start": 24548105,
+          "end": 24549726,
+          "start_line": 618594,
+          "end_line": 618623
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "syncShunCodeBridgeSelectOptions"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/shunCodeBridgeStatusMessage.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "66b14dc847f4a1f6b48bdac87cb7526290efcce6255cb551af12b73e328883b6",
+      "source_ranges": [
+        {
+          "start": 24549816,
+          "end": 24549893,
+          "start_line": 618626,
+          "end_line": 618626
+        },
+        {
+          "start": 24549894,
+          "end": 24549922,
+          "start_line": 618627,
+          "end_line": 618627
+        },
+        {
+          "start": 24549923,
+          "end": 24550118,
+          "start_line": 618628,
+          "end_line": 618633
+        },
+        {
+          "start": 24550119,
+          "end": 24553273,
+          "start_line": 618634,
+          "end_line": 618700
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "privateMcpAddressPattern",
+        "statusMessageIdPool",
+        "redactShunCodeBridgeMcpAddresses",
+        "ShunCodeBridgeStatusMessage"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/shunCodeBridgeWidget.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "0bc9e5b52d402e6324573e88eca816e6e1985e76c8636e29774d54b0abed89d6",
+      "source_ranges": [
+        {
+          "start": 24553356,
+          "end": 24553408,
+          "start_line": 618703,
+          "end_line": 618703
+        },
+        {
+          "start": 24553409,
+          "end": 24553460,
+          "start_line": 618704,
+          "end_line": 618704
+        },
+        {
+          "start": 24553461,
+          "end": 24553536,
+          "start_line": 618705,
+          "end_line": 618705
+        },
+        {
+          "start": 24553537,
+          "end": 24553615,
+          "start_line": 618706,
+          "end_line": 618706
+        },
+        {
+          "start": 24553616,
+          "end": 24553685,
+          "start_line": 618707,
+          "end_line": 618707
+        },
+        {
+          "start": 24553686,
+          "end": 24553729,
+          "start_line": 618708,
+          "end_line": 618708
+        },
+        {
+          "start": 24553730,
+          "end": 24553771,
+          "start_line": 618709,
+          "end_line": 618709
+        },
+        {
+          "start": 24553772,
+          "end": 24553838,
+          "start_line": 618710,
+          "end_line": 618710
+        },
+        {
+          "start": 24553839,
+          "end": 24553895,
+          "start_line": 618711,
+          "end_line": 618711
+        },
+        {
+          "start": 24553896,
+          "end": 24553966,
+          "start_line": 618712,
+          "end_line": 618712
+        },
+        {
+          "start": 24553967,
+          "end": 24554029,
+          "start_line": 618713,
+          "end_line": 618713
+        },
+        {
+          "start": 24554030,
+          "end": 24554086,
+          "start_line": 618714,
+          "end_line": 618714
+        },
+        {
+          "start": 24554087,
+          "end": 24554149,
+          "start_line": 618715,
+          "end_line": 618715
+        },
+        {
+          "start": 24554150,
+          "end": 24554216,
+          "start_line": 618716,
+          "end_line": 618716
+        },
+        {
+          "start": 24554217,
+          "end": 24554279,
+          "start_line": 618717,
+          "end_line": 618717
+        },
+        {
+          "start": 24554280,
+          "end": 24554357,
+          "start_line": 618718,
+          "end_line": 618718
+        },
+        {
+          "start": 24554358,
+          "end": 24554436,
+          "start_line": 618719,
+          "end_line": 618719
+        },
+        {
+          "start": 24554437,
+          "end": 24554500,
+          "start_line": 618720,
+          "end_line": 618720
+        },
+        {
+          "start": 24554501,
+          "end": 24554565,
+          "start_line": 618721,
+          "end_line": 618721
+        },
+        {
+          "start": 24554566,
+          "end": 24554627,
+          "start_line": 618722,
+          "end_line": 618722
+        },
+        {
+          "start": 24554628,
+          "end": 24554694,
+          "start_line": 618723,
+          "end_line": 618723
+        },
+        {
+          "start": 24554695,
+          "end": 24554767,
+          "start_line": 618724,
+          "end_line": 618724
+        },
+        {
+          "start": 24554768,
+          "end": 24554834,
+          "start_line": 618725,
+          "end_line": 618725
+        },
+        {
+          "start": 24554835,
+          "end": 24554894,
+          "start_line": 618726,
+          "end_line": 618726
+        },
+        {
+          "start": 24554895,
+          "end": 24554958,
+          "start_line": 618727,
+          "end_line": 618727
+        },
+        {
+          "start": 24554959,
+          "end": 24555035,
+          "start_line": 618728,
+          "end_line": 618728
+        },
+        {
+          "start": 24555036,
+          "end": 24555094,
+          "start_line": 618729,
+          "end_line": 618729
+        },
+        {
+          "start": 24555095,
+          "end": 24555163,
+          "start_line": 618730,
+          "end_line": 618730
+        },
+        {
+          "start": 24555164,
+          "end": 24555234,
+          "start_line": 618731,
+          "end_line": 618731
+        },
+        {
+          "start": 24555235,
+          "end": 24555305,
+          "start_line": 618732,
+          "end_line": 618732
+        },
+        {
+          "start": 24555306,
+          "end": 24555355,
+          "start_line": 618733,
+          "end_line": 618733
+        },
+        {
+          "start": 24555356,
+          "end": 24555434,
+          "start_line": 618734,
+          "end_line": 618734
+        },
+        {
+          "start": 24555435,
+          "end": 24555706,
+          "start_line": 618735,
+          "end_line": 618735
+        },
+        {
+          "start": 24555707,
+          "end": 24555773,
+          "start_line": 618736,
+          "end_line": 618736
+        },
+        {
+          "start": 24555774,
+          "end": 24555844,
+          "start_line": 618737,
+          "end_line": 618737
+        },
+        {
+          "start": 24555845,
+          "end": 24555899,
+          "start_line": 618738,
+          "end_line": 618738
+        },
+        {
+          "start": 24555900,
+          "end": 24555971,
+          "start_line": 618739,
+          "end_line": 618739
+        },
+        {
+          "start": 24555972,
+          "end": 24556055,
+          "start_line": 618740,
+          "end_line": 618740
+        },
+        {
+          "start": 24556056,
+          "end": 24694057,
+          "start_line": 618741,
+          "end_line": 620824
+        },
+        {
+          "start": 24694058,
+          "end": 24694366,
+          "start_line": 620825,
+          "end_line": 620832
+        },
+        {
+          "start": 24694367,
+          "end": 24694853,
+          "start_line": 620833,
+          "end_line": 620840
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "BRIDGE_GET_STATUS",
+        "BRIDGE_CONFIGURE",
+        "BRIDGE_CONFIGURE_NAMED_TUNNEL",
+        "BRIDGE_CLEAR_NAMED_TUNNEL_TOKEN",
+        "BRIDGE_SET_TUNNEL_PROVIDER",
+        "BRIDGE_START",
+        "BRIDGE_STOP",
+        "BRIDGE_CLEANUP_PROCESSES",
+        "BRIDGE_CHECK_TUNNEL",
+        "BRIDGE_INSTALL_CLOUDFLARED",
+        "BRIDGE_ROTATE_ENDPOINT",
+        "BRIDGE_OPEN_SESSION",
+        "BRIDGE_PERSISTENT_MODE",
+        "BRIDGE_ACCESS_GET_STATUS",
+        "BRIDGE_LICENSE_SIGN_IN",
+        "BRIDGE_LICENSE_SIGN_IN_GITEE",
+        "BRIDGE_LICENSE_REFRESH_SESSION",
+        "BRIDGE_LICENSE_REFRESH",
+        "BRIDGE_LICENSE_SIGN_OUT",
+        "BRIDGE_LICENSE_REDEEM",
+        "BRIDGE_PAYMENT_GET_PLANS",
+        "BRIDGE_PAYMENT_CREATE_ORDER",
+        "BRIDGE_PAYMENT_GET_ORDER",
+        "BRIDGE_SKILLS_IMPORT",
+        "BRIDGE_SKILLS_DIAGNOSE",
+        "BRIDGE_SKILLS_GENERATE_RUNNER",
+        "BRIDGE_OPEN_RESOURCE",
+        "BRIDGE_SKILLS_ENABLED_SETTING",
+        "BRIDGE_CUSTOM_TOOLS_TOGGLE",
+        "BRIDGE_CUSTOM_TOOLS_DELETE",
+        "CUSTOM_TOOLS_DIR_REL",
+        "NGROK_VIDEO_TUTORIAL_URL",
+        "DEFAULT_ARENA_PROMPT",
+        "BRIDGE_COPY_PROMPT_SETTING",
+        "BRIDGE_WORKSPACE_SCOPE_SETTING",
+        "WINDOW_RESTORE_SETTING",
+        "BRIDGE_STARTUP_PIN_PAGE_SETTING",
+        "BRIDGE_SETTINGS_PAGE_FLOATING_SETTING",
+        "ShunCodeBridgeWidget"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/shunCodeMultiModelLocalization.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "e6ae2ca6de881a1bbc6fb31b52e63a9426435233d6fa147a1f5771be020ccb93",
+      "source_ranges": [
+        {
+          "start": 24694946,
+          "end": 24700131,
+          "start_line": 620843,
+          "end_line": 620880
+        },
+        {
+          "start": 24700132,
+          "end": 24700325,
+          "start_line": 620881,
+          "end_line": 620884
+        },
+        {
+          "start": 24700326,
+          "end": 24700678,
+          "start_line": 620885,
+          "end_line": 620891
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "simplifiedChineseMessages2",
+        "isSimplifiedChinese2",
+        "localizeMultiModel",
+        "simplifiedChineseMessages",
+        "isSimplifiedChinese"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/shunCodeMultiModelWidget.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "57bbfa46aaf9b14b34d5cdd9b92ebeec3a67ba4008ad5c225956c60583d581e4",
+      "source_ranges": [
+        {
+          "start": 24700765,
+          "end": 24700817,
+          "start_line": 620894,
+          "end_line": 620894
+        },
+        {
+          "start": 24700818,
+          "end": 24700877,
+          "start_line": 620895,
+          "end_line": 620895
+        },
+        {
+          "start": 24700878,
+          "end": 24700946,
+          "start_line": 620896,
+          "end_line": 620896
+        },
+        {
+          "start": 24700947,
+          "end": 24701008,
+          "start_line": 620897,
+          "end_line": 620897
+        },
+        {
+          "start": 24701009,
+          "end": 24701082,
+          "start_line": 620898,
+          "end_line": 620898
+        },
+        {
+          "start": 24701083,
+          "end": 24701140,
+          "start_line": 620899,
+          "end_line": 620899
+        },
+        {
+          "start": 24701141,
+          "end": 24701253,
+          "start_line": 620900,
+          "end_line": 620900
+        },
+        {
+          "start": 24701254,
+          "end": 24702328,
+          "start_line": 620901,
+          "end_line": 620924
+        },
+        {
+          "start": 24702329,
+          "end": 24713479,
+          "start_line": 620925,
+          "end_line": 621090
+        },
+        {
+          "start": 24713480,
+          "end": 24713637,
+          "start_line": 621091,
+          "end_line": 621094
+        },
+        {
+          "start": 24713638,
+          "end": 24714173,
+          "start_line": 621095,
+          "end_line": 621102
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "SETTING_ENABLED",
+        "SETTING_MERGE_MODEL",
+        "SETTING_MERGE_READ_TOOLS",
+        "SETTING_MAX_BRANCHES",
+        "SETTING_MERGE_REASONING",
+        "PICK_MERGE_MODEL_COMMAND",
+        "MERGE_REASONING_OPTIONS",
+        "mergeReasoningOptionLabel",
+        "ShunCodeMultiModelWidget"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/widgetHosts/viewPane/bridgeStatusRefresh.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "67d596c48d966a4d79ab7b3e3cbb5a9849b989c71a4f3cb24e1c15231b28826b",
+      "source_ranges": [
+        {
+          "start": 24775748,
+          "end": 24777680,
+          "start_line": 622677,
+          "end_line": 622743
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "BridgeStatusRefresher"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/widgetHosts/viewPane/bridgeTaskPresentation.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "2ccc05fbe8706ee30e304b143ce923a583cb577f14e24b1115b4c8f8c876b4a3",
+      "source_ranges": [
+        {
+          "start": 24777770,
+          "end": 24778146,
+          "start_line": 622746,
+          "end_line": 622762
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "BridgeTaskViewState"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/widgetHosts/viewPane/shunCodeBridgeSessionView.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "d180a4c3c477c83d6e4255e84934a8f84686226df1669eb216d8ad984fd9d7f0",
+      "source_ranges": [
+        {
+          "start": 24778239,
+          "end": 24778292,
+          "start_line": 622765,
+          "end_line": 622765
+        },
+        {
+          "start": 24778293,
+          "end": 24778337,
+          "start_line": 622766,
+          "end_line": 622766
+        },
+        {
+          "start": 24778338,
+          "end": 24778380,
+          "start_line": 622767,
+          "end_line": 622767
+        },
+        {
+          "start": 24778381,
+          "end": 24778437,
+          "start_line": 622768,
+          "end_line": 622768
+        },
+        {
+          "start": 24778438,
+          "end": 24778505,
+          "start_line": 622769,
+          "end_line": 622769
+        },
+        {
+          "start": 24778506,
+          "end": 24778565,
+          "start_line": 622770,
+          "end_line": 622770
+        },
+        {
+          "start": 24778566,
+          "end": 24778616,
+          "start_line": 622771,
+          "end_line": 622771
+        },
+        {
+          "start": 24778617,
+          "end": 24778675,
+          "start_line": 622772,
+          "end_line": 622772
+        },
+        {
+          "start": 24778676,
+          "end": 24778897,
+          "start_line": 622773,
+          "end_line": 622781
+        },
+        {
+          "start": 24778898,
+          "end": 24779152,
+          "start_line": 622782,
+          "end_line": 622791
+        },
+        {
+          "start": 24779153,
+          "end": 24779733,
+          "start_line": 622792,
+          "end_line": 622815
+        },
+        {
+          "start": 24779734,
+          "end": 24819528,
+          "start_line": 622816,
+          "end_line": 623496
+        },
+        {
+          "start": 24819529,
+          "end": 24819643,
+          "start_line": 623497,
+          "end_line": 623499
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "BRIDGE_GET_STATUS2",
+        "BRIDGE_START2",
+        "BRIDGE_STOP2",
+        "BRIDGE_CHECK_HEALTH",
+        "BRIDGE_CLEAR_ACTIVITY_LOG",
+        "BRIDGE_OPEN_RESOURCE2",
+        "BRIDGE_OPEN_DIFF",
+        "BRIDGE_OPEN_TERMINAL",
+        "formatDuration4",
+        "formatTime",
+        "activityIcon",
+        "ShunCodeBridgeSessionView",
+        "BRIDGE_GET_STATUS",
+        "BRIDGE_START",
+        "BRIDGE_STOP",
+        "BRIDGE_OPEN_RESOURCE",
+        "formatDuration"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/planReviewFeedback/planReviewFeedbackEditorActions.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 5,
+      "original_upstream_sha256": null,
+      "output_sha256": "e0110488ff9b8e529063524d49efb54cd9fbab597dc008dd93e9f529824c472e",
+      "source_ranges": [
+        {
+          "start": 25810003,
+          "end": 25810081,
+          "start_line": 647087,
+          "end_line": 647087
+        },
+        {
+          "start": 25810082,
+          "end": 25810169,
+          "start_line": 647088,
+          "end_line": 647088
+        },
+        {
+          "start": 25810170,
+          "end": 25810264,
+          "start_line": 647089,
+          "end_line": 647089
+        },
+        {
+          "start": 25810265,
+          "end": 25810351,
+          "start_line": 647090,
+          "end_line": 647090
+        },
+        {
+          "start": 25810352,
+          "end": 25810430,
+          "start_line": 647091,
+          "end_line": 647091
+        },
+        {
+          "start": 25810431,
+          "end": 25810509,
+          "start_line": 647092,
+          "end_line": 647092
+        },
+        {
+          "start": 25810510,
+          "end": 25810968,
+          "start_line": 647093,
+          "end_line": 647108
+        },
+        {
+          "start": 25810969,
+          "end": 25812220,
+          "start_line": 647109,
+          "end_line": 647144
+        },
+        {
+          "start": 25812221,
+          "end": 25812975,
+          "start_line": 647145,
+          "end_line": 647171
+        },
+        {
+          "start": 25812976,
+          "end": 25813597,
+          "start_line": 647172,
+          "end_line": 647194
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "PlanReviewFeedbackMenuId",
+        "hasPlanReviewFeedback",
+        "navigatePreviousPlanReviewFeedbackActionId",
+        "navigateNextPlanReviewFeedbackActionId",
+        "clearAllPlanReviewFeedbackActionId",
+        "navigationBearingFakeActionId2",
+        "getActivePlanUri",
+        "NavigatePlanReviewFeedbackAction",
+        "ClearAllPlanReviewFeedbackAction",
+        "registerPlanReviewFeedbackEditorActions",
+        "navigationBearingFakeActionId"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/planReviewFeedback/planReviewFeedbackEditorContribution.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 5,
+      "original_upstream_sha256": null,
+      "output_sha256": "47f1a324af1491511a29ff0cc487ce4e93d9d36db351280d46548d86e9c5ac28",
+      "source_ranges": [
+        {
+          "start": 25813699,
+          "end": 25816873,
+          "start_line": 647197,
+          "end_line": 647293
+        },
+        {
+          "start": 25816874,
+          "end": 25819766,
+          "start_line": 647294,
+          "end_line": 647367
+        },
+        {
+          "start": 25819767,
+          "end": 25830320,
+          "start_line": 647368,
+          "end_line": 647686
+        },
+        {
+          "start": 25830321,
+          "end": 25830555,
+          "start_line": 647687,
+          "end_line": 647691
+        },
+        {
+          "start": 25830556,
+          "end": 25830682,
+          "start_line": 647692,
+          "end_line": 647692
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "PlanReviewFeedbackInputWidget",
+        "PlanReviewFeedbackOverlayWidget",
+        "PlanReviewFeedbackEditorContribution"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/browserView/common/browserViewScope.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "5b9a67ed7f6cf6a45cea216f5674517c3f3a3c505dd82afa7f651eec3f34c546",
+      "source_ranges": [
+        {
+          "start": 35933964,
+          "end": 35933991,
+          "start_line": 898234,
+          "end_line": 898234
+        },
+        {
+          "start": 35933992,
+          "end": 35934025,
+          "start_line": 898235,
+          "end_line": 898235
+        },
+        {
+          "start": 35934026,
+          "end": 35934059,
+          "start_line": 898236,
+          "end_line": 898236
+        },
+        {
+          "start": 35934060,
+          "end": 35934383,
+          "start_line": 898237,
+          "end_line": 898248
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "GlobalScope",
+        "WorkspaceScope",
+        "EphemeralScope",
+        "resolveBrowserViewStorageScope"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/browserView/common/browserArenaFollowLatestConfiguration.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "4fa870bff35ce99f287d1305b5f09b23b1e9e1406234970d19d53adcc7f7f26c",
+      "source_ranges": [
+        {
+          "start": 35934473,
+          "end": 35934551,
+          "start_line": 898251,
+          "end_line": 898251
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "browserArenaFollowLatestSettingId"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/browserView/electron-browser/features/browserScopeIndicatorFeature.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 6,
+      "original_upstream_sha256": null,
+      "output_sha256": "b08a616e65c3cf291b66dacbc6e1de507c120e0586e719353b3a126520849ad4",
+      "source_ranges": [
+        {
+          "start": 36232200,
+          "end": 36232584,
+          "start_line": 906191,
+          "end_line": 906200
+        },
+        {
+          "start": 36232585,
+          "end": 36233313,
+          "start_line": 906201,
+          "end_line": 906227
+        },
+        {
+          "start": 36233314,
+          "end": 36235584,
+          "start_line": 906228,
+          "end_line": 906278
+        },
+        {
+          "start": 36235585,
+          "end": 36235817,
+          "start_line": 906279,
+          "end_line": 906283
+        },
+        {
+          "start": 36235818,
+          "end": 36235888,
+          "start_line": 906284,
+          "end_line": 906284
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "classifyBrowserScopeBadge",
+        "presentationFor",
+        "BrowserScopeIndicatorContribution"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/browserView/electron-browser/features/browserEditorArenaFollowLatestFeature.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 6,
+      "original_upstream_sha256": null,
+      "output_sha256": "e235c74fdc47eab51b3c8a71129bd0ef7454ed1d5aa7cbaed4eb064f01b97905",
+      "source_ranges": [
+        {
+          "start": 36235997,
+          "end": 36236284,
+          "start_line": 906287,
+          "end_line": 906297
+        },
+        {
+          "start": 36236285,
+          "end": 36238717,
+          "start_line": 906298,
+          "end_line": 906362
+        },
+        {
+          "start": 36238718,
+          "end": 36238909,
+          "start_line": 906363,
+          "end_line": 906366
+        },
+        {
+          "start": 36238910,
+          "end": 36238989,
+          "start_line": 906367,
+          "end_line": 906367
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "BrowserEditorArenaFollowLatestContribution"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/widget/chatContentParts/toolInvocationParts/chatToolInvocationPart.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": "09def56275a7415786004830fbe77f59afcea77430d7e0ecf0ae73d165a3cd0b",
+      "output_sha256": "b9ffba15bd2bd3ceeb101464348801d04ae3a0d81c66c78630e301c127f1c846",
+      "source_ranges": [
+        {
+          "start": 20521869,
+          "end": 20522452,
+          "start_line": 519372,
+          "end_line": 519389
+        },
+        {
+          "start": 20522453,
+          "end": 20536945,
+          "start_line": 519390,
+          "end_line": 519651
+        },
+        {
+          "start": 20536946,
+          "end": 20537152,
+          "start_line": 519652,
+          "end_line": 519656
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "mcpAppRenderDataEquals",
+        "ChatToolInvocationPart3",
+        "ChatToolInvocationPart"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/widget/chatListRenderer.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 44,
+      "original_upstream_sha256": "566a20b1aa722b84ab91aaba8716d188e45483c4fa544a1968821eb961d14e0d",
+      "output_sha256": "9942c16305fe345b7d86e944b7a5b5a6743c857eba0f7632828c4a241e9f51c0",
+      "source_ranges": [
+        {
+          "start": 20597656,
+          "end": 20597668,
+          "start_line": 521127,
+          "end_line": 521127
+        },
+        {
+          "start": 20597669,
+          "end": 20597709,
+          "start_line": 521128,
+          "end_line": 521128
+        },
+        {
+          "start": 20597710,
+          "end": 20597750,
+          "start_line": 521129,
+          "end_line": 521129
+        },
+        {
+          "start": 20597751,
+          "end": 20597797,
+          "start_line": 521130,
+          "end_line": 521130
+        },
+        {
+          "start": 20597798,
+          "end": 20597905,
+          "start_line": 521131,
+          "end_line": 521133
+        },
+        {
+          "start": 20597906,
+          "end": 20599443,
+          "start_line": 521134,
+          "end_line": 521172
+        },
+        {
+          "start": 20599444,
+          "end": 20599609,
+          "start_line": 521173,
+          "end_line": 521175
+        },
+        {
+          "start": 20599610,
+          "end": 20600015,
+          "start_line": 521176,
+          "end_line": 521192
+        },
+        {
+          "start": 20600016,
+          "end": 20600352,
+          "start_line": 521193,
+          "end_line": 521199
+        },
+        {
+          "start": 20600353,
+          "end": 20600625,
+          "start_line": 521200,
+          "end_line": 521209
+        },
+        {
+          "start": 20600626,
+          "end": 20601454,
+          "start_line": 521210,
+          "end_line": 521224
+        },
+        {
+          "start": 20601455,
+          "end": 20603116,
+          "start_line": 521225,
+          "end_line": 521253
+        },
+        {
+          "start": 20603117,
+          "end": 20604072,
+          "start_line": 521254,
+          "end_line": 521275
+        },
+        {
+          "start": 20604073,
+          "end": 20604239,
+          "start_line": 521276,
+          "end_line": 521278
+        },
+        {
+          "start": 20604240,
+          "end": 20604421,
+          "start_line": 521279,
+          "end_line": 521281
+        },
+        {
+          "start": 20604422,
+          "end": 20604591,
+          "start_line": 521282,
+          "end_line": 521284
+        },
+        {
+          "start": 20604592,
+          "end": 20604747,
+          "start_line": 521285,
+          "end_line": 521287
+        },
+        {
+          "start": 20604748,
+          "end": 20604937,
+          "start_line": 521288,
+          "end_line": 521290
+        },
+        {
+          "start": 20604938,
+          "end": 20605284,
+          "start_line": 521291,
+          "end_line": 521293
+        },
+        {
+          "start": 20605285,
+          "end": 20605449,
+          "start_line": 521294,
+          "end_line": 521296
+        },
+        {
+          "start": 20605450,
+          "end": 20605488,
+          "start_line": 521297,
+          "end_line": 521297
+        },
+        {
+          "start": 20605489,
+          "end": 20605551,
+          "start_line": 521298,
+          "end_line": 521298
+        },
+        {
+          "start": 20605552,
+          "end": 20605881,
+          "start_line": 521299,
+          "end_line": 521302
+        },
+        {
+          "start": 20605882,
+          "end": 20606094,
+          "start_line": 521303,
+          "end_line": 521305
+        },
+        {
+          "start": 20606095,
+          "end": 20606431,
+          "start_line": 521306,
+          "end_line": 521319
+        },
+        {
+          "start": 20606432,
+          "end": 20753520,
+          "start_line": 521320,
+          "end_line": 524180
+        },
+        {
+          "start": 20753521,
+          "end": 20754232,
+          "start_line": 524181,
+          "end_line": 524197
+        },
+        {
+          "start": 20754233,
+          "end": 20754707,
+          "start_line": 524198,
+          "end_line": 524215
+        },
+        {
+          "start": 20754708,
+          "end": 20754848,
+          "start_line": 524216,
+          "end_line": 524218
+        },
+        {
+          "start": 20754849,
+          "end": 20755009,
+          "start_line": 524219,
+          "end_line": 524224
+        },
+        {
+          "start": 20755010,
+          "end": 20755097,
+          "start_line": 524225,
+          "end_line": 524227
+        },
+        {
+          "start": 20755098,
+          "end": 20755510,
+          "start_line": 524228,
+          "end_line": 524238
+        },
+        {
+          "start": 20755511,
+          "end": 20755800,
+          "start_line": 524239,
+          "end_line": 524248
+        },
+        {
+          "start": 20755801,
+          "end": 20755947,
+          "start_line": 524249,
+          "end_line": 524251
+        },
+        {
+          "start": 20755948,
+          "end": 20756198,
+          "start_line": 524252,
+          "end_line": 524260
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "$55",
+        "COPILOT_USERNAME",
+        "WORKING_CAUGHT_UP_DEBOUNCE_MS",
+        "DEFAULT_CHAT_ITEM_HORIZONTAL_PADDING",
+        "escapeMarkdownLinkLabel2",
+        "buildPlanReviewProgressContent",
+        "shouldScheduleInitialHeightChange",
+        "getFinalResponseStartIndex",
+        "formatCompletedResponseDisclosureLabel",
+        "getVisibleCompletedResponseItemCount",
+        "reconcileChatItemHeight",
+        "renderChatResponseDetails",
+        "renderChatRequestTimestamp",
+        "shouldRenderInitialProgressiveContentImmediately",
+        "shouldStartNewCollapsedThinkingGroup",
+        "shouldCreateGroupedThinkingPart",
+        "shouldShowFileChangesSummaryForSettings",
+        "shouldShowPillsSummaryForSettings",
+        "shouldPinToolInvocationToThinking",
+        "toolInvocationHasMcpAppData",
+        "forceVerboseLayoutTracing",
+        "mostRecentResponseClassName",
+        "shouldHideChatUserIdentity",
+        "isAgentHostCopilotSessionType",
+        "upvoteAnimationSettingToEnum",
+        "ChatListItemRenderer",
+        "ChatListDelegate",
+        "isParentSubagentTool",
+        "getSubagentId",
+        "isSubagentToolInvocation",
+        "getWorkingProgressRelevantParts",
+        "endsWithSubagentContent",
+        "isWaitingForMcpServers",
+        "findLastMeaningfulPart",
+        "$",
+        "escapeMarkdownLinkLabel"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/widget/chatListWidget.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": "6586f1faf58dcb4dd07b5810e6405756a482565139a0397f1a85a520ae499fe1",
+      "output_sha256": "2b9dfa04541bbb078ff38fa900c47e40bd05032fe64b24761eb472d70da887d6",
+      "source_ranges": [
+        {
+          "start": 20764872,
+          "end": 20765626,
+          "start_line": 524486,
+          "end_line": 524515
+        },
+        {
+          "start": 20765627,
+          "end": 20765763,
+          "start_line": 524516,
+          "end_line": 524518
+        },
+        {
+          "start": 20765764,
+          "end": 20765931,
+          "start_line": 524519,
+          "end_line": 524524
+        },
+        {
+          "start": 20765932,
+          "end": 20767774,
+          "start_line": 524525,
+          "end_line": 524576
+        },
+        {
+          "start": 20767775,
+          "end": 20795083,
+          "start_line": 524577,
+          "end_line": 525312
+        },
+        {
+          "start": 20795084,
+          "end": 20795474,
+          "start_line": 525313,
+          "end_line": 525322
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "UserToggleResizeState",
+        "getAnchoredScrollTop",
+        "computeScrollDownState",
+        "UserToggleResizeTracker",
+        "ChatListWidget"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/widget/chatWidget.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 15,
+      "original_upstream_sha256": "41b151898ed5388ab35d3e3617b15d4faedfd3cc894fb3d6c69814ce6451eb6c",
+      "output_sha256": "add60284c6f36268e561e9aaee22fe2b3b8c4cd11e45a4a2e021db8ffcc1a757",
+      "source_ranges": [
+        {
+          "start": 20876046,
+          "end": 20876058,
+          "start_line": 527464,
+          "end_line": 527464
+        },
+        {
+          "start": 20876059,
+          "end": 20876106,
+          "start_line": 527465,
+          "end_line": 527465
+        },
+        {
+          "start": 20876107,
+          "end": 20876239,
+          "start_line": 527466,
+          "end_line": 527468
+        },
+        {
+          "start": 20876240,
+          "end": 20876374,
+          "start_line": 527469,
+          "end_line": 527471
+        },
+        {
+          "start": 20876375,
+          "end": 20876647,
+          "start_line": 527472,
+          "end_line": 527476
+        },
+        {
+          "start": 20876648,
+          "end": 20877133,
+          "start_line": 527477,
+          "end_line": 527491
+        },
+        {
+          "start": 20877134,
+          "end": 20877173,
+          "start_line": 527492,
+          "end_line": 527492
+        },
+        {
+          "start": 20877174,
+          "end": 20983980,
+          "start_line": 527493,
+          "end_line": 529974
+        },
+        {
+          "start": 20983981,
+          "end": 20985307,
+          "start_line": 529975,
+          "end_line": 530005
+        },
+        {
+          "start": 20985308,
+          "end": 20985494,
+          "start_line": 530006,
+          "end_line": 530009
+        },
+        {
+          "start": 20985495,
+          "end": 20985520,
+          "start_line": 530010,
+          "end_line": 530010
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "$58",
+        "SESSIONS_CHAT_ITEM_HORIZONTAL_PADDING",
+        "isQuickChat",
+        "isInlineChat",
+        "getImmediateSilentSlashCommandPart",
+        "supportsAllAttachments",
+        "DISCLAIMER",
+        "ChatWidget",
+        "layoutChatWidgetForInputHeight",
+        "MIN_LIST_HEIGHT",
+        "$"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/common/chatService/chatServiceImpl.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 3,
+      "original_upstream_sha256": "b7b7e1e296951cbecc048cd82ca66b29966423035136e75c72334c8c16163d6f",
+      "output_sha256": "2a070cdffb4dd4e85ce243ba099801ccf31da7617edf0f77b73ae9cf29906fa1",
+      "source_ranges": [
+        {
+          "start": 22062182,
+          "end": 22062229,
+          "start_line": 557035,
+          "end_line": 557035
+        },
+        {
+          "start": 22062230,
+          "end": 22062450,
+          "start_line": 557036,
+          "end_line": 557045
+        },
+        {
+          "start": 22062451,
+          "end": 22063406,
+          "start_line": 557046,
+          "end_line": 557076
+        },
+        {
+          "start": 22063407,
+          "end": 22063518,
+          "start_line": 557077,
+          "end_line": 557079
+        },
+        {
+          "start": 22063519,
+          "end": 22063560,
+          "start_line": 557080,
+          "end_line": 557080
+        },
+        {
+          "start": 22063561,
+          "end": 22063637,
+          "start_line": 557081,
+          "end_line": 557081
+        },
+        {
+          "start": 22063638,
+          "end": 22064035,
+          "start_line": 557082,
+          "end_line": 557091
+        },
+        {
+          "start": 22064036,
+          "end": 22064279,
+          "start_line": 557092,
+          "end_line": 557097
+        },
+        {
+          "start": 22064280,
+          "end": 22148724,
+          "start_line": 557098,
+          "end_line": 558829
+        },
+        {
+          "start": 22148725,
+          "end": 22149457,
+          "start_line": 558830,
+          "end_line": 558847
+        },
+        {
+          "start": 22149458,
+          "end": 22149889,
+          "start_line": 558848,
+          "end_line": 558860
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "serializedChatKey",
+        "hasDraftInput",
+        "CancellableRequest",
+        "EMPTY_REFERENCES",
+        "EMPTY_TOOL_ENABLEMENT_MAP",
+        "backfillRestoredPickerState",
+        "backfillTransferredModel",
+        "ChatService",
+        "chatModelToChatDetail"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/aiCustomizationManagementEditor.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 114,
+      "original_upstream_sha256": "60022adcde0e65eac82853caa3a1f820eb57f029df89efabfa6706a7340d8de6",
+      "output_sha256": "ee6436be70db681b1345f3185677463822c2adb9a8f47445df3e0440d86b50dc",
+      "source_ranges": [
+        {
+          "start": 24432176,
+          "end": 24432188,
+          "start_line": 616019,
+          "end_line": 616019
+        },
+        {
+          "start": 24432189,
+          "end": 24432310,
+          "start_line": 616020,
+          "end_line": 616027
+        },
+        {
+          "start": 24432311,
+          "end": 24433659,
+          "start_line": 616028,
+          "end_line": 616058
+        },
+        {
+          "start": 24433660,
+          "end": 24540404,
+          "start_line": 616059,
+          "end_line": 618426
+        },
+        {
+          "start": 24540405,
+          "end": 24541513,
+          "start_line": 618427,
+          "end_line": 618452
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "$97",
+        "SectionItemDelegate",
+        "SectionItemRenderer",
+        "AICustomizationManagementEditor",
+        "$"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/widgetHosts/viewPane/chatViewPane.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 16,
+      "original_upstream_sha256": "15405e148ba4038296f8e3b197b251944440c0e323e94027104c208876c5c09b",
+      "output_sha256": "1e3a423826e677e66312b2417720adeaf307e69a707a3672cb0b5adb1443f4a2",
+      "source_ranges": [
+        {
+          "start": 24819723,
+          "end": 24881609,
+          "start_line": 623502,
+          "end_line": 624815
+        },
+        {
+          "start": 24881610,
+          "end": 24883141,
+          "start_line": 624816,
+          "end_line": 624851
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "ChatViewPane"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/chat.shared.contribution.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 321,
+      "original_upstream_sha256": "f081f01fae4cbc8b89fa7671e3f502c71beab2f139188cbab6081a0cf3a7d7d2",
+      "output_sha256": "cc662d33378be326c8f1a21a91d3559cf443cc880a38cc91e6dd19a357137c00",
+      "source_ranges": [
+        {
+          "start": 25895575,
+          "end": 25895768,
+          "start_line": 649422,
+          "end_line": 649424
+        },
+        {
+          "start": 25895769,
+          "end": 25895806,
+          "start_line": 649425,
+          "end_line": 649425
+        },
+        {
+          "start": 25895807,
+          "end": 25895850,
+          "start_line": 649426,
+          "end_line": 649426
+        },
+        {
+          "start": 25895851,
+          "end": 25895925,
+          "start_line": 649427,
+          "end_line": 649427
+        },
+        {
+          "start": 25895926,
+          "end": 25896000,
+          "start_line": 649428,
+          "end_line": 649428
+        },
+        {
+          "start": 25896001,
+          "end": 25896070,
+          "start_line": 649429,
+          "end_line": 649429
+        },
+        {
+          "start": 25896071,
+          "end": 25956958,
+          "start_line": 649430,
+          "end_line": 651326
+        },
+        {
+          "start": 25956959,
+          "end": 25957177,
+          "start_line": 651327,
+          "end_line": 651336
+        },
+        {
+          "start": 25957178,
+          "end": 25957405,
+          "start_line": 651337,
+          "end_line": 651346
+        },
+        {
+          "start": 25957406,
+          "end": 25957634,
+          "start_line": 651347,
+          "end_line": 651356
+        },
+        {
+          "start": 25957635,
+          "end": 25957750,
+          "start_line": 651357,
+          "end_line": 651359
+        },
+        {
+          "start": 25957751,
+          "end": 25957982,
+          "start_line": 651360,
+          "end_line": 651365
+        },
+        {
+          "start": 25957983,
+          "end": 25962789,
+          "start_line": 651366,
+          "end_line": 651490
+        },
+        {
+          "start": 25962790,
+          "end": 25964358,
+          "start_line": 651491,
+          "end_line": 651536
+        },
+        {
+          "start": 25964359,
+          "end": 25964567,
+          "start_line": 651537,
+          "end_line": 651541
+        },
+        {
+          "start": 25964568,
+          "end": 25965408,
+          "start_line": 651542,
+          "end_line": 651564
+        },
+        {
+          "start": 25965409,
+          "end": 25965578,
+          "start_line": 651565,
+          "end_line": 651568
+        },
+        {
+          "start": 25965579,
+          "end": 25966308,
+          "start_line": 651569,
+          "end_line": 651595
+        },
+        {
+          "start": 25966309,
+          "end": 25966438,
+          "start_line": 651596,
+          "end_line": 651598
+        },
+        {
+          "start": 25966439,
+          "end": 25969058,
+          "start_line": 651599,
+          "end_line": 651666
+        },
+        {
+          "start": 25969059,
+          "end": 25969280,
+          "start_line": 651667,
+          "end_line": 651671
+        },
+        {
+          "start": 25969281,
+          "end": 25970756,
+          "start_line": 651672,
+          "end_line": 651709
+        },
+        {
+          "start": 25970757,
+          "end": 25970979,
+          "start_line": 651710,
+          "end_line": 651714
+        },
+        {
+          "start": 25970980,
+          "end": 25971587,
+          "start_line": 651715,
+          "end_line": 651732
+        },
+        {
+          "start": 25971588,
+          "end": 25973113,
+          "start_line": 651733,
+          "end_line": 651774
+        },
+        {
+          "start": 25973114,
+          "end": 25973277,
+          "start_line": 651775,
+          "end_line": 651778
+        },
+        {
+          "start": 25973278,
+          "end": 25974783,
+          "start_line": 651779,
+          "end_line": 651811
+        },
+        {
+          "start": 25974784,
+          "end": 25974956,
+          "start_line": 651812,
+          "end_line": 651815
+        },
+        {
+          "start": 25974957,
+          "end": 25976204,
+          "start_line": 651816,
+          "end_line": 651846
+        },
+        {
+          "start": 25976205,
+          "end": 25976340,
+          "start_line": 651847,
+          "end_line": 651849
+        },
+        {
+          "start": 25976341,
+          "end": 25976507,
+          "start_line": 651850,
+          "end_line": 651856
+        },
+        {
+          "start": 25976508,
+          "end": 25976645,
+          "start_line": 651857,
+          "end_line": 651859
+        },
+        {
+          "start": 25976646,
+          "end": 25976718,
+          "start_line": 651860,
+          "end_line": 651860
+        },
+        {
+          "start": 25976719,
+          "end": 25976785,
+          "start_line": 651861,
+          "end_line": 651861
+        },
+        {
+          "start": 25976786,
+          "end": 25976852,
+          "start_line": 651862,
+          "end_line": 651862
+        },
+        {
+          "start": 25976853,
+          "end": 25976919,
+          "start_line": 651863,
+          "end_line": 651863
+        },
+        {
+          "start": 25976920,
+          "end": 25976986,
+          "start_line": 651864,
+          "end_line": 651864
+        },
+        {
+          "start": 25976987,
+          "end": 25977053,
+          "start_line": 651865,
+          "end_line": 651865
+        },
+        {
+          "start": 25977054,
+          "end": 25977105,
+          "start_line": 651866,
+          "end_line": 651866
+        },
+        {
+          "start": 25977106,
+          "end": 25977226,
+          "start_line": 651867,
+          "end_line": 651867
+        },
+        {
+          "start": 25977227,
+          "end": 25977353,
+          "start_line": 651868,
+          "end_line": 651868
+        },
+        {
+          "start": 25977354,
+          "end": 25977477,
+          "start_line": 651869,
+          "end_line": 651869
+        },
+        {
+          "start": 25977478,
+          "end": 25977609,
+          "start_line": 651870,
+          "end_line": 651870
+        },
+        {
+          "start": 25977610,
+          "end": 25977725,
+          "start_line": 651871,
+          "end_line": 651871
+        },
+        {
+          "start": 25977726,
+          "end": 25977851,
+          "start_line": 651872,
+          "end_line": 651872
+        },
+        {
+          "start": 25977852,
+          "end": 25977967,
+          "start_line": 651873,
+          "end_line": 651873
+        },
+        {
+          "start": 25977968,
+          "end": 25978095,
+          "start_line": 651874,
+          "end_line": 651874
+        },
+        {
+          "start": 25978096,
+          "end": 25978231,
+          "start_line": 651875,
+          "end_line": 651875
+        },
+        {
+          "start": 25978232,
+          "end": 25978355,
+          "start_line": 651876,
+          "end_line": 651876
+        },
+        {
+          "start": 25978356,
+          "end": 25978505,
+          "start_line": 651877,
+          "end_line": 651877
+        },
+        {
+          "start": 25978506,
+          "end": 25978610,
+          "start_line": 651878,
+          "end_line": 651878
+        },
+        {
+          "start": 25978611,
+          "end": 25978728,
+          "start_line": 651879,
+          "end_line": 651879
+        },
+        {
+          "start": 25978729,
+          "end": 25978874,
+          "start_line": 651880,
+          "end_line": 651880
+        },
+        {
+          "start": 25978875,
+          "end": 25979014,
+          "start_line": 651881,
+          "end_line": 651881
+        },
+        {
+          "start": 25979015,
+          "end": 25979130,
+          "start_line": 651882,
+          "end_line": 651882
+        },
+        {
+          "start": 25979131,
+          "end": 25979246,
+          "start_line": 651883,
+          "end_line": 651883
+        },
+        {
+          "start": 25979247,
+          "end": 25979360,
+          "start_line": 651884,
+          "end_line": 651884
+        },
+        {
+          "start": 25979361,
+          "end": 25979488,
+          "start_line": 651885,
+          "end_line": 651885
+        },
+        {
+          "start": 25979489,
+          "end": 25979602,
+          "start_line": 651886,
+          "end_line": 651886
+        },
+        {
+          "start": 25979603,
+          "end": 25979728,
+          "start_line": 651887,
+          "end_line": 651887
+        },
+        {
+          "start": 25979729,
+          "end": 25979838,
+          "start_line": 651888,
+          "end_line": 651888
+        },
+        {
+          "start": 25979839,
+          "end": 25979973,
+          "start_line": 651889,
+          "end_line": 651889
+        },
+        {
+          "start": 25979974,
+          "end": 25980108,
+          "start_line": 651890,
+          "end_line": 651890
+        },
+        {
+          "start": 25980109,
+          "end": 25980226,
+          "start_line": 651891,
+          "end_line": 651891
+        },
+        {
+          "start": 25980227,
+          "end": 25980343,
+          "start_line": 651892,
+          "end_line": 651892
+        },
+        {
+          "start": 25980344,
+          "end": 25980447,
+          "start_line": 651893,
+          "end_line": 651893
+        },
+        {
+          "start": 25980448,
+          "end": 25980561,
+          "start_line": 651894,
+          "end_line": 651894
+        },
+        {
+          "start": 25980562,
+          "end": 25980679,
+          "start_line": 651895,
+          "end_line": 651895
+        },
+        {
+          "start": 25980680,
+          "end": 25980791,
+          "start_line": 651896,
+          "end_line": 651896
+        },
+        {
+          "start": 25980792,
+          "end": 25980903,
+          "start_line": 651897,
+          "end_line": 651897
+        },
+        {
+          "start": 25980904,
+          "end": 25981028,
+          "start_line": 651898,
+          "end_line": 651898
+        },
+        {
+          "start": 25981029,
+          "end": 25981173,
+          "start_line": 651899,
+          "end_line": 651899
+        },
+        {
+          "start": 25981174,
+          "end": 25981295,
+          "start_line": 651900,
+          "end_line": 651900
+        },
+        {
+          "start": 25981296,
+          "end": 25981430,
+          "start_line": 651901,
+          "end_line": 651901
+        },
+        {
+          "start": 25981431,
+          "end": 25981559,
+          "start_line": 651902,
+          "end_line": 651902
+        },
+        {
+          "start": 25981560,
+          "end": 25981671,
+          "start_line": 651903,
+          "end_line": 651903
+        },
+        {
+          "start": 25981672,
+          "end": 25981800,
+          "start_line": 651904,
+          "end_line": 651904
+        },
+        {
+          "start": 25981801,
+          "end": 25981916,
+          "start_line": 651905,
+          "end_line": 651905
+        },
+        {
+          "start": 25981917,
+          "end": 25982033,
+          "start_line": 651906,
+          "end_line": 651906
+        },
+        {
+          "start": 25982034,
+          "end": 25982158,
+          "start_line": 651907,
+          "end_line": 651907
+        },
+        {
+          "start": 25982159,
+          "end": 25982274,
+          "start_line": 651908,
+          "end_line": 651908
+        },
+        {
+          "start": 25982275,
+          "end": 25982391,
+          "start_line": 651909,
+          "end_line": 651909
+        },
+        {
+          "start": 25982392,
+          "end": 25982491,
+          "start_line": 651910,
+          "end_line": 651910
+        },
+        {
+          "start": 25982492,
+          "end": 25982591,
+          "start_line": 651911,
+          "end_line": 651911
+        },
+        {
+          "start": 25982592,
+          "end": 25982747,
+          "start_line": 651912,
+          "end_line": 651912
+        },
+        {
+          "start": 25982748,
+          "end": 25982898,
+          "start_line": 651913,
+          "end_line": 651913
+        },
+        {
+          "start": 25982899,
+          "end": 25983014,
+          "start_line": 651914,
+          "end_line": 651914
+        },
+        {
+          "start": 25983015,
+          "end": 25983140,
+          "start_line": 651915,
+          "end_line": 651915
+        },
+        {
+          "start": 25983141,
+          "end": 25983245,
+          "start_line": 651916,
+          "end_line": 651916
+        },
+        {
+          "start": 25983246,
+          "end": 25983359,
+          "start_line": 651917,
+          "end_line": 651917
+        },
+        {
+          "start": 25983360,
+          "end": 25983477,
+          "start_line": 651918,
+          "end_line": 651918
+        },
+        {
+          "start": 25983478,
+          "end": 25983575,
+          "start_line": 651919,
+          "end_line": 651919
+        },
+        {
+          "start": 25983576,
+          "end": 25983726,
+          "start_line": 651920,
+          "end_line": 651920
+        },
+        {
+          "start": 25983727,
+          "end": 25983749,
+          "start_line": 651921,
+          "end_line": 651921
+        },
+        {
+          "start": 25983750,
+          "end": 25983785,
+          "start_line": 651922,
+          "end_line": 651922
+        },
+        {
+          "start": 25983786,
+          "end": 25983812,
+          "start_line": 651923,
+          "end_line": 651923
+        },
+        {
+          "start": 25983813,
+          "end": 25983841,
+          "start_line": 651924,
+          "end_line": 651924
+        },
+        {
+          "start": 25983842,
+          "end": 25983882,
+          "start_line": 651925,
+          "end_line": 651925
+        },
+        {
+          "start": 25983883,
+          "end": 25983914,
+          "start_line": 651926,
+          "end_line": 651926
+        },
+        {
+          "start": 25983915,
+          "end": 25983953,
+          "start_line": 651927,
+          "end_line": 651927
+        },
+        {
+          "start": 25983954,
+          "end": 25983984,
+          "start_line": 651928,
+          "end_line": 651928
+        },
+        {
+          "start": 25983985,
+          "end": 25984023,
+          "start_line": 651929,
+          "end_line": 651929
+        },
+        {
+          "start": 25984024,
+          "end": 25984051,
+          "start_line": 651930,
+          "end_line": 651930
+        },
+        {
+          "start": 25984052,
+          "end": 25984081,
+          "start_line": 651931,
+          "end_line": 651931
+        },
+        {
+          "start": 25984082,
+          "end": 25984124,
+          "start_line": 651932,
+          "end_line": 651932
+        },
+        {
+          "start": 25984125,
+          "end": 25984179,
+          "start_line": 651933,
+          "end_line": 651933
+        },
+        {
+          "start": 25984180,
+          "end": 25984220,
+          "start_line": 651934,
+          "end_line": 651934
+        },
+        {
+          "start": 25984221,
+          "end": 25984255,
+          "start_line": 651935,
+          "end_line": 651935
+        },
+        {
+          "start": 25984256,
+          "end": 25984301,
+          "start_line": 651936,
+          "end_line": 651936
+        },
+        {
+          "start": 25984302,
+          "end": 25984329,
+          "start_line": 651937,
+          "end_line": 651937
+        },
+        {
+          "start": 25984330,
+          "end": 25984357,
+          "start_line": 651938,
+          "end_line": 651938
+        },
+        {
+          "start": 25984358,
+          "end": 25984386,
+          "start_line": 651939,
+          "end_line": 651939
+        },
+        {
+          "start": 25984387,
+          "end": 25984409,
+          "start_line": 651940,
+          "end_line": 651940
+        },
+        {
+          "start": 25984410,
+          "end": 25984435,
+          "start_line": 651941,
+          "end_line": 651941
+        },
+        {
+          "start": 25984436,
+          "end": 25984465,
+          "start_line": 651942,
+          "end_line": 651942
+        },
+        {
+          "start": 25984466,
+          "end": 25984497,
+          "start_line": 651943,
+          "end_line": 651943
+        },
+        {
+          "start": 25984498,
+          "end": 25984526,
+          "start_line": 651944,
+          "end_line": 651944
+        },
+        {
+          "start": 25984527,
+          "end": 25984560,
+          "start_line": 651945,
+          "end_line": 651945
+        },
+        {
+          "start": 25984561,
+          "end": 25984587,
+          "start_line": 651946,
+          "end_line": 651946
+        },
+        {
+          "start": 25984588,
+          "end": 25984619,
+          "start_line": 651947,
+          "end_line": 651947
+        },
+        {
+          "start": 25984620,
+          "end": 25984648,
+          "start_line": 651948,
+          "end_line": 651948
+        },
+        {
+          "start": 25984649,
+          "end": 25984691,
+          "start_line": 651949,
+          "end_line": 651949
+        },
+        {
+          "start": 25984692,
+          "end": 25984727,
+          "start_line": 651950,
+          "end_line": 651950
+        },
+        {
+          "start": 25984728,
+          "end": 25984777,
+          "start_line": 651951,
+          "end_line": 651951
+        },
+        {
+          "start": 25984778,
+          "end": 25984889,
+          "start_line": 651952,
+          "end_line": 651952
+        },
+        {
+          "start": 25984890,
+          "end": 25985003,
+          "start_line": 651953,
+          "end_line": 651953
+        },
+        {
+          "start": 25985004,
+          "end": 25985113,
+          "start_line": 651954,
+          "end_line": 651954
+        },
+        {
+          "start": 25985114,
+          "end": 25985225,
+          "start_line": 651955,
+          "end_line": 651955
+        },
+        {
+          "start": 25985226,
+          "end": 25985342,
+          "start_line": 651956,
+          "end_line": 651956
+        },
+        {
+          "start": 25985343,
+          "end": 25985427,
+          "start_line": 651957,
+          "end_line": 651957
+        },
+        {
+          "start": 25985428,
+          "end": 25985506,
+          "start_line": 651958,
+          "end_line": 651958
+        },
+        {
+          "start": 25985507,
+          "end": 25985569,
+          "start_line": 651959,
+          "end_line": 651959
+        },
+        {
+          "start": 25985570,
+          "end": 25985644,
+          "start_line": 651960,
+          "end_line": 651960
+        },
+        {
+          "start": 25985645,
+          "end": 25985719,
+          "start_line": 651961,
+          "end_line": 651961
+        },
+        {
+          "start": 25985720,
+          "end": 25985798,
+          "start_line": 651962,
+          "end_line": 651962
+        },
+        {
+          "start": 25985799,
+          "end": 25985867,
+          "start_line": 651963,
+          "end_line": 651963
+        },
+        {
+          "start": 25985868,
+          "end": 25985940,
+          "start_line": 651964,
+          "end_line": 651964
+        },
+        {
+          "start": 25985941,
+          "end": 25986029,
+          "start_line": 651965,
+          "end_line": 651965
+        },
+        {
+          "start": 25986030,
+          "end": 25986118,
+          "start_line": 651966,
+          "end_line": 651966
+        },
+        {
+          "start": 25986119,
+          "end": 25986227,
+          "start_line": 651967,
+          "end_line": 651967
+        },
+        {
+          "start": 25986228,
+          "end": 25986310,
+          "start_line": 651968,
+          "end_line": 651968
+        },
+        {
+          "start": 25986311,
+          "end": 25986401,
+          "start_line": 651969,
+          "end_line": 651969
+        },
+        {
+          "start": 25986402,
+          "end": 25986488,
+          "start_line": 651970,
+          "end_line": 651970
+        },
+        {
+          "start": 25986489,
+          "end": 25986561,
+          "start_line": 651971,
+          "end_line": 651971
+        },
+        {
+          "start": 25986562,
+          "end": 25986642,
+          "start_line": 651972,
+          "end_line": 651972
+        },
+        {
+          "start": 25986643,
+          "end": 25986723,
+          "start_line": 651973,
+          "end_line": 651973
+        },
+        {
+          "start": 25986724,
+          "end": 25986800,
+          "start_line": 651974,
+          "end_line": 651974
+        },
+        {
+          "start": 25986801,
+          "end": 25986889,
+          "start_line": 651975,
+          "end_line": 651975
+        },
+        {
+          "start": 25986890,
+          "end": 25986990,
+          "start_line": 651976,
+          "end_line": 651976
+        },
+        {
+          "start": 25986991,
+          "end": 25987087,
+          "start_line": 651977,
+          "end_line": 651977
+        },
+        {
+          "start": 25987088,
+          "end": 25987174,
+          "start_line": 651978,
+          "end_line": 651978
+        },
+        {
+          "start": 25987175,
+          "end": 25987255,
+          "start_line": 651979,
+          "end_line": 651979
+        },
+        {
+          "start": 25987256,
+          "end": 25987346,
+          "start_line": 651980,
+          "end_line": 651980
+        },
+        {
+          "start": 25987347,
+          "end": 25987434,
+          "start_line": 651981,
+          "end_line": 651981
+        },
+        {
+          "start": 25987435,
+          "end": 25987549,
+          "start_line": 651982,
+          "end_line": 651982
+        },
+        {
+          "start": 25987550,
+          "end": 25987648,
+          "start_line": 651983,
+          "end_line": 651983
+        },
+        {
+          "start": 25987649,
+          "end": 25987733,
+          "start_line": 651984,
+          "end_line": 651984
+        },
+        {
+          "start": 25987734,
+          "end": 25987834,
+          "start_line": 651985,
+          "end_line": 651985
+        },
+        {
+          "start": 25987835,
+          "end": 25987937,
+          "start_line": 651986,
+          "end_line": 651986
+        },
+        {
+          "start": 25987938,
+          "end": 25988010,
+          "start_line": 651987,
+          "end_line": 651987
+        },
+        {
+          "start": 25988011,
+          "end": 25988121,
+          "start_line": 651988,
+          "end_line": 651988
+        },
+        {
+          "start": 25988122,
+          "end": 25988196,
+          "start_line": 651989,
+          "end_line": 651989
+        },
+        {
+          "start": 25988197,
+          "end": 25988273,
+          "start_line": 651990,
+          "end_line": 651990
+        },
+        {
+          "start": 25988274,
+          "end": 25988364,
+          "start_line": 651991,
+          "end_line": 651991
+        },
+        {
+          "start": 25988365,
+          "end": 25988455,
+          "start_line": 651992,
+          "end_line": 651992
+        },
+        {
+          "start": 25988456,
+          "end": 25988560,
+          "start_line": 651993,
+          "end_line": 651993
+        },
+        {
+          "start": 25988561,
+          "end": 25988629,
+          "start_line": 651994,
+          "end_line": 651994
+        },
+        {
+          "start": 25988630,
+          "end": 25988714,
+          "start_line": 651995,
+          "end_line": 651995
+        },
+        {
+          "start": 25988715,
+          "end": 25988785,
+          "start_line": 651996,
+          "end_line": 651996
+        },
+        {
+          "start": 25988786,
+          "end": 25988882,
+          "start_line": 651997,
+          "end_line": 651997
+        },
+        {
+          "start": 25988883,
+          "end": 25988979,
+          "start_line": 651998,
+          "end_line": 651998
+        },
+        {
+          "start": 25988980,
+          "end": 25989058,
+          "start_line": 651999,
+          "end_line": 651999
+        },
+        {
+          "start": 25989059,
+          "end": 25989139,
+          "start_line": 652000,
+          "end_line": 652000
+        },
+        {
+          "start": 25989140,
+          "end": 25989230,
+          "start_line": 652001,
+          "end_line": 652001
+        },
+        {
+          "start": 25989231,
+          "end": 25989305,
+          "start_line": 652002,
+          "end_line": 652002
+        },
+        {
+          "start": 25989306,
+          "end": 25989396,
+          "start_line": 652003,
+          "end_line": 652003
+        },
+        {
+          "start": 25989397,
+          "end": 25989465,
+          "start_line": 652004,
+          "end_line": 652004
+        },
+        {
+          "start": 25989466,
+          "end": 25989542,
+          "start_line": 652005,
+          "end_line": 652005
+        },
+        {
+          "start": 25989543,
+          "end": 25989631,
+          "start_line": 652006,
+          "end_line": 652006
+        },
+        {
+          "start": 25989632,
+          "end": 25989736,
+          "start_line": 652007,
+          "end_line": 652007
+        },
+        {
+          "start": 25989737,
+          "end": 25989788,
+          "start_line": 652008,
+          "end_line": 652008
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "toolReferenceNameEnumValues",
+        "toolReferenceNameEnumDescriptions",
+        "jsonContributionRegistry2",
+        "configurationRegistry14",
+        "isStringKeyedObject",
+        "migrateChatDefaultConfiguration",
+        "ChatResolverContribution",
+        "CopilotTelemetryContribution",
+        "ChatDebugResolverContribution",
+        "ChatAgentSettingContribution",
+        "ChatForegroundSessionCountContribution",
+        "getCustomModesWithUniqueNames",
+        "ChatAgentActionsContribution",
+        "HookSchemaAssociationContribution",
+        "ToolReferenceNamesContribution",
+        "ChatSpeechToTextInitContribution",
+        "jsonContributionRegistry",
+        "configurationRegistry"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/browserView/electron-browser/browserViewWorkbenchService.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": "2325ff99bafb09b57ca1c32ea0d659537fcb129ed5a7282555d781743e64a89d",
+      "output_sha256": "ba773b356324ef0ce088613f209c0c971ad655030f2dc2caf5473fc39989e7e9",
+      "source_ranges": [
+        {
+          "start": 35935016,
+          "end": 35935094,
+          "start_line": 898265,
+          "end_line": 898265
+        },
+        {
+          "start": 35935095,
+          "end": 35935174,
+          "start_line": 898266,
+          "end_line": 898266
+        },
+        {
+          "start": 35935175,
+          "end": 35935249,
+          "start_line": 898267,
+          "end_line": 898267
+        },
+        {
+          "start": 35935250,
+          "end": 35935386,
+          "start_line": 898268,
+          "end_line": 898272
+        },
+        {
+          "start": 35935387,
+          "end": 35951125,
+          "start_line": 898273,
+          "end_line": 898647
+        },
+        {
+          "start": 35951126,
+          "end": 35951840,
+          "start_line": 898648,
+          "end_line": 898663
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "BrowserMaxHistoryEntriesSettingId",
+        "BrowserRemoteProxyEnabledSettingId",
+        "BrowserNewTabPlacementSettingId",
+        "browserViewContextMenuCommands",
+        "BrowserViewWorkbenchService"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/browserView/electron-browser/features/browserTabManagementFeatures.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 43,
+      "original_upstream_sha256": "d237377872e0abf04adc8f304887f30ba5363514ca2bc3a29c385baa0a439d72",
+      "output_sha256": "4217b0b70d6cbb7c3007ba5af9270b9156bcaebeeeeb3a462e313964f3c3df2d",
+      "source_ranges": [
+        {
+          "start": 36196206,
+          "end": 36196308,
+          "start_line": 905260,
+          "end_line": 905260
+        },
+        {
+          "start": 36196309,
+          "end": 36196418,
+          "start_line": 905261,
+          "end_line": 905264
+        },
+        {
+          "start": 36196419,
+          "end": 36196562,
+          "start_line": 905265,
+          "end_line": 905269
+        },
+        {
+          "start": 36196563,
+          "end": 36203288,
+          "start_line": 905270,
+          "end_line": 905424
+        },
+        {
+          "start": 36203289,
+          "end": 36203569,
+          "start_line": 905425,
+          "end_line": 905431
+        },
+        {
+          "start": 36203570,
+          "end": 36204354,
+          "start_line": 905432,
+          "end_line": 905453
+        },
+        {
+          "start": 36204355,
+          "end": 36206643,
+          "start_line": 905454,
+          "end_line": 905507
+        },
+        {
+          "start": 36206644,
+          "end": 36208338,
+          "start_line": 905508,
+          "end_line": 905555
+        },
+        {
+          "start": 36208339,
+          "end": 36209825,
+          "start_line": 905556,
+          "end_line": 905591
+        },
+        {
+          "start": 36209826,
+          "end": 36210768,
+          "start_line": 905592,
+          "end_line": 905616
+        },
+        {
+          "start": 36210769,
+          "end": 36211734,
+          "start_line": 905617,
+          "end_line": 905641
+        },
+        {
+          "start": 36211735,
+          "end": 36212433,
+          "start_line": 905642,
+          "end_line": 905661
+        },
+        {
+          "start": 36212434,
+          "end": 36213277,
+          "start_line": 905662,
+          "end_line": 905684
+        },
+        {
+          "start": 36213278,
+          "end": 36214616,
+          "start_line": 905685,
+          "end_line": 905721
+        },
+        {
+          "start": 36214617,
+          "end": 36214797,
+          "start_line": 905722,
+          "end_line": 905729
+        },
+        {
+          "start": 36214798,
+          "end": 36214999,
+          "start_line": 905730,
+          "end_line": 905730
+        },
+        {
+          "start": 36215000,
+          "end": 36215279,
+          "start_line": 905731,
+          "end_line": 905740
+        },
+        {
+          "start": 36215280,
+          "end": 36215320,
+          "start_line": 905741,
+          "end_line": 905741
+        },
+        {
+          "start": 36215321,
+          "end": 36215366,
+          "start_line": 905742,
+          "end_line": 905742
+        },
+        {
+          "start": 36215367,
+          "end": 36215418,
+          "start_line": 905743,
+          "end_line": 905743
+        },
+        {
+          "start": 36215419,
+          "end": 36215461,
+          "start_line": 905744,
+          "end_line": 905744
+        },
+        {
+          "start": 36215462,
+          "end": 36215492,
+          "start_line": 905745,
+          "end_line": 905745
+        },
+        {
+          "start": 36215493,
+          "end": 36215532,
+          "start_line": 905746,
+          "end_line": 905746
+        },
+        {
+          "start": 36215533,
+          "end": 36215576,
+          "start_line": 905747,
+          "end_line": 905747
+        },
+        {
+          "start": 36215577,
+          "end": 36215620,
+          "start_line": 905748,
+          "end_line": 905748
+        },
+        {
+          "start": 36215621,
+          "end": 36215671,
+          "start_line": 905749,
+          "end_line": 905749
+        },
+        {
+          "start": 36215672,
+          "end": 36215878,
+          "start_line": 905750,
+          "end_line": 905754
+        },
+        {
+          "start": 36215879,
+          "end": 36216374,
+          "start_line": 905755,
+          "end_line": 905766
+        },
+        {
+          "start": 36216375,
+          "end": 36216572,
+          "start_line": 905767,
+          "end_line": 905770
+        },
+        {
+          "start": 36216573,
+          "end": 36216719,
+          "start_line": 905771,
+          "end_line": 905771
+        },
+        {
+          "start": 36216720,
+          "end": 36218319,
+          "start_line": 905772,
+          "end_line": 905808
+        },
+        {
+          "start": 36218320,
+          "end": 36218621,
+          "start_line": 905809,
+          "end_line": 905815
+        },
+        {
+          "start": 36218622,
+          "end": 36218751,
+          "start_line": 905816,
+          "end_line": 905816
+        },
+        {
+          "start": 36218752,
+          "end": 36218831,
+          "start_line": 905817,
+          "end_line": 905817
+        },
+        {
+          "start": 36218832,
+          "end": 36222169,
+          "start_line": 905818,
+          "end_line": 905908
+        },
+        {
+          "start": 36222170,
+          "end": 36222392,
+          "start_line": 905909,
+          "end_line": 905914
+        },
+        {
+          "start": 36222393,
+          "end": 36222448,
+          "start_line": 905915,
+          "end_line": 905915
+        },
+        {
+          "start": 36222449,
+          "end": 36228110,
+          "start_line": 905916,
+          "end_line": 906064
+        },
+        {
+          "start": 36228111,
+          "end": 36228363,
+          "start_line": 906065,
+          "end_line": 906070
+        },
+        {
+          "start": 36228364,
+          "end": 36228425,
+          "start_line": 906071,
+          "end_line": 906071
+        },
+        {
+          "start": 36228426,
+          "end": 36229550,
+          "start_line": 906072,
+          "end_line": 906116
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "CONTEXT_BROWSER_EDITOR_OPEN",
+        "closeButtonItem",
+        "closeAllButtonItem",
+        "BrowserTabQuickPick",
+        "QuickOpenBrowserAction",
+        "OpenIntegratedBrowserAction",
+        "OpenFileInIntegratedBrowserAction",
+        "NewTabAction",
+        "NewIncognitoTabAction",
+        "NewSecondAccountTabAction",
+        "CloseAllBrowserTabsAction",
+        "CloseAllBrowserTabsInGroupAction",
+        "OpenOrListBrowsersAction",
+        "BrowserEditorOpenContextKeyContribution",
+        "LocalhostLinkOpenerContribution",
+        "LOCALHOST_HINT_DISMISSED_KEY",
+        "LinkOpenedHintPill",
+        "BrowserTabUrlSuggestions"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/voiceClient/voiceGlow.ts",
+      "bundle": "out/vs/workbench/workbench.desktop.main.js",
+      "input_sha256": "dcf008dbfe64877f10dcea60f4aa8249a40c962f1c82eedf2de477eef3484751",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": "3716765b303957e509c4a72152a98dd457c2924ec38d86449d8dc1ab2097dc47",
+      "output_sha256": "f708d43f76a709d824ae82da8b3afb3a0cc68917f3114432deeeb02eaab5570c",
+      "source_ranges": [
+        {
+          "start": 18142890,
+          "end": 18143000,
+          "start_line": 460980,
+          "end_line": 460982
+        },
+        {
+          "start": 18143001,
+          "end": 18143466,
+          "start_line": 460983,
+          "end_line": 460996
+        },
+        {
+          "start": 18143467,
+          "end": 18144242,
+          "start_line": 460997,
+          "end_line": 461015
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "isGlowingVoiceState",
+        "readVoiceGlowIntensity",
+        "computeVoiceGlowStyle"
+      ]
+    },
+    {
+      "module": "src/vs/base/common/shunCodeRecoveredHelpersSessions.ts",
+      "bundle": "out/vs/sessions/sessions.desktop.main.js",
+      "input_sha256": "a300e3ec6dfedea5f34d29e46c71ef8c4fb7668297a58edebacb6d54dea8f4a5",
+      "classification": "recovered-syntax-helpers",
+      "output_sha256": "2b7260a5bfcc8f6f91e8b1636ef9e0232d5fa1ba7ae2a74734e8915fda7486f9",
+      "reconstruction_deltas": [
+        "Deduplicated named exports of recovered tslib helper declarations."
+      ]
+    },
+    {
+      "module": "src/vs/sessions/contrib/sessions/browser/views/sessionArchiveAnimation.ts",
+      "bundle": "out/vs/sessions/sessions.desktop.main.js",
+      "input_sha256": "a300e3ec6dfedea5f34d29e46c71ef8c4fb7668297a58edebacb6d54dea8f4a5",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "8700804783b2516e309b58f11fca2e910e092cfdaa38e402f42638e994d4c6cf",
+      "source_ranges": [
+        {
+          "start": 31286178,
+          "end": 31286244,
+          "start_line": 786434,
+          "end_line": 786434
+        },
+        {
+          "start": 31286245,
+          "end": 31286309,
+          "start_line": 786435,
+          "end_line": 786435
+        },
+        {
+          "start": 31286310,
+          "end": 31286359,
+          "start_line": 786436,
+          "end_line": 786436
+        },
+        {
+          "start": 31286360,
+          "end": 31286408,
+          "start_line": 786437,
+          "end_line": 786437
+        },
+        {
+          "start": 31286409,
+          "end": 31286460,
+          "start_line": 786438,
+          "end_line": 786438
+        },
+        {
+          "start": 31286461,
+          "end": 31288340,
+          "start_line": 786439,
+          "end_line": 786489
+        },
+        {
+          "start": 31288341,
+          "end": 31291076,
+          "start_line": 786490,
+          "end_line": 786543
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "SESSION_ARCHIVE_ANIMATION_CLASS",
+        "SESSION_ARCHIVE_PULSE_CLASS",
+        "SESSION_ARCHIVE_ROW_ANIMATION_DURATION",
+        "SESSION_ARCHIVE_PULSE_ANIMATION_DELAY",
+        "SESSION_ARCHIVE_PULSE_ANIMATION_DURATION",
+        "SessionArchiveAnimation",
+        "createSessionArchiveAnimation"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/contrib/chat/browser/aiCustomization/automationsAccessibilityHelp.ts",
+      "bundle": "out/vs/sessions/sessions.desktop.main.js",
+      "input_sha256": "a300e3ec6dfedea5f34d29e46c71ef8c4fb7668297a58edebacb6d54dea8f4a5",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 22,
+      "original_upstream_sha256": null,
+      "output_sha256": "a8bc5c9cf7933e19f1f6ba8b8f8d426ceb81a93a0f2b746a36bbaf5bfd772851",
+      "source_ranges": [
+        {
+          "start": 33072614,
+          "end": 33073333,
+          "start_line": 831392,
+          "end_line": 831413
+        },
+        {
+          "start": 33073334,
+          "end": 33074439,
+          "start_line": 831414,
+          "end_line": 831446
+        },
+        {
+          "start": 33074440,
+          "end": 33074597,
+          "start_line": 831447,
+          "end_line": 831450
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "AutomationsAccessibilityHelp",
+        "buildAutomationsHelpContent",
+        "describeCommand"
+      ]
+    },
+    {
+      "module": "src/vs/sessions/contrib/sessions/browser/views/sessionsList.ts",
+      "bundle": "out/vs/sessions/sessions.desktop.main.js",
+      "input_sha256": "a300e3ec6dfedea5f34d29e46c71ef8c4fb7668297a58edebacb6d54dea8f4a5",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 44,
+      "original_upstream_sha256": "8f0a62835231278f65ff667e393df317892f56216838fbe2006b8c2b98cfa760",
+      "output_sha256": "190a78459864e00c7457be2a8e89365b0b7f751013003972a40b82d46a7e1948",
+      "source_ranges": [
+        {
+          "start": 31291144,
+          "end": 31291157,
+          "start_line": 786546,
+          "end_line": 786546
+        },
+        {
+          "start": 31291158,
+          "end": 31291242,
+          "start_line": 786547,
+          "end_line": 786547
+        },
+        {
+          "start": 31291243,
+          "end": 31291311,
+          "start_line": 786548,
+          "end_line": 786548
+        },
+        {
+          "start": 31291312,
+          "end": 31291376,
+          "start_line": 786549,
+          "end_line": 786549
+        },
+        {
+          "start": 31291377,
+          "end": 31291438,
+          "start_line": 786550,
+          "end_line": 786550
+        },
+        {
+          "start": 31291439,
+          "end": 31291509,
+          "start_line": 786551,
+          "end_line": 786551
+        },
+        {
+          "start": 31291510,
+          "end": 31291576,
+          "start_line": 786552,
+          "end_line": 786552
+        },
+        {
+          "start": 31291577,
+          "end": 31291670,
+          "start_line": 786553,
+          "end_line": 786553
+        },
+        {
+          "start": 31291671,
+          "end": 31291749,
+          "start_line": 786554,
+          "end_line": 786554
+        },
+        {
+          "start": 31291750,
+          "end": 31291842,
+          "start_line": 786555,
+          "end_line": 786555
+        },
+        {
+          "start": 31291843,
+          "end": 31291933,
+          "start_line": 786556,
+          "end_line": 786556
+        },
+        {
+          "start": 31291934,
+          "end": 31292014,
+          "start_line": 786557,
+          "end_line": 786557
+        },
+        {
+          "start": 31292015,
+          "end": 31292092,
+          "start_line": 786558,
+          "end_line": 786558
+        },
+        {
+          "start": 31292093,
+          "end": 31292197,
+          "start_line": 786559,
+          "end_line": 786559
+        },
+        {
+          "start": 31292198,
+          "end": 31292280,
+          "start_line": 786560,
+          "end_line": 786560
+        },
+        {
+          "start": 31292281,
+          "end": 31292449,
+          "start_line": 786561,
+          "end_line": 786563
+        },
+        {
+          "start": 31292450,
+          "end": 31292656,
+          "start_line": 786564,
+          "end_line": 786568
+        },
+        {
+          "start": 31292657,
+          "end": 31292859,
+          "start_line": 786569,
+          "end_line": 786573
+        },
+        {
+          "start": 31292860,
+          "end": 31292965,
+          "start_line": 786574,
+          "end_line": 786576
+        },
+        {
+          "start": 31292966,
+          "end": 31292998,
+          "start_line": 786577,
+          "end_line": 786577
+        },
+        {
+          "start": 31292999,
+          "end": 31293062,
+          "start_line": 786578,
+          "end_line": 786580
+        },
+        {
+          "start": 31293063,
+          "end": 31293188,
+          "start_line": 786581,
+          "end_line": 786583
+        },
+        {
+          "start": 31293189,
+          "end": 31293280,
+          "start_line": 786584,
+          "end_line": 786586
+        },
+        {
+          "start": 31293281,
+          "end": 31293381,
+          "start_line": 786587,
+          "end_line": 786589
+        },
+        {
+          "start": 31293382,
+          "end": 31293536,
+          "start_line": 786590,
+          "end_line": 786592
+        },
+        {
+          "start": 31293537,
+          "end": 31293586,
+          "start_line": 786593,
+          "end_line": 786593
+        },
+        {
+          "start": 31293587,
+          "end": 31293629,
+          "start_line": 786594,
+          "end_line": 786594
+        },
+        {
+          "start": 31293630,
+          "end": 31293669,
+          "start_line": 786595,
+          "end_line": 786595
+        },
+        {
+          "start": 31293670,
+          "end": 31296337,
+          "start_line": 786596,
+          "end_line": 786676
+        },
+        {
+          "start": 31296338,
+          "end": 31296905,
+          "start_line": 786677,
+          "end_line": 786693
+        },
+        {
+          "start": 31296906,
+          "end": 31296973,
+          "start_line": 786694,
+          "end_line": 786694
+        },
+        {
+          "start": 31296974,
+          "end": 31297082,
+          "start_line": 786695,
+          "end_line": 786695
+        },
+        {
+          "start": 31297083,
+          "end": 31297155,
+          "start_line": 786696,
+          "end_line": 786696
+        },
+        {
+          "start": 31297156,
+          "end": 31318391,
+          "start_line": 786697,
+          "end_line": 787129
+        },
+        {
+          "start": 31318392,
+          "end": 31322600,
+          "start_line": 787130,
+          "end_line": 787215
+        },
+        {
+          "start": 31322601,
+          "end": 31327621,
+          "start_line": 787216,
+          "end_line": 787333
+        },
+        {
+          "start": 31327622,
+          "end": 31328685,
+          "start_line": 787334,
+          "end_line": 787360
+        },
+        {
+          "start": 31328686,
+          "end": 31329620,
+          "start_line": 787361,
+          "end_line": 787388
+        },
+        {
+          "start": 31329621,
+          "end": 31330803,
+          "start_line": 787389,
+          "end_line": 787415
+        },
+        {
+          "start": 31330804,
+          "end": 31340220,
+          "start_line": 787416,
+          "end_line": 787684
+        },
+        {
+          "start": 31340221,
+          "end": 31340342,
+          "start_line": 787685,
+          "end_line": 787687
+        },
+        {
+          "start": 31340343,
+          "end": 31390037,
+          "start_line": 787688,
+          "end_line": 788895
+        },
+        {
+          "start": 31390038,
+          "end": 31390889,
+          "start_line": 788896,
+          "end_line": 788915
+        },
+        {
+          "start": 31390890,
+          "end": 31391241,
+          "start_line": 788916,
+          "end_line": 788925
+        },
+        {
+          "start": 31391242,
+          "end": 31391611,
+          "start_line": 788926,
+          "end_line": 788938
+        },
+        {
+          "start": 31391612,
+          "end": 31391789,
+          "start_line": 788939,
+          "end_line": 788942
+        },
+        {
+          "start": 31391790,
+          "end": 31392497,
+          "start_line": 788943,
+          "end_line": 788971
+        },
+        {
+          "start": 31392498,
+          "end": 31392676,
+          "start_line": 788972,
+          "end_line": 788977
+        },
+        {
+          "start": 31392677,
+          "end": 31393693,
+          "start_line": 788978,
+          "end_line": 789009
+        },
+        {
+          "start": 31393694,
+          "end": 31393736,
+          "start_line": 789010,
+          "end_line": 789010
+        },
+        {
+          "start": 31393737,
+          "end": 31393823,
+          "start_line": 789011,
+          "end_line": 789013
+        },
+        {
+          "start": 31393824,
+          "end": 31394918,
+          "start_line": 789014,
+          "end_line": 789043
+        },
+        {
+          "start": 31394919,
+          "end": 31395027,
+          "start_line": 789044,
+          "end_line": 789046
+        },
+        {
+          "start": 31395028,
+          "end": 31395873,
+          "start_line": 789047,
+          "end_line": 789070
+        },
+        {
+          "start": 31395874,
+          "end": 31395905,
+          "start_line": 789071,
+          "end_line": 789071
+        },
+        {
+          "start": 31395906,
+          "end": 31396775,
+          "start_line": 789072,
+          "end_line": 789096
+        },
+        {
+          "start": 31396776,
+          "end": 31401109,
+          "start_line": 789097,
+          "end_line": 789193
+        },
+        {
+          "start": 31401110,
+          "end": 31401573,
+          "start_line": 789194,
+          "end_line": 789204
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "$110",
+        "SESSION_SECTION_FOCUS_FROM_POINTER_CLASS",
+        "SESSION_HEADER_DROP_TARGET_CLASS",
+        "SessionItemToolbarMenuId",
+        "SessionItemContextMenuId",
+        "SessionSectionToolbarMenuId",
+        "SessionGroupToolbarMenuId",
+        "SESSIONS_LIST_SHOW_EMPTY_DEFAULT_GROUPS_SETTING",
+        "IsSessionPinnedContext",
+        "SessionItemHasBranchNameContext",
+        "SessionItemStatusContext",
+        "SessionItemInGroupContext",
+        "SessionSectionTypeContext",
+        "SessionGroupHasVisibleSessionsContext",
+        "SessionGroupIsEmptyContext",
+        "shouldAnimateArchiveAction",
+        "SessionsGrouping",
+        "SessionsSorting",
+        "sortingToMode",
+        "SORT_FALLBACK_STEP_MS",
+        "isSessionGroupItem",
+        "isSessionSection",
+        "isSessionShowMore",
+        "isSessionPlaceholder",
+        "isSessionItem",
+        "SHOW_MORE_FOLDERS_LABEL",
+        "FOUR_DAYS_MS",
+        "DEFAULT_APPROVAL_ROW_MAX_LINES",
+        "SessionsTreeDelegate",
+        "SessionItemActionRunner",
+        "SESSION_TITLE_SHIMMER_ANIMATION_NAME",
+        "SESSION_TITLE_SHIMMER_ANIMATION_NAMES",
+        "SESSION_TITLE_SHIMMER_PAUSED_CLASS",
+        "SessionItemRenderer",
+        "SessionSectionRenderer",
+        "SessionGroupRenderer",
+        "SessionShowMoreRenderer",
+        "SessionPlaceholderRenderer",
+        "SessionsAccessibilityProvider",
+        "SessionsListDragAndDrop",
+        "sectorToPosition",
+        "SessionsList",
+        "getFirstApprovalAcrossChats",
+        "sessionMatchesFolder",
+        "sortSessions",
+        "limitSessionsForList",
+        "defaultSortKey",
+        "computeReorderSortChanges",
+        "QUICK_CHATS_SECTION_ID",
+        "isQuickChatSession",
+        "groupSessionsForList",
+        "sessionWorkspaceLabel",
+        "groupByWorkspace",
+        "RECENT_SESSIONS_LIMIT",
+        "groupByDate",
+        "SessionsFlatList",
+        "$"
+      ]
+    },
+    {
+      "module": "src/vs/sessions/contrib/automations/browser/automations.contribution.ts",
+      "bundle": "out/vs/sessions/sessions.desktop.main.js",
+      "input_sha256": "a300e3ec6dfedea5f34d29e46c71ef8c4fb7668297a58edebacb6d54dea8f4a5",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 2,
+      "original_upstream_sha256": "b21afdb4dfd946499731b72117e6d3cd72ce0a71fc931725da5e1634f4e69401",
+      "output_sha256": "bc980034f12dde968ad60de4d4ecbe961c616286cd4c0b06f5c35fd5d8944af4",
+      "source_ranges": [
+        {
+          "start": 33226964,
+          "end": 33227059,
+          "start_line": 835231,
+          "end_line": 835231
+        },
+        {
+          "start": 33227060,
+          "end": 33227134,
+          "start_line": 835232,
+          "end_line": 835232
+        },
+        {
+          "start": 33227135,
+          "end": 33227207,
+          "start_line": 835233,
+          "end_line": 835233
+        },
+        {
+          "start": 33227208,
+          "end": 33227294,
+          "start_line": 835234,
+          "end_line": 835234
+        },
+        {
+          "start": 33227295,
+          "end": 33227398,
+          "start_line": 835235,
+          "end_line": 835235
+        },
+        {
+          "start": 33227399,
+          "end": 33227518,
+          "start_line": 835236,
+          "end_line": 835236
+        },
+        {
+          "start": 33227519,
+          "end": 33227587,
+          "start_line": 835237,
+          "end_line": 835237
+        },
+        {
+          "start": 33227588,
+          "end": 33228306,
+          "start_line": 835238,
+          "end_line": 835260
+        },
+        {
+          "start": 33228307,
+          "end": 33228916,
+          "start_line": 835261,
+          "end_line": 835276
+        },
+        {
+          "start": 33228917,
+          "end": 33229111,
+          "start_line": 835277,
+          "end_line": 835280
+        },
+        {
+          "start": 33229112,
+          "end": 33229261,
+          "start_line": 835281,
+          "end_line": 835281
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "ChatAutomationsEnabledContextContribution"
+      ]
+    },
+    {
+      "module": "src/vs/sessions/common/sessionCommands.ts",
+      "bundle": "out/vs/sessions/sessions.desktop.main.js",
+      "input_sha256": "a300e3ec6dfedea5f34d29e46c71ef8c4fb7668297a58edebacb6d54dea8f4a5",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": "6dd7c5b74246e362edc569c088e391f074edfb7379ecfdf832343798e5069f22",
+      "output_sha256": "fbe2fe3b9dc92f5eba60a508f004455afb2877b589dc6ca6d92a67f1f749a716",
+      "source_ranges": [
+        {
+          "start": 31190791,
+          "end": 31190858,
+          "start_line": 783914,
+          "end_line": 783914
+        },
+        {
+          "start": 31190859,
+          "end": 31190930,
+          "start_line": 783915,
+          "end_line": 783915
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "ARCHIVE_SESSION_COMMAND_ID",
+        "UNARCHIVE_SESSION_COMMAND_ID"
+      ]
+    },
+    {
+      "module": "src/vs/base/common/shunCodeRecoveredHelpersMain.ts",
+      "bundle": "out/main.js",
+      "input_sha256": "554718003acca9510fee6c47bc0839f1b57ae739f436a9697ea4e49c100e00fd",
+      "classification": "recovered-syntax-helpers",
+      "output_sha256": "63368d18918af2afd5cc4c086ba5032229d24ca3a2339f21d0057f75d910d47d",
+      "reconstruction_deltas": [
+        "Deduplicated named exports of recovered tslib helper declarations."
+      ]
+    },
+    {
+      "module": "src/vs/platform/browserView/electron-main/browserArenaFollowLatestPage.ts",
+      "bundle": "out/main.js",
+      "input_sha256": "554718003acca9510fee6c47bc0839f1b57ae739f436a9697ea4e49c100e00fd",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "f4d13fee596fcc3df943c3b553592550cd7267f68df4e7fb7bd299463b7854c0",
+      "source_ranges": [
+        {
+          "start": 1143566,
+          "end": 1151351,
+          "start_line": 30245,
+          "end_line": 30443
+        },
+        {
+          "start": 1151352,
+          "end": 1151489,
+          "start_line": 30444,
+          "end_line": 30447
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "installArenaFollowLatest"
+      ]
+    },
+    {
+      "module": "src/vs/platform/browserView/electron-main/browserArenaFollowLatest.ts",
+      "bundle": "out/main.js",
+      "input_sha256": "554718003acca9510fee6c47bc0839f1b57ae739f436a9697ea4e49c100e00fd",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "58978e3daf215e6781a86c23a83c87060b64e29b634d625d80d31974f7537cfc",
+      "source_ranges": [
+        {
+          "start": 1151564,
+          "end": 1151593,
+          "start_line": 30450,
+          "end_line": 30450
+        },
+        {
+          "start": 1151594,
+          "end": 1155390,
+          "start_line": 30451,
+          "end_line": 30559
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "BrowserArenaFollowLatest"
+      ]
+    },
+    {
+      "module": "src/vs/base/node/shunCodeLanguagePackBootstrap.ts",
+      "bundle": "out/main.js",
+      "input_sha256": "554718003acca9510fee6c47bc0839f1b57ae739f436a9697ea4e49c100e00fd",
+      "classification": "reconstructed-custom-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": null,
+      "output_sha256": "144cd803148d3a08bc9a6e99b69fa91a8426b3726162027bfeaa6b3c59f52ddd",
+      "source_ranges": [
+        {
+          "start": 2589487,
+          "end": 2589528,
+          "start_line": 64734,
+          "end_line": 64734
+        },
+        {
+          "start": 2589529,
+          "end": 2589571,
+          "start_line": 64735,
+          "end_line": 64735
+        },
+        {
+          "start": 2589572,
+          "end": 2589607,
+          "start_line": 64736,
+          "end_line": 64736
+        },
+        {
+          "start": 2589608,
+          "end": 2589668,
+          "start_line": 64737,
+          "end_line": 64737
+        },
+        {
+          "start": 2589669,
+          "end": 2590590,
+          "start_line": 64738,
+          "end_line": 64767
+        },
+        {
+          "start": 2590591,
+          "end": 2590907,
+          "start_line": 64768,
+          "end_line": 64778
+        },
+        {
+          "start": 2590908,
+          "end": 2592584,
+          "start_line": 64779,
+          "end_line": 64821
+        },
+        {
+          "start": 2592585,
+          "end": 2593073,
+          "start_line": 64822,
+          "end_line": 64832
+        },
+        {
+          "start": 2593074,
+          "end": 2593204,
+          "start_line": 64833,
+          "end_line": 64840
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "createHash",
+        "fs4",
+        "path2",
+        "BUILT_IN_LANGUAGE_PACK_PREFIX",
+        "syncBuiltInLanguagePacks",
+        "findExtensionsRoot",
+        "readBuiltInLanguagePacks",
+        "isValidLocalization",
+        "fileExists",
+        "fs",
+        "path"
+      ]
+    },
+    {
+      "module": "src/vs/platform/browserView/electron-main/browserView.ts",
+      "bundle": "out/main.js",
+      "input_sha256": "554718003acca9510fee6c47bc0839f1b57ae739f436a9697ea4e49c100e00fd",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": "7dffbd5e28aebe72fd2a5392a7da11aa0fa59ac041e5fde39f312cd0a788744b",
+      "output_sha256": "273856f91832bdb8a6a65a99e3ef254e582a953c5707447bcee63f5092325fff",
+      "source_ranges": [
+        {
+          "start": 1183164,
+          "end": 1183228,
+          "start_line": 30932,
+          "end_line": 30932
+        },
+        {
+          "start": 1183229,
+          "end": 1183507,
+          "start_line": 30933,
+          "end_line": 30943
+        },
+        {
+          "start": 1183508,
+          "end": 1183524,
+          "start_line": 30944,
+          "end_line": 30944
+        },
+        {
+          "start": 1183525,
+          "end": 1218261,
+          "start_line": 30945,
+          "end_line": 31766
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "screen",
+        "WebContentsView",
+        "webContents",
+        "isTrackableHistoryUrl",
+        "BrowserView"
+      ]
+    },
+    {
+      "module": "src/vs/base/node/nls.ts",
+      "bundle": "out/main.js",
+      "input_sha256": "554718003acca9510fee6c47bc0839f1b57ae739f436a9697ea4e49c100e00fd",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 0,
+      "original_upstream_sha256": "f19c9fcc33a861d9869d0bf8bf019cadbd54407b4f57c6ed949fb4136ace8a6f",
+      "output_sha256": "b24cde2dcca5ee41d27250901acb27b1f813345148a72c159f33c8666403897b",
+      "source_ranges": [
+        {
+          "start": 2589344,
+          "end": 2589356,
+          "start_line": 64728,
+          "end_line": 64728
+        },
+        {
+          "start": 2589357,
+          "end": 2589376,
+          "start_line": 64729,
+          "end_line": 64729
+        },
+        {
+          "start": 2589377,
+          "end": 2589388,
+          "start_line": 64730,
+          "end_line": 64730
+        },
+        {
+          "start": 2589389,
+          "end": 2589432,
+          "start_line": 64731,
+          "end_line": 64731
+        },
+        {
+          "start": 2593233,
+          "end": 2597596,
+          "start_line": 64843,
+          "end_line": 64931
+        },
+        {
+          "start": 2597597,
+          "end": 2597844,
+          "start_line": 64932,
+          "end_line": 64939
+        },
+        {
+          "start": 2597845,
+          "end": 2598284,
+          "start_line": 64940,
+          "end_line": 64957
+        },
+        {
+          "start": 2598285,
+          "end": 2598699,
+          "start_line": 64958,
+          "end_line": 64969
+        },
+        {
+          "start": 2598700,
+          "end": 2598814,
+          "start_line": 64970,
+          "end_line": 64973
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "promises3",
+        "resolveNLSConfiguration",
+        "getLanguagePackConfigurations",
+        "resolveLanguagePackLanguage",
+        "defaultNLSConfiguration",
+        "touch",
+        "promises"
+      ]
+    },
+    {
+      "module": "src/vs/platform/browserView/electron-main/browserSession.ts",
+      "bundle": "out/main.js",
+      "input_sha256": "554718003acca9510fee6c47bc0839f1b57ae739f436a9697ea4e49c100e00fd",
+      "classification": "reconstructed-customized-upstream-module",
+      "indexed_nls_messages_restored": 1,
+      "original_upstream_sha256": "bc5bd0072a05f6572c4e0917928464e9423f6ed665282af8c5ed149910fb4842",
+      "output_sha256": "157944ddd4b86b7f1554f96c25af1aea54eb5459024363887068c7d5b4851f7f",
+      "source_ranges": [
+        {
+          "start": 786475,
+          "end": 786510,
+          "start_line": 21047,
+          "end_line": 21047
+        },
+        {
+          "start": 786511,
+          "end": 786769,
+          "start_line": 21048,
+          "end_line": 21053
+        },
+        {
+          "start": 786770,
+          "end": 786789,
+          "start_line": 21054,
+          "end_line": 21054
+        },
+        {
+          "start": 786790,
+          "end": 797514,
+          "start_line": 21055,
+          "end_line": 21305
+        }
+      ],
+      "range_unit": "utf16-code-units",
+      "exports": [
+        "session",
+        "toStandardChromiumUserAgent",
+        "BrowserSession"
+      ]
+    },
+    {
+      "module": "src/vs/workbench/workbench.desktop.main.ts",
+      "classification": "reconstructed-contribution-wiring",
+      "output_sha256": "0db75665efc8f1b2b4715d8db6f997cb1afda1f86a1c89c779e930a8c40e47b3"
+    },
+    {
+      "module": "src/vs/sessions/sessions.desktop.main.ts",
+      "classification": "reconstructed-contribution-wiring",
+      "output_sha256": "bc24738eb2b0badc9edfd199a40acad50bde3fa436e94223cb5d7b3b6a40006b"
+    }
+  ],
+  "unresolved_imports": [],
+  "full_editor_source_build": false,
+  "validation_status": "pending",
+  "limitations": [
+    "Source implementations are executable JS reconstructed from preserved esbuild module boundaries; original TS types are not restored.",
+    "Official upstream TS is retained for unchanged modules.",
+    "Original forks may contain additional changes with no direct reference to a missing module; feature regression remains required."
+  ]
+}

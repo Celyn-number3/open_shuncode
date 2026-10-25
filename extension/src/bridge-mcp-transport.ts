@@ -12,17 +12,17 @@ import {
 } from "@modelcontextprotocol/server";
 import type { Transport } from "@modelcontextprotocol/server";
 import { handleModernPost, isModernRequest, type ModernRequestDeps } from "./bridge-mcp-modern.js";
-import { CUSTOM_TOOL_OUTPUT_SCHEMA, type CustomToolManifest } from "../../../src/custom-tools.js";
-import { BoundedInMemoryEventStore } from "../../../src/bridge-event-store.js";
+import { CUSTOM_TOOL_OUTPUT_SCHEMA, type CustomToolManifest } from "../../src/custom-tools.js";
+import { BoundedInMemoryEventStore } from "../../src/bridge-event-store.js";
 import {
   createBridgeHttpRoutes,
   handleBridgeHttpRequest,
   writeBridgeJsonError,
   writeBridgeJsonRpcError,
-} from "../../../src/bridge-http-router.js";
-import { JsonRpcRequestIdRegistry, requestIdsOfRequest } from "../../../src/jsonrpc-request-id-registry.js";
-import { BridgeSessionRegistry } from "../../../src/bridge-session-registry.js";
-import { bridgeManagedCommandOwnerId } from "../../../src/managed-command-cancellation.js";
+} from "../../src/bridge-http-router.js";
+import { JsonRpcRequestIdRegistry, requestIdsOfRequest } from "../../src/jsonrpc-request-id-registry.js";
+import { BridgeSessionRegistry } from "../../src/bridge-session-registry.js";
+import { bridgeManagedCommandOwnerId } from "../../src/managed-command-cancellation.js";
 import {
   BRIDGE_SERVER_INSTRUCTIONS,
   BRIDGE_TOOL_DEFINITIONS,
@@ -36,7 +36,7 @@ import {
 } from "./bridge-constants.js";
 import type { BridgeTunnelProvider } from "./bridge-constants.js";
 import type { ToolCallResult } from "./bridge-tool-dispatcher.js";
-import { SHUNCODE_BEHAVIOR_VERSION } from "../../../src/version.js";
+import { SHUNCODE_BEHAVIOR_VERSION } from "../../src/version.js";
 
 /**
  * Only JSON-RPC method names are extracted here (never request parameters or

@@ -1,0 +1,3 @@
+// Evidence-based JavaScript source facade. Original TS types are not claimed recovered.
+// See src/recovered/extension/provenance.json for statement-level source provenance.
+export { DEFAULT_CANCELLATION_LIMIT, DEFAULT_CANCELLATION_WINDOW_MS, DEFAULT_FORCE_PROMPT_COOLDOWN_MS, DEFAULT_FORCE_PROMPT_LIMIT, DEFAULT_FORCE_PROMPT_WINDOW_MS, DEFAULT_FORCE_RESERVATION_TTL_MS, ManagedCommandCanceller, NATIVE_MANAGED_COMMAND_OWNER_ID, PerOwnerCancellationRateLimiter, bridgeManagedCommandOwnerId, forceCancellationRequiresConfirmation, managedCommandNotAccessibleError, waitForCommandOrGrace } from "./recovered/extension/modules/src/managed-command-cancellation.mjs";
