@@ -69,7 +69,17 @@ shutil.copytree(ROOT/'artifacts/source-build/extension/dist',ext/'dist');shutil.
 for name in ['git','cloudflared.exe','cloudflared','ngrok','ngrok.exe']:
  p=runtime/'resources/app/extensions/shuncode/runtime'/name
  if p.exists():copy(p,ext/'runtime'/name,'third-party-bridge-tool')
-receipt={'schema':1,'created_at':datetime.datetime.now().isoformat(),'output':str(output),'source_build_executed':not args.assemble_only,'old_first_party_bundle_inputs':False,'third_party_runtime_inputs':runtime_inputs,'gui_verified':False,'complete_product_verified':False,'source_receipt':json.loads((ROOT/'artifacts/source-build/build-receipt.json').read_text(encoding='utf-8'))}
+source_receipt=json.loads((ROOT/'artifacts/source-build/build-receipt.json').read_text(encoding='utf-8'))
+def git(*arguments):
+ try:
+  return subprocess.run(['git',*arguments],cwd=ROOT,capture_output=True,text=True,check=True).stdout.strip()
+ except Exception:
+  return None
+extension_result=next((item for item in source_receipt.get('results',[]) if item.get('entry')=='extension/src/extension.ts'),{})
+# The product carries its own provenance so a shipped zip can be traced without the build machine.
+source_build_info={'schema':1,'application':'ShunCode','version':json.loads((ROOT/'package.json').read_text(encoding='utf-8'))['version'],'buildKind':'reconstructed-source-product','firstPartySourceBuild':True,'fullSourceBuild':False,'sourceRevision':git('rev-parse','HEAD'),'sourceDirty':bool(git('status','--porcelain')),'assembledAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'extensionBuiltAt':source_receipt.get('built_at'),'extensionBuild':{'entry':extension_result.get('entry'),'input_count':extension_result.get('input_count'),'output_sha256':extension_result.get('output_sha256')}}
+(output/'SOURCE_BUILD_INFO.json').write_text(json.dumps(source_build_info,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+receipt={'schema':1,'created_at':datetime.datetime.now().isoformat(),'output':str(output),'source_build_executed':not args.assemble_only,'old_first_party_bundle_inputs':False,'third_party_runtime_inputs':runtime_inputs,'gui_verified':False,'complete_product_verified':False,'source_build_info':source_build_info,'source_receipt':source_receipt}
 files=[]
 for file in sorted(output.rglob('*')):
  if file.is_file():files.append({'path':file.relative_to(output).as_posix(),'sha256':hashlib.sha256(file.read_bytes()).hexdigest(),'bytes':file.stat().st_size})

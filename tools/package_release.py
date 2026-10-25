@@ -2,6 +2,32 @@
 """Package an already-synced Windows app, not a full Code-OSS source build."""
 import argparse, hashlib, json, os, pathlib, zipfile
 EXCLUDED_DIRS = {'.git', '.shuncode', '.codegraph', 'user-data', 'logs', '__pycache__'}
+# Local audit records contain absolute paths from the build machine. They are not
+# shipped; their hashes are recorded in SHUNCODE_BUILD_INFO.json instead.
+LOCAL_AUDIT_FILES = {'SOURCE_BUILD_RECEIPT.json', 'SOURCE_PRODUCT_AUDIT.json'}
+def read_build_info(ext, version):
+    """Accept both build kinds: the legacy incremental build writes build-info.json,
+    the reconstructed source build writes an esbuild receipt next to the bundle."""
+    info_path = ext / 'dist/build-info.json'
+    if info_path.is_file():
+        info = json.loads(info_path.read_text(encoding='utf-8-sig'))
+        if info.get('version') != version:
+            raise ValueError('Version or build metadata mismatch')
+        return info
+    source_path = ext / 'dist/extension.js.build.json'
+    if not source_path.is_file():
+        raise ValueError('Missing build metadata: neither build-info.json nor extension.js.build.json exists')
+    source = json.loads(source_path.read_text(encoding='utf-8-sig'))
+    return {
+        'version': version,
+        'buildKind': 'reconstructed-extension-source',
+        'fullSourceBuild': False,
+        'extensionBuild': {
+            'entry': source.get('entry'),
+            'input_count': source.get('input_count'),
+            'output_sha256': source.get('output_sha256'),
+        },
+    }
 def package(app, output, version):
     app, output = pathlib.Path(app).resolve(), pathlib.Path(output).resolve()
     if output == app or app in output.parents:
@@ -10,11 +36,29 @@ def package(app, output, version):
         raise FileExistsError('Refusing to overwrite an existing release archive')
     ext = app / 'resources/app/extensions/shuncode'
     manifest = json.loads((ext / 'package.json').read_text(encoding='utf-8-sig'))
-    info = json.loads((ext / 'dist/build-info.json').read_text(encoding='utf-8-sig'))
-    if manifest['version'] != version or info['version'] != version:
+    info = read_build_info(ext, version)
+    if manifest['version'] != version:
         raise ValueError('Version or build metadata mismatch')
     if not (ext / 'src/bridge-security.js').is_file():
         raise ValueError('Security module missing')
+    product_info_path = app / 'SOURCE_BUILD_INFO.json'
+    if product_info_path.is_file():
+        product_info = json.loads(product_info_path.read_text(encoding='utf-8-sig'))
+        if product_info.get('version') not in (None, version):
+            raise ValueError('Version or build metadata mismatch')
+        for key in ('sourceRevision', 'sourceHash', 'sourceDirty', 'buildKind'):
+            if product_info.get(key) is not None:
+                info[key] = product_info[key]
+        info['builtAt'] = product_info.get('assembledAt') or info.get('builtAt')
+    receipt_path = app / 'SOURCE_BUILD_RECEIPT.json'
+    if receipt_path.is_file():
+        raw = receipt_path.read_bytes()
+        receipt = json.loads(raw.decode('utf-8'))
+        info['productReceipt'] = {
+            'sha256': hashlib.sha256(raw).hexdigest(),
+            'created_at': receipt.get('created_at'),
+            'files': len(receipt.get('files', [])),
+        }
     output.parent.mkdir(parents=True, exist_ok=True)
     staging = output.with_suffix(output.suffix + '.partial')
     if staging.exists():
@@ -27,7 +71,7 @@ def package(app, output, version):
                 for name in sorted(files):
                     file = pathlib.Path(directory, name)
                     relative = file.relative_to(app).as_posix()
-                    if file.is_symlink() or name.endswith(('.lnk', '.shuncode-stage', '.bak')) or name in {'.env', 'auth.json', '.git-credentials', 'id_rsa', 'id_ed25519'}:
+                    if file.is_symlink() or name.endswith(('.lnk', '.shuncode-stage', '.bak')) or name in {'.env', 'auth.json', '.git-credentials', 'id_rsa', 'id_ed25519'} or name in LOCAL_AUDIT_FILES:
                         skipped.append(relative)
                         continue
                     z.write(file, relative)
