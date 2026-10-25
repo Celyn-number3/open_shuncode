@@ -1,0 +1,142 @@
+{
+  "schema": 1,
+  "generated_at": "2026-10-25T16:40:49.485Z",
+  "ledger_id": "rol_6fb0d4f840ebc77fa321776f4eedeb94223020eb5a96df8dae434d6877083597",
+  "ledger_status": "unknown",
+  "ledger_verified": 0,
+  "total": 954,
+  "by_bucket": {
+    "family-level-regression": 918,
+    "static-only": 14,
+    "vendor-service": 22
+  },
+  "by_family": [
+    {
+      "family": "task-lifecycle",
+      "layer": "runtime",
+      "total": 715,
+      "buckets": {
+        "family-level-regression": 715
+      },
+      "owners": [
+        "extension / agent-host task lifecycle"
+      ],
+      "evidence_regressions": [
+        "task lifecycle revisions and owner isolation",
+        "permanent sessions survive arbitrary idle age but retain bounded capacity",
+        "semaphore queues, releases once, and aborts waiters"
+      ],
+      "rationale": "Lifecycle revisions, owner isolation and cancellation are exercised by named regressions; individual awaited-expression claims are not enumerated."
+    },
+    {
+      "family": "timer",
+      "layer": "runtime",
+      "total": 12,
+      "buckets": {
+        "static-only": 12
+      },
+      "owners": [
+        "unassigned"
+      ],
+      "evidence_regressions": [],
+      "rationale": "setTimeout/setInterval sites have no owner binding and no dedicated regression; they are static candidates, not verified behaviour."
+    },
+    {
+      "family": "promise-ownership",
+      "layer": "runtime",
+      "total": 88,
+      "buckets": {
+        "family-level-regression": 88
+      },
+      "owners": [
+        "shared async ownership"
+      ],
+      "evidence_regressions": [
+        "semaphore queues, releases once, and aborts waiters",
+        "task lifecycle revisions and owner isolation"
+      ],
+      "rationale": "Promise settlement and cancellation ownership are covered at behaviour level by the queue and lifecycle regressions."
+    },
+    {
+      "family": "parser-boundary",
+      "layer": "application",
+      "total": 67,
+      "buckets": {
+        "family-level-regression": 67
+      },
+      "owners": [
+        "tool input validation"
+      ],
+      "evidence_regressions": [
+        "file aliases and structured tool validation are reconstructed",
+        "actual source router rejects ambiguous identity-header arrays before dispatch"
+      ],
+      "rationale": "String/Number/JSON coercion boundaries are covered by structured tool validation and the strict extension typecheck; not every coercion site has a dedicated case."
+    },
+    {
+      "family": "event",
+      "layer": "runtime",
+      "total": 19,
+      "buckets": {
+        "family-level-regression": 19
+      },
+      "owners": [
+        "agent-host event plumbing"
+      ],
+      "evidence_regressions": [
+        "Agent runtime handles closed input in an isolated subprocess",
+        "revocation aborts active custom-tool signals, not just managed terminals"
+      ],
+      "rationale": "Stream close and abort propagation are covered; individual emitter claims are not enumerated."
+    },
+    {
+      "family": "configuration",
+      "layer": "cli",
+      "total": 8,
+      "buckets": {
+        "vendor-service": 6,
+        "static-only": 2
+      },
+      "owners": [
+        "vendor identity / usage service",
+        "unassigned"
+      ],
+      "evidence_regressions": [],
+      "rationale": "Build-time constants and environment switches; licence-related values are split into the vendor bucket."
+    },
+    {
+      "family": "endpoint",
+      "layer": "protocol",
+      "total": 44,
+      "buckets": {
+        "family-level-regression": 28,
+        "vendor-service": 16
+      },
+      "owners": [
+        "mcp-server / bridge transport",
+        "vendor identity / usage service"
+      ],
+      "evidence_regressions": [
+        "real HTTP MCP handshake, permission denial, local grant and DELETE teardown",
+        "MCP runtime exports are usable, not only syntactically valid"
+      ],
+      "rationale": "The MCP transport endpoints are exercised over real HTTP; vendor identity and usage endpoints are split out below."
+    },
+    {
+      "family": "package-lifecycle",
+      "layer": "packaging",
+      "total": 1,
+      "buckets": {
+        "family-level-regression": 1
+      },
+      "owners": [
+        "release packaging"
+      ],
+      "evidence_regressions": [
+        "packager excludes personal files, verifies CRC and refuses archive overwrite"
+      ],
+      "rationale": "Package assembly and overwrite refusal are covered by the packaging regression."
+    }
+  ],
+  "closing_requirement": "An obligation is closed only when it gains an owner binding, an original-behaviour case and a verifier with the authority recorded in the ledger. Family-level regressions do not close individual claims."
+}

@@ -20,6 +20,7 @@
     "typecheck:source:extension": "tsc -p extension/tsconfig.source.json",
     "test:source": "node --test test/source-recovery.test.cjs test/source-extension-integration.test.cjs test/source-editor-compat.test.cjs test/source-contracts.test.cjs",
     "verify:source:extension": "npm run typecheck:source:extension && npm run build:source:extension && npm run test:source",
+    "triage:obligations": "node tools/triage-obligations.cjs",
     "build:source:product": "python tools/build-source-product.py"
   },
   "devDependencies": {
